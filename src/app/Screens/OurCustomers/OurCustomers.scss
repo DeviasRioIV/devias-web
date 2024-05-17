@@ -1,0 +1,142 @@
+#our-customers {
+  background-color: #FAFAFA;
+
+  .section-title {
+    .container {
+      .main-title {
+        margin: 100px 0 64px 0;
+        
+
+        h5 {
+          font-size: 1.5rem;
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: 300;
+          color: #828282;
+          animation: slideRight 0.5s ease-in-out;
+        }
+
+        h1 {
+          font-size: 6rem;
+          font-family: 'Ubuntu', sans-serif;
+          color: #333;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          line-height: 1.2;
+          animation: slideRight 1s ease-in-out;
+
+          @media (max-width: 991px) {
+            font-size: 3rem;
+          }
+        }
+
+        @media (max-width: 991px){
+          margin: 5rem 0;
+        }
+      }
+    }
+  }
+
+  .info {
+    animation: slideDown 1.5s ease-in-out;
+
+    .container {
+      .container-card {
+        width: 100%;
+        transition: ease 0.2s;
+        .text-card {
+          padding: 140px;
+          background-color: #fff;
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.5rem;
+          color: #333;
+          background-image: url(/Utilities/backround-card.png);
+          background-position: right top;
+          background-repeat: no-repeat;
+          border-radius: 10px;
+          box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.25);
+
+          @media (max-width: 768px) {
+            padding: 50px;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+          }
+        }
+        &:hover{
+          transform: scale(1.01);
+          box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+
+  .container-project-detail {
+    padding: 2rem 0;
+    background-color: #FAFAFA;
+
+    .container {
+      .project-detail {
+        .contain-info {
+          .project-title {
+            a {
+              color: #333;
+            }
+          }
+
+          .project-description {
+            p {
+              color: #828282;
+            }
+          }
+
+          .project-buttons {
+            .read-more {
+              a {
+                color: #FFF;
+                background-color: #598392;
+                transition: ease 0.2s;
+
+                &:hover {
+                  background-color: #606060;
+                }
+              }
+            }
+
+            .see-all {
+              display: none;
+            }
+          }
+        }
+      }
+
+      button, i{
+        color: #598392;
+      }
+    }
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

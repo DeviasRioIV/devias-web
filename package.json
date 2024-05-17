@@ -9,9 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "fortawesome": "^0.0.1-security",
+    "mongoose": "^8.3.4",
+    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.0",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.77.0"
   },
   "devDependencies": {
     "eslint": "^8",

@@ -1,0 +1,201 @@
+#home{
+  background-color: #FAFAFA;
+  font-family: 'Ubuntu', sans-serif;
+
+  .primary-section{
+    color: #333;
+
+    .container{
+
+      .main-title{
+        margin: 100px 0 64px 0;
+        animation: slideRight 0.5s ease-in-out;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+
+        h1{
+          font-size: 6rem;
+          font-weight: 500;
+          margin: 0;
+
+          @media (max-width: 991px){
+            font-size: 3rem;
+          }
+          
+        }
+
+        @media all and (max-width: 768px) {
+          margin-top: 0px;
+        }
+      }
+
+      .section-description{
+        animation: slideRight 1s ease-in-out;
+        margin-bottom: 5rem;
+
+        h4{
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+
+        @media all and (max-width: 768px) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  .services-card{
+    margin-bottom: 150px;
+    animation: slideDown 1.5s ease-in-out;
+
+    .container{
+      .row{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;  
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+
+        .container-dev-card{
+          width: 50%;
+          padding: 0 1rem;
+          .dev-card{
+            background-color: #598392;
+            padding: 48px;
+            border-radius: 10px;
+            min-height: 370px;
+            background-image: url(/Utilities/background-develop.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            transition: ease 0.2s;
+
+            h2{
+              font-size: 3rem;
+              color: #FFFFFF;
+              font-weight: 500;
+              margin-bottom: 48px;
+            }
+
+            h3{
+              font-size: 1.5rem; 
+              font-weight: 500;
+              margin-bottom: 24px;
+              color: #FFFFFF;
+            }
+
+            @media (max-width: 991px){
+              min-height: 300px;
+              margin-bottom: 50px;
+              h2{
+                font-size: 2rem;
+              }
+              h3{
+                font-size: 1.2rem;
+              }
+            }
+            &:hover{
+              transform: scale(1.02);
+              box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
+            }
+          }
+          @media (max-width: 768px){
+            width: 100%;
+          }
+        }
+
+        .container-design-card{
+          width: 50%;
+          padding: 0 1rem;
+
+          .design-card{
+            background-color: #EBC95C;
+            color: #333;
+            padding: 48px;
+            border-radius: 10px;
+            min-height: 370px;
+            background-image: url(/Utilities/background-design.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            transition: ease 0.2s;
+
+            h2{
+              font-size: 3rem;
+              color: #333;
+              font-weight: 500;
+              margin-bottom: 48px;
+            }
+
+            h3{
+              font-size: 1.5rem; 
+              font-weight: 500;
+              margin-bottom: 24px;
+            }
+            @media (max-width: 991px){
+              min-height: 300px;
+              margin-bottom: 50px;
+              h2{
+                font-size: 2rem;
+              }
+              h3{
+                font-size: 1.2rem;
+              }
+            }
+            &:hover{
+              transform: scale(1.02);
+              box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
+            }
+          }
+          @media (max-width: 768px){
+            width: 100%;
+          }
+        }
+        @media (max-width: 768px){
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  .highlighted-project{
+    width: 100%;
+    padding: 100px 0;
+    color: #FFFFFF !important;
+    background: linear-gradient(90deg, #78a2a8 0%, #466872 100%);
+    
+    h2{
+      font-size: 3rem;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 500;
+      @media (max-width: 991px){
+        font-size: 2.5rem;
+      }
+    }
+}
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

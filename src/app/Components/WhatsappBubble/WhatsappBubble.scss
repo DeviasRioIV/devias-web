@@ -1,0 +1,29 @@
+.whatsapp-bubble {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+
+  img {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, .20));
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(20deg);
+    }
+  }
+
+  &:hover {
+    opacity: .9;
+    animation: rotate .5s alternate infinite;
+  }
+}

@@ -1,0 +1,148 @@
+.contact-form {
+  width: 500px;
+  height: 500px;
+
+  &.form-home{
+    margin: 2rem auto;
+  }
+
+  .form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.25);
+
+    .contact-title {
+      display: flex;
+      align-items: start;
+      width: 85%;
+
+      h2 {
+        color: #333;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+      }
+    }
+
+    .form-label {
+      font-family: "Ubuntu", sans-serif;
+      color: #333;
+      font-size: 15px;
+
+      span {
+        color: red;
+      }
+    }
+
+    .data-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      
+      .locker {
+        width: 190px;
+
+        input {
+          border: none;
+          border-radius: 5px;
+          width: 100%;
+          height: 3em;
+          color: #333;
+          background-color: #003c7b17;
+          font-family: "Ubuntu", sans-serif;
+          text-indent: 13px;
+          transition: transform 0.1s ease;
+
+          &:focus-visible {
+            outline: #598392 solid 2px ;
+            transform: scale(1.01);
+          }
+        }
+
+        .input-incorrect {
+          position: relative;
+          top: 7px;
+          left: 8px;
+          color: red;
+          font-size: 11px;
+        }
+
+        @media (max-width: 503px) {
+          width: 85%;
+        }
+      }
+    }
+
+    .consult-container {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      
+      span {
+        color: red;
+      }
+
+      textarea {
+        border: none;
+        border-radius: 5px;
+        height: 5em;
+        color: #333;
+        background-color: rgba(0, 60, 123, 0.0901960784);
+        font-family: "Ubuntu", sans-serif;
+        margin-bottom: 22px;
+        text-indent: 13px;
+        padding: 1em 0.4em;
+        transition: transform 0.1s ease;
+
+        &:focus-visible {
+          outline: #598392 solid 2px ;
+          transform: scale(1.01);
+        }
+      }
+
+      .input-incorrect-consult {
+          position: relative;
+          bottom: 16px;
+          left: 7px;
+          z-index: 99;
+          color: red;
+          font-size: 11px;
+        }
+
+
+      input {
+        height: 35px;
+        color: #FFF;
+        background-color: #598392;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .9;
+        }
+
+        &.form-empty {
+          cursor: not-allowed;
+          opacity: .8;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 525px) {
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+
+  @media all and (max-width: 503px) {
+    height: 600px;
+  }
+}
