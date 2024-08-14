@@ -63,7 +63,7 @@
         "long-description": "In response to our clients' needs, we've crafted a mobile app for affiliate management that delivers convenience and accessibility. This app, built in React Native, empowers affiliates to handle a range of procedures and inquiries with ease, simply by entering their ID number. Key functionalities include authorization requests, accessing the medical directory, and obtaining information about branches and emergency phone numbers.\n\nThe impact of this app has been substantial, elevating the affiliate experience and reducing administrative burdens. Recently, we've rolled out a revamp to offer an even more user-friendly and appealing experience, and we've developed a version compatible with iOS devices. These enhancements showcase our dedication to excellence and user satisfaction. We take pride in our contribution to this innovative project that keeps evolving to deliver quality service to our affiliates.",
         "tech-stack": [
           {
-            "tech-img": "Assets/techStack/logo-react.png",
+            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           }
         ]
@@ -77,7 +77,7 @@
         "long-description": "GovSDS is a web platform designed to showcase a government's commitment to the United Nations Sustainable Development Goals (SDGs) Agenda. This innovative tool not only offers a clear visualization of how the government aligns with the SDGs but also has the capability to interface with a variety of governmental systems and conduct data analysis to support informed decision-making.\n\nThe main goal of the GovSDS project was to develop an innovative and highly functional web platform that would enable governments to demonstrate their dedication to the United Nations Sustainable Development Goals (SDGs) Agenda. This platform not only seeks to vividly display the alignment of governmental policies and projects with the SDGs but also aims to facilitate integration with existing governmental systems, perform advanced data analysis, and present information interactively to support informed decision-making.\n\nThe client faced several challenges, including a lack of transparency in showcasing the government's commitment to the SDGs, difficulties in collecting data from multiple governmental systems, and the need to effectively communicate with citizens and stakeholders.\n\nTo address these challenges, GovSDS was implemented with key strategies, including development in React, web services integration, advanced data analysis, and a user interface designed for effective communication.\n\nGovSDS has promoted transparency and accountability by allowing the government to demonstrate its commitment to the SDGs. Advanced data analysis has supported informed decision-making regarding the implementation of policies related to the SDGs. The platform has identified areas for improvement, enabling a more efficient allocation of resources to achieve the SDGs. GovSDS has facilitated communication with citizens and stakeholders by providing a clear view of progress toward the SDGs.",
         "tech-stack": [
           {
-            "tech-img": "Assets/techStack/logo-react.png",
+            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           }
         ]
