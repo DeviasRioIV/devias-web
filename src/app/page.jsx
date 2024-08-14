@@ -2,14 +2,16 @@
 import App from "./App"
 import styles from "./page.module.css"
 
+import './page.scss'
+
 export default function Home() {
 
 
   return (
-    <main className={styles.main}>
+    <div id="root" className={styles.main}>
 
       <App />
 
-    </main>
+    </div>
   );
 }
