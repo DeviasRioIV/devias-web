@@ -6,7 +6,8 @@
       "Assets/*": ["src/app/Assets/*"],
       "Components/*": ["src/app/Components/*"],
       "Router/*": ["src/app/Router/*"],
-      "Screens/*": ["src/app/Screens/*"]
+      "Screens/*": ["src/app/Screens/*"],
+      "Sass/*": ["src/app/Sass/*"]
     }
   }
 }
