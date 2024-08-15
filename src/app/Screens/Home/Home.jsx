@@ -10,6 +10,7 @@ import TechStack from 'Components/TechStack/TechStack'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import {AppContext} from '../../AppContext'
 import ContactForm from 'Components/ContactForm/ContactForm'
+import InsigniaClutch from 'Components/InsigniaClutch/InsigniaClutch'
 
 export default function Home() {
 
@@ -96,6 +97,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Insignias Clutch */}
+      <InsigniaClutch />
 
       {/* Tech Stack */}
       <TechStack />
