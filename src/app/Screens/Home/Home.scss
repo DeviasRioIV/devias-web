@@ -1,6 +1,7 @@
+@import 'Sass/config.scss';
+
 #home{
   background-color: #FAFAFA;
-  font-family: 'Ubuntu', sans-serif;
 
   .primary-section{
     color: #333;
@@ -169,7 +170,6 @@
     
     h2{
       font-size: 3rem;
-      font-family: 'Ubuntu', sans-serif;
       font-weight: 500;
       @media (max-width: 991px){
         font-size: 2.5rem;

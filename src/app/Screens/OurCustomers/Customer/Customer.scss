@@ -1,6 +1,5 @@
 #customer-single-page {
   background-color: #FAFAFA;
-  font-family: 'Ubuntu', sans-serif;
 
   /* Section title */
   .section-title {
@@ -26,7 +25,6 @@
 
         h5 {
           font-size: 1.5rem;
-          font-family: 'Ubuntu', sans-serif;
           font-weight: 300;
           color: #828282;
         }
@@ -41,7 +39,6 @@
 
   /* Section post */
   .post-content {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
     color: #333;
 
@@ -93,7 +90,6 @@
 
           h2 {
             font-size: 3rem;
-            font-family: 'Ubuntu', sans-serif;
             color: #333;
             font-weight: 500;
             margin-bottom: 0.5rem;
@@ -123,7 +119,6 @@
   
             p {
               text-align: center;
-              font-family: 'Roboto', sans-serif;
               font-size: 0.875rem;
               color: #828282;
             }
@@ -146,7 +141,6 @@
     
     h2 {
       font-size: 3rem;
-      font-family: 'Ubuntu', sans-serif;
       font-weight: 500;
 
       @media (max-width: 991px) {

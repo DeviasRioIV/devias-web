@@ -1,6 +1,5 @@
 #our-way {
   background-color: #FAFAFA;
-  font-family: 'Ubuntu', sans-serif;
 
   .primari-section {
     color: #333;
@@ -26,7 +25,6 @@
 
         h5 {
           font-size: 1.5rem;
-          font-family: 'Ubuntu', sans-serif;
           font-weight: 300;
           color: #828282;
           animation: slideRight 0.5s ease-in-out;
@@ -193,7 +191,6 @@
     .container {
       h2 {
         font-size: 3rem;
-        font-family: 'Ubuntu', sans-serif;
         font-weight: 500;
 
         @media (max-width: 991px) {
