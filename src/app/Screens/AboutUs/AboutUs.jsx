@@ -3,7 +3,6 @@ import React from 'react'
 
 // Internal modules
 import './AboutUs.scss'
-import TeamCard from 'Components/TeamCard/TeamCard'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
@@ -58,13 +57,6 @@ export default function AboutUs() {
             <div className='text-card'>
               {language.card}
             </div>
-          </div>
-        </div>
-      </section>
-      <section className='section-team'>
-        <div className='container'>
-          <div className='container-cards'>
-            <TeamCard />
           </div>
         </div>
       </section>
