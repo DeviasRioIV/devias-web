@@ -5,7 +5,6 @@ import React from 'react'
 import './AboutUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import {AppContext} from '../../AppContext'
 
 export default function AboutUs() {
@@ -35,9 +34,6 @@ export default function AboutUs() {
   return (
     <main id='about-us'>
       <Header />
-
-      {/* WhatsApp Bubble */}
-      <WhatsappBubble />
 
       <section className='section-title'>
         <div className='container'>

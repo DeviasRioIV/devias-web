@@ -7,7 +7,6 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import TechStack from 'Components/TechStack/TechStack'
-import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import {AppContext} from '../../AppContext'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import InsigniaClutch from 'Components/InsigniaClutch/InsigniaClutch'
@@ -40,9 +39,6 @@ export default function Home() {
     <main id='home'>
 
       <Header />
-
-      {/* WhatsApp Bubble */}
-      <WhatsappBubble />
 
       <section className='primary-section'>
         <div className='container'>

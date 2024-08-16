@@ -7,7 +7,6 @@ import './ContactUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
-import WhatsappBubble from 'Components/WhatsappBubble/WhatsappBubble'
 import MyMapComponent from 'Components/Map/MyMapComponent'
 import {AppContext} from '../../AppContext'
 
@@ -58,9 +57,6 @@ export default function ContactUs() {
   return (
     <main id='contact-us'>
       <Header />
-
-      {/* WhatsApp Bubble */}
-      <WhatsappBubble />
 
       {/* Section title */}
       <section className='section-title'>
