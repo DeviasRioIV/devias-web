@@ -12,23 +12,24 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-// Assets
-import itServicesCompany from 'Assets/InsigniaClutch/top_clutch.co_app_development_company_real_estate_argentina.png'
-import webDevelopersArgentina from 'Assets/InsigniaClutch/top_clutch.co_web_developers_government_argentina.png'
-import ecommerceDevelopersArgentina from 'Assets/InsigniaClutch/top_clutch.co_e-commerce_developers_medical_argentina.png'
-import itServicesCompanyRealEstate from 'Assets/InsigniaClutch/top_clutch.co_it_services_company_real_estate_argentina.png'
-import ErpConsultingCompany from 'Assets/InsigniaClutch/top_clutch.co_erp_consulting_company_argentina_2024.png'
-import softwareDeveloperArgentina from 'Assets/InsigniaClutch/top_clutch.co_software_developers_government_argentina.png'
-import softwareDeveloperRealEstate from 'Assets/InsigniaClutch/top_clutch.co_software_developers_real_estate_argentina.png'
-import appDevelopmentCompanyRealEstate from 'Assets/InsigniaClutch/top_clutch.co_app_development_company_real_estate_argentina.png'
-import itServicesCompanyMedical from 'Assets/InsigniaClutch/top_clutch.co_it_services_company_medical_argentina.png'
-
 export default function InsigniaClutch() {
 
   // Local state
   const [cantInsignia, setCantInsignia] = React.useState(5)
 
   // Constants
+
+  //Img insignia clutch
+  const itServicesCompany               = 'Assets/InsigniaClutch/top_clutch.co_app_development_company_real_estate_argentina.png'
+  const webDevelopersArgentina          = 'Assets/InsigniaClutch/top_clutch.co_web_developers_government_argentina.png'
+  const ecommerceDevelopersArgentina    = 'Assets/InsigniaClutch/top_clutch.co_e-commerce_developers_medical_argentina.png'
+  const itServicesCompanyRealEstate     = 'Assets/InsigniaClutch/top_clutch.co_it_services_company_real_estate_argentina.png'
+  const ErpConsultingCompany            = 'Assets/InsigniaClutch/top_clutch.co_erp_consulting_company_argentina_2024.png'
+  const softwareDeveloperArgentina      = 'Assets/InsigniaClutch/top_clutch.co_software_developers_government_argentina.png'
+  const softwareDeveloperRealEstate     = 'Assets/InsigniaClutch/top_clutch.co_software_developers_real_estate_argentina.png'
+  const appDevelopmentCompanyRealEstate = 'Assets/InsigniaClutch/top_clutch.co_app_development_company_real_estate_argentina.png'
+  const itServicesCompanyMedical        = 'Assets/InsigniaClutch/top_clutch.co_it_services_company_medical_argentina.png'
+
   const insignias = ([
     {
       title: 'Top Clutch It Services Company Government Argentina',
