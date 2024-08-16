@@ -7,7 +7,7 @@ import {Link, NavLink} from 'react-router-dom'
 import {AppContext} from '../../AppContext'
 
 // Assets
-import logoDevias from 'Assets/Utilities/logo-devias.png'
+import logoDevias from 'Assets/Utilities/Logos/iso-eslogan.svg'
 
 export default function Footer() {
 

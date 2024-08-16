@@ -9,7 +9,7 @@ import en from '../../Helpers/english.json'
 import es from '../../Helpers/spanish.json'
 
 // Assets
-import logo from 'Assets/Utilities/logo-devias.png'
+import logo from 'Assets/Utilities/Logos/logo-devias.svg'
 import {AppContext} from '../../AppContext'
 
 export default function Header() {
