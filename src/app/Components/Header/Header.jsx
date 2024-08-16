@@ -140,13 +140,6 @@ export default function Header() {
               <li>
                 <NavLink
                   className={({isActive, isPending}) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-customers'
-                > {language.customers}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} to='/about-us'
                 > {language.about_us}
                 </NavLink>
@@ -154,8 +147,15 @@ export default function Header() {
               <li>
                 <NavLink
                   className={({isActive, isPending}) =>
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-customers'
+                > {language.projects}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} to='/our-way'
-                > {language.our_way}
+                > {language.our_workflow}
                 </NavLink>
               </li>
               <li className='line' />

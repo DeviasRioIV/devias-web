@@ -2,9 +2,9 @@
   "header": {
     "links":{
       "home": "Home",
-      "customers": "Our Customers",
       "about_us":"About Us",
-      "our_way":"Our Way",
+      "projects": "Projects",
+      "our_workflow":"Our Workflow",
       "contact": "Contact Us"
     }
   },

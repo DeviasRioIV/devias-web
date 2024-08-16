@@ -1,14 +1,14 @@
 @import 'Sass/config.scss';
 
 #root {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-roboto);
   font-weight: 400;
+  line-height: 1.5;
   font-style: normal;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #FAFAFA;
+  background-color: $withe;
 
   overflow-x: hidden;
 
