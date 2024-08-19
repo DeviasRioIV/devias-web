@@ -4,7 +4,7 @@ import {Link, NavLink, useHref} from 'react-router-dom'
 
 // Internal modules
 import './Header.scss'
-import {RxHamburgerMenu} from 'react-icons/rx'
+import {RxHamburgerMenu, RxCross2} from 'react-icons/rx'
 import en from '../../Helpers/english.json'
 import es from '../../Helpers/spanish.json'
 
@@ -119,13 +119,6 @@ export default function Header() {
             </Link>
           </section>
 
-          {/* Burguer button responsive */}
-          <button className='menu-toggle' onClick={handleMenuToggle}>
-            <span className='navbar-toggler-icon'>
-              <RxHamburgerMenu />
-            </span>
-          </button>
-
           {/* NavBar */}
           <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
             <ul>
@@ -180,6 +173,13 @@ export default function Header() {
               ES
             </button>
           </section>
+
+          {/* Burguer button responsive */}
+          <button className='menu-toggle' onClick={handleMenuToggle}>
+            <span className='navbar-toggler-icon'>
+              {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
+            </span>
+          </button>
         </div>
       </nav>
     </header>
