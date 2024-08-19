@@ -1,5 +1,6 @@
 // External Modules
 import React from 'react'
+import { RiTwitterXFill, RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 // Internal modules
 import './Footer.scss'
@@ -26,36 +27,44 @@ export default function Footer() {
 
   return (
     <footer>
-      <div id='social-icons'>
-        <a href='https://www.facebook.com/devias.ar' target='_blank' rel='noreferrer'>
-          <i className='fab fa-facebook' />
-        </a>
-        <a href='#' target='_blank' rel='noreferrer'>
-          <i className='fab fa-twitter' />
-        </a>
-        <a href='https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true' target='_blank' rel='noreferrer'>
-          <i className='fab fa-linkedin' />
-        </a>
-        <a href='https://www.instagram.com/devias.ar/?hl=es-la' target='_blank' rel='noreferrer'>
-          <i className='fab fa-instagram' />
-        </a>
-      </div>
       <section className='container'>
         <div className='container-footer-links'>
           <ul>
             <li>
-              <NavLink to='/our-customers'> {language.customers} </NavLink>
-            </li>
-            <li>
               <NavLink to='/about-us'> {language.about_us} </NavLink>
             </li>
             <li>
-              <NavLink to='/our-way'> {language.our_way} </NavLink>
+              <NavLink to='/our-customers'> {language.projects} </NavLink>
             </li>
-            {/* <li>
-              <NavLink to='/careers'> Careers </NavLink>
-            </li> */}
+            <li>
+              <NavLink to='/our-way'> {language.our_workflow} </NavLink>
+            </li>
+            <li>
+              <NavLink to='/contact-us'> {language.contact} </NavLink>
+            </li>
           </ul>
+        </div>
+        <div id='social-icons'>
+          <a href='https://www.facebook.com/devias.ar' target='_blank' rel='noreferrer'>
+            <i>
+              <RiFacebookFill />
+            </i>
+          </a>
+          <a href='#' target='_blank' rel='noreferrer'>
+            <i>
+              <RiTwitterXFill />
+            </i>
+          </a>
+          <a href='https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true' target='_blank' rel='noreferrer'>
+            <i>
+              <RiLinkedinFill />
+            </i>
+          </a>
+          <a href='https://www.instagram.com/devias.ar/?hl=es-la' target='_blank' rel='noreferrer'>
+            <i>
+              <RiInstagramLine />
+            </i>
+          </a>
         </div>
         <div className='container-footer-logo'>
           <Link to='/'>
