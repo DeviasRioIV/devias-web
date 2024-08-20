@@ -12,7 +12,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-export default function InsigniaClutch() {
+export default function InsigniaClutch({title}) {
 
   // Local state
   const [cantInsignia, setCantInsignia] = React.useState(5)
@@ -78,11 +78,11 @@ export default function InsigniaClutch() {
 
     if (width >= 992) {
 
-      cant = 5
+      cant = 7
 
     } else if (width >= 768) {
 
-      cant = 4
+      cant = 5
 
     } else if (width >= 576) {
 
@@ -138,10 +138,10 @@ export default function InsigniaClutch() {
   }, [])
 
   return (
-    <div id='insignia-carousel'>
+    <div id='insignia-carousel' className='container'>
+      <h1>{title}</h1>
       <div className='container'>
         <div className='carousel-container'>
-
           <Swiper
             slidesPerView={cantInsignia}
             spaceBetween={25}

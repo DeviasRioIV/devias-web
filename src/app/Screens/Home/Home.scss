@@ -7,87 +7,122 @@
     color: #333;
 
     .container{
+      position: relative;
+      width: 100%;
+      max-width: 100%;
 
-      .main-title{
-        margin: 100px 0 64px 0;
-        animation: slideRight 0.5s ease-in-out;
-        white-space: pre-wrap;
-        white-space: -moz-pre-wrap;
-        white-space: -o-pre-wrap;
+      .container-titles{
+        position: absolute;
+        top: 30%;
+        left: 14%;
+        z-index: 2;
 
-        h1{
-          font-size: 6rem;
-          font-weight: 500;
-          margin: 0;
+        h1 {
+          color:#FFFFFF;
 
-          @media (max-width: 991px){
-            font-size: 3rem;
+          &#humanizing {
+            font-size: 7rem;
+            font-family: 'Maqueen Sans';
           }
-          
-        }
-
-        @media all and (max-width: 768px) {
-          margin-top: 0px;
-        }
-      }
-
-      .section-description{
-        animation: slideRight 1s ease-in-out;
-        margin-bottom: 5rem;
-
-        h4{
-          font-size: 1.5rem;
-          font-weight: 500;
-        }
-
-        @media all and (max-width: 768px) {
-          margin-bottom: 50px;
+          &#digital{
+            font-size: 5rem;
+            font-family: 'Univia Pro';
+          }
         }
       }
+
+      #banner {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      
+      #placeholder {
+        position: absolute;
+        top: 0;
+        left: 0.75rem;
+        right: 0.75rem;
+        width: calc(100% - 1.50rem);
+        height: calc(100% - 0.5rem);
+        background-color:#00000066;
+        border-radius: 10px;
+      }
+
+      #element-left {
+        position: absolute;
+        width: 9vw;
+        height: auto;
+        left: 0.75rem;
+        top: 25%;
+      }
+
+      #element-right {
+        position: absolute;
+        width: 32vw;
+        height: auto;
+        right: 0.75rem;
+        top: 25%;
+      }
+
     }
   }
 
   .services-card{
-    margin-bottom: 150px;
-    animation: slideDown 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
 
     .container{
-      .row{
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;  
-        margin-top: calc(-1 * var(--bs-gutter-y));
-        margin-right: calc(-.5 * var(--bs-gutter-x));
-        margin-left: calc(-.5 * var(--bs-gutter-x));
+      width: 100%;
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
 
-        .container-dev-card{
-          width: 50%;
-          padding: 0 1rem;
-          .dev-card{
-            background-color: #598392;
-            padding: 48px;
-            border-radius: 10px;
-            min-height: 370px;
-            background-image: url(/Assets/Utilities/background-develop.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: right;
-            transition: ease 0.2s;
+      .container-dev-card{
+        width: 100%;
+        min-height: 366px;
+        display: flex;
+        flex-direction: row;
+        padding: 0 1rem;
+        background-color: $dark-blue;
+        border-radius: 10px;
+        transition: ease 0.2s;
 
-            h2{
-              font-size: 3rem;
-              color: #FFFFFF;
-              font-weight: 500;
-              margin-bottom: 48px;
+        #title-and-services {
+
+          h2{
+            margin-top: 1.5rem;
+            margin-left: 1.5rem;
+            font-family: 'Univia Pro';
+            font-size: 2.8rem;
+            color: #FFFFFF;
+            font-weight: 500;
+          }
+  
+          .services-card{
+            width: 100%;
+            padding: 1.5rem;
+            padding-top: 3rem;
+            display: flex;
+            flex-direction: row;
+  
+            #services {
+              display: flex;
+              flex-direction: row;
+
+              .services-description {
+                width: 50%;
+                h3{
+                  font-family: 'Roboto';
+                  font-size: 1.3rem; 
+                  font-weight: 500;
+                  margin-bottom: 15px;
+                  color: #FFFFFF;
+                }
+              }
+
             }
-
-            h3{
-              font-size: 1.5rem; 
-              font-weight: 500;
-              margin-bottom: 24px;
-              color: #FFFFFF;
-            }
-
+  
             @media (max-width: 991px){
               min-height: 300px;
               margin-bottom: 50px;
@@ -98,77 +133,34 @@
                 font-size: 1.2rem;
               }
             }
-            &:hover{
-              transform: scale(1.02);
-              box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
-            }
           }
-          @media (max-width: 768px){
-            width: 100%;
-          }
+  
+
         }
 
-        .container-design-card{
-          width: 50%;
-          padding: 0 1rem;
-
-          .design-card{
-            background-color: #EBC95C;
-            color: #333;
-            padding: 48px;
-            border-radius: 10px;
-            min-height: 370px;
-            background-image: url(/Assets/Utilities/background-design.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: right;
-            transition: ease 0.2s;
-
-            h2{
-              font-size: 3rem;
-              color: #333;
-              font-weight: 500;
-              margin-bottom: 48px;
-            }
-
-            h3{
-              font-size: 1.5rem; 
-              font-weight: 500;
-              margin-bottom: 24px;
-            }
-            @media (max-width: 991px){
-              min-height: 300px;
-              margin-bottom: 50px;
-              h2{
-                font-size: 2rem;
-              }
-              h3{
-                font-size: 1.2rem;
-              }
-            }
-            &:hover{
-              transform: scale(1.02);
-              box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
-            }
-          }
-          @media (max-width: 768px){
-            width: 100%;
-          }
+        #services-element {
+          width: 33.3333%;
+          height: auto;
         }
+
         @media (max-width: 768px){
-          flex-wrap: wrap;
+          width: 100%;
         }
+      }
+
+      @media (max-width: 768px){
+        flex-wrap: wrap;
       }
     }
   }
 
   .highlighted-project{
     width: 100%;
-    padding: 100px 0;
-    color: #FFFFFF !important;
-    background: linear-gradient(90deg, #78a2a8 0%, #466872 100%);
-    
+    padding: 5rem 0;
+  
     h2{
+      color: $dark-black;
+      font-family: 'Univia Pro';
       font-size: 3rem;
       font-weight: 500;
       @media (max-width: 991px){

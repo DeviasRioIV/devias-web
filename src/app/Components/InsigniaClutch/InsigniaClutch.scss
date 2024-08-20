@@ -1,9 +1,18 @@
+@import 'Sass/config.scss';
+
 #insignia-carousel {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   position: relative;
   width: 100%;
   margin-bottom: 100px;
+
+  h1 {
+    font-family: 'Univia Pro';
+    font-size: 3rem;
+    color: $dark-black;
+    margin-bottom: 2rem;
+  }
 
   .container {
     display: flex;

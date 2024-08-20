@@ -121,115 +121,136 @@ export default function ContactForm ({home}){
   return (
     <form className={`contact-form ${home ? 'form-home' : ''}`} ref={form} onSubmit={sendEmail}>
 
-      <div className='form-container'>
+      <div className='form-container container'>
 
         {/* Title formularie */}
         <div className='contact-title'>
 
           <h2>
-            Let's talk.
+            LET'S TALK
           </h2>
 
         </div>
 
-        {/* Container of data */}
-        <div className='data-container'>
+        <div id="container-form-location">
 
-          <div className='locker'>
-            <label className='form-label '>Name <span>*</span></label>
-            <input
-              type='text'
-              name='user_name'
-              value={formData.name}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              placeholder='Name'
-            />
+          <div className="container-form">
+            {/* Container of data */}
+            <div className='data-container'>
 
-            {/* Verify touched name and valid name */}
-            {touchedFields.user_name && !isFieldValid('user_name') && (
-              <h4 className='input-incorrect'>Short name</h4>
-            )}
+              <div className='locker'>
+                <label className='form-label '>Name <span>*</span></label>
+                <input
+                  type='text'
+                  name='user_name'
+                  value={formData.name}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder='Name'
+                />
+
+                {/* Verify touched name and valid name */}
+                {touchedFields.user_name && !isFieldValid('user_name') && (
+                  <h4 className='input-incorrect'>Short name</h4>
+                )}
+              </div>
+
+              <div className='locker'>
+                <label className='form-label' >Last name <span>*</span></label>
+                <input
+                  type='text'
+                  name='user_last_name'
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder='Last name'
+                />
+
+                {/* Verify touched last name and valid last name */}
+                {touchedFields.user_last_name && !isFieldValid('user_last_name') && (
+                  <h4 className='input-incorrect'>Short last name</h4>
+                )}
+              </div>
+
+              <div className='locker'>
+
+                <label className='form-label' >Company <span>*</span></label>
+                <input
+                  type='text'
+                  name='user_company'
+                  value={formData.company}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder='Company'
+                />
+
+                {/* Verify touched company and valid company */}
+                {touchedFields.user_company && !isFieldValid('user_company') && (
+                  <h4 className='input-incorrect'>Short name company</h4>
+                )}
+              </div>
+
+              <div className='locker'>
+
+                <label className='form-label' >E-mail <span>*</span></label>
+                <input
+                  type='email'
+                  name='user_email'
+                  value={formData.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder='E-mail'
+                />
+
+                {/* Verify touched email and valid email */}
+                {touchedFields.user_email && !isFieldValid('user_email') && (
+                  <h4 className='input-incorrect'>Incorrect email</h4>
+                )}
+              </div>
+            </div>
+
+            {/* Container of consult */}
+            <div className='consult-container'>
+
+              <label className='form-label' >Message <span>*</span></label>
+              <textarea
+                name='consult'
+                value={formData.consult}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                placeholder='Leave your message'
+              />
+
+              {/* Verify touched consult and valid consult */}
+              {touchedFields.consult && !isFieldValid('consult') && (
+                <h4 className='input-incorrect-consult'>The minimum number of characters is (15)</h4>
+              )}
+              <input
+                className={`${!allFieldsValid ? 'form-empty' : ''}`}
+                type='submit'
+                value={isLoading ? 'Sending...' : 'Send'}
+                disabled={!allFieldsValid}
+              />
+            </div>
           </div>
 
-          <div className='locker'>
-            <label className='form-label' >Last name <span>*</span></label>
-            <input
-              type='text'
-              name='user_last_name'
-              value={formData.lastName}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              placeholder='Last name'
-            />
-
-            {/* Verify touched last name and valid last name */}
-            {touchedFields.user_last_name && !isFieldValid('user_last_name') && (
-              <h4 className='input-incorrect'>Short last name</h4>
-            )}
-          </div>
-
-          <div className='locker'>
-
-            <label className='form-label' >Company <span>*</span></label>
-            <input
-              type='text'
-              name='user_company'
-              value={formData.company}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              placeholder='Company'
-            />
-
-            {/* Verify touched company and valid company */}
-            {touchedFields.user_company && !isFieldValid('user_company') && (
-              <h4 className='input-incorrect'>Short name company</h4>
-            )}
-          </div>
-
-          <div className='locker'>
-
-            <label className='form-label' >E-mail <span>*</span></label>
-            <input
-              type='email'
-              name='user_email'
-              value={formData.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              placeholder='E-mail'
-            />
-
-            {/* Verify touched email and valid email */}
-            {touchedFields.user_email && !isFieldValid('user_email') && (
-              <h4 className='input-incorrect'>Incorrect email</h4>
-            )}
+          <div className="location-data">
+            <br />
+            <p>San Martín 1496, 5800</p>
+            <p>Rio Cuarto, Córdoba</p>
+            <p className="country">
+              Argentina
+            </p>
+            <p>
+              <a href="">
+                View Map
+              </a>
+            </p>
+            <br />
+            <br />
+            <p>hola@devias.ar</p>
           </div>
         </div>
-
-        {/* Container of consult */}
-        <div className='consult-container'>
-
-          <label className='form-label' >Consult <span>*</span></label>
-          <textarea
-            name='consult'
-            value={formData.consult}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            placeholder='Leave your consult'
-          />
-
-          {/* Verify touched consult and valid consult */}
-          {touchedFields.consult && !isFieldValid('consult') && (
-            <h4 className='input-incorrect-consult'>The minimum number of characters is (15)</h4>
-          )}
-          <input
-            className={`${!allFieldsValid ? 'form-empty' : ''}`}
-            type='submit'
-            value={isLoading ? 'Sending...' : 'Send'}
-            disabled={!allFieldsValid}
-          />
-        </div>
-
       </div>
 
     </form>

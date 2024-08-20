@@ -17,23 +17,21 @@
       "label_section": "— Nuestro proceso",
       "title_section": "Así es como trabajamos.",
       "development": {
-        "title": "Desarrollo",
-        "service_1": "Desarrollo Back-End",
-        "service_2": "Desarrollo Front-end",
-        "service_3": "Desarrollo para IOS / Android"
-      },
-      "design": {
-        "title": "Diseño",
+        "title": "Design & Development",
         "service_1": "Investigación UX",
         "service_2": "Diseño UX/UI",
-        "service_3": "Wireframes, Mockups y prototipos interactivos"
+        "service_3": "Wireframes, Mockups y prototipos interactivos",
+        "service_4": "Desarrollo Back-End",
+        "service_5": "Desarrollo Front-end",
+        "service_6": "Desarrollo para IOS / Android"
       }
     },
     "technologies": {},
     "projects_section": {
-      "title": "Echa un vistazo a nuestros proyectos",
+      "title": "NUESTROS PROYECTOS",
       "projects": {}
-    }
+    },
+    "clutch": "INSIGNIAS"
   },
   "our_customers": {
     "label": "— Conoce a nuestros clientes",
@@ -42,6 +40,7 @@
     "projects": [
       {
         "code": "bucked-up",
+        "color":"#DD3636",
         "name": "Bucked Up",
         "img-logo": "/Assets/Projects/BuckedUp/logo.webp",
         "img-page": "/Assets/Projects/BuckedUp/project-view.png",
@@ -56,6 +55,7 @@
       },
       {
         "code": "mi-osfatun",
+        "color":"#EDC14F",
         "name": "Mi Osfatun",
         "img-logo": "/Assets/Projects/MiOsfatun/logo-normal.svg",
         "img-page": "/Assets/Projects/MiOsfatun/project-view.png",
@@ -70,6 +70,7 @@
       },
       {
         "code": "portal-ODS",
+        "color":"#00006C",
         "name": "Portal ODS",
         "img-logo": "/Assets/Projects/ODS/logo.png",
         "img-page": "/Assets/Projects/ODS/project-view.png",
@@ -84,6 +85,7 @@
       },
       {
         "code": "presupuesto-participativo",
+        "color":"#00006C",
         "name": "Presupuesto Participativo",
         "img-logo": "/Assets/Projects/PresupuestoParticipativo/logo.png",
         "img-page": "/Assets/Projects/PresupuestoParticipativo/project-view.png",
@@ -98,6 +100,7 @@
       },
       {
         "code": "mitext",
+        "color":"#EDC14F",
         "name": "Mi Text",
         "img-logo": "/Assets/Projects/Mitext/logo.png",
         "img-page": "/Assets/Projects/Mitext/project-view.png",
@@ -116,6 +119,7 @@
       },
       {
         "code": "jovenes-+16",
+        "color":"#00006C",
         "name": "Jovenes +16",
         "img-logo": "/Assets/Projects/jovenes/logo.png",
         "img-page": "/Assets/Projects/jovenes/project-view.png",
@@ -130,6 +134,7 @@
       },
       {
         "code": "babycarepro",
+        "color":"#00006C",
         "name": "BabyCarePro",
         "img-logo": "/Assets/Projects/sistemaEmbarazos/logo.png",
         "img-page": "/Assets/Projects/sistemaEmbarazos/project-view.png",
@@ -144,6 +149,7 @@
       },
       {
         "code": "dipres",
+        "color":"#00006C",
         "name": "Dipres",
         "img-logo": "/Assets/Projects/Dipres/logo.png",
         "img-page": "/Assets/Projects/Dipres/project-view.png",
@@ -166,6 +172,7 @@
       },
       {
         "code": "quickup",
+        "color":"#00006C",
         "name": "Quickup",
         "img-logo": "/logo-amarillo.svg",
         "img-page": "/logo-amarillo.svg",
@@ -188,6 +195,7 @@
       },
       {
         "code": "meditec",
+        "color":"#00006C",
         "name": "Meditec",
         "img-logo": "/Assets/Projects/Meditec/logo.png",
         "img-page": "/Assets/Projects/Meditec/project-view.png",
@@ -202,6 +210,7 @@
       },
       {
         "code": "ditrack",
+        "color":"#00006C",
         "name": "Ditrack",
         "img-logo": "/Assets/Projects/ditrack/logo.png",
         "img-page": "/Assets/Projects/ditrack/project-view.png",
@@ -216,6 +225,7 @@
       },
       {
         "code": "gremitec",
+        "color":"#00006C",
         "name": "Gremitec",
         "img-logo": "/Assets/Projects/gremiotec/logo.png",
         "img-page": "/Assets/Projects/gremiotec/project-view.png",
@@ -230,6 +240,7 @@
       },
       {
         "code": "namhut",
+        "color":"#00006C",
         "name": "Namhut",
         "img-logo": "/logo-amarillo.svg",
         "img-page": "/logo-amarillo.svg",
@@ -244,6 +255,7 @@
       },
       {
         "code": "SIGCon",
+        "color":"#00006C",
         "name": "SIGCon",
         "img-logo": "/logo-amarillo.svg",
         "img-page": "/logo-amarillo.svg",
@@ -262,6 +274,7 @@
       },
       {
         "code": "recuperos",
+        "color":"#00006C",
         "name": "Recuperos",
         "img-logo": "/Assets/Projects/recupero/logo.png",
         "img-page": "/Assets/Projects/recupero/project-view.png",
@@ -276,6 +289,7 @@
       },
       {
         "code": "sistema-de-gestión-de-ordene-para-organización-gremial-ATUNPA",
+        "color":"#00006C",
         "name": "Sistema de Gestión de Órdenes para Organización Gremial ATUNPA",
         "img-logo": "/logo-amarillo.svg",
         "img-page": "/logo-amarillo.svg",

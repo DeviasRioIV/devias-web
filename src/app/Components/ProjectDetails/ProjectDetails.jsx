@@ -57,46 +57,43 @@ export default function ProjectDetails({customerView}) {
   return (
 
     <>
-
-      {projectsList?.slice(0, visibleProjects).map((project, index) => (
-        <div key={index} className='project-detail'>
-          {/* Link image */}
-          <div className='project-thumbnail'>
-            <Link to={`/customer/${project.code}`}>
-              <Card img={project['img-logo']} alt={project.name} />
-            </Link>
-          </div>
-          {/* Contain Info */}
-          <div className='contain-info'>
-            <div className='project-title'>
+      <div className="container-projects">
+        {projectsList?.slice(0, visibleProjects).map((project, index) => (
+          <div key={index} className='project-detail'>
+            {/* Link image */}
+            <div className='project-thumbnail'>
               <Link to={`/customer/${project.code}`}>
-                {project.name}
+                <Card img={project['img-page']} alt={project.name} background={project.color}/>
               </Link>
             </div>
-            {/* Description */}
-            <div className='project-description'>
-              <p>
-                {project.description}
-              </p>
-            </div>
-            {/* Buttons */}
-            <div className='project-buttons'>
-              <div className='read-more'>
+            {/* Contain Info */}
+            <div className='contain-info'>
+              <div className='project-title'>
                 <Link to={`/customer/${project.code}`}>
-                  Read More
+                  {project.name}
                 </Link>
               </div>
-              <div className='see-all'>
-                <Link to='/our-customers'>
-                  See all projects
-                </Link>
+              {/* Description */}
+              <div className='project-description'>
+                <p>
+                  {project.description}
+                </p>
               </div>
+
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      {visibleProjects < projectsList.length && (
+      {/* Buttons */}
+      <div className='see-all'>
+        <Link to='/our-customers'>
+          See all projects
+        </Link>
+      </div>
+
+      {/* Lets this comment until know what they want to do with this functionality */}
+      {/* {visibleProjects < projectsList.length && (
         <div id='container-button-spinner'>
           {
             !loading
@@ -104,7 +101,7 @@ export default function ProjectDetails({customerView}) {
               : <div className='icon-container'> <i className='fa-solid fa-circle-notch fa-spin' /> </div>
           }
         </div>
-      )}
+      )} */}
     </>
   )
 
