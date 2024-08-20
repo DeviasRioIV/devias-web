@@ -1,69 +1,140 @@
-#about-us{
-  background-color: #FAFAFA;
-  .section-title{
-    margin: 100px 0 64px 0;
-    .container{
-      .main-title{
-        h5{
-          font-size: 1.5rem;
-          font-weight: 300;
-          color: #828282;
-          animation: slideRight 0.5s ease-in-out;
-        }
-        h1{
-          font-size: 6rem;
-          color: #333;
-          margin-top: 0;
-          margin-bottom: 0.5rem;
-          font-weight: 500;
-          line-height: 1.2;
-          animation: slideRight 1s ease-in-out;
+@import 'Sass/config.scss';
 
-          @media (max-width: 991px) {
-            font-size: 3rem;
+#about-us{
+
+  .section-title{
+    
+    .container{
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+
+      .container-titles {
+        position: absolute;
+        top: 30%;
+        left: 14%;
+        z-index: 2;
+
+        h1, h2 {
+          color:#FFFFFF;
+
+          &#we-are {
+            font-size: 7rem;
+            font-family: 'Maqueen Sans';
           }
-          @media (max-width: 419px) {
-            font-size: 2.8rem;
+          &#devias{
+            font-size: 5rem;
+            font-family: 'Univia Pro';
+          }
+        }
+      }
+
+      #banner {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      
+      #placeholder {
+        position: absolute;
+        top: 0;
+        left: 0.75rem;
+        right: 0.75rem;
+        width: calc(100% - 1.50rem);
+        height: calc(100% - 0.5rem);
+        background-color:#00000066;
+        border-radius: 10px;
+      }
+
+      #element-left {
+        position: absolute;
+        width: 8vw;
+        height: auto;
+        left: 0.75rem;
+        top: 25%;
+      }
+
+      #element-right {
+        position: absolute;
+        width: 32vw;
+        height: auto;
+        right: 0.75rem;
+        top: 25%;
+      }
+    }
+  }
+
+  #hello-from-argentina {
+    margin-top: 20px;
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+
+      #card {
+        display: flex;
+        flex-direction: row;
+        background-color: $dark-blue;
+        border-radius: 10px;
+        padding: 80px 75px;
+        gap: 50px;
+
+        #map {
+          width: auto;
+          height: 100%;
+        }
+
+        #container-title-hello {
+          padding: 0px 35px;
+
+          #hello {
+            font-family: 'Maqueen Sans';
+            font-size: 7rem;
+            color: $purple;
+          }
+          #argentina {
+            font-family: 'Univia Pro';
+            font-size: 5rem;
+            color: $withe;
+          }
+
+          #elements {
+            width: 100%;
+            height: auto;
           }
         }
       }
     }
-    @media (max-width: 991px){
-      margin: 5rem 0;
-    }
   }
+
   .section-info{
-    animation: slideDown 1.5s ease-in-out;
+    margin-top: 150px;
+    padding: 0px 200px;
 
     .container{
-      .container-card{
-        width: 100%;
-        transition: ease 0.2s;
-        .text-card{
-          padding: 140px;
-          background-color: #fff;
+
+      .info-container {
+        width: 760px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        margin-bottom: 60px;
+
+        .info-title {
+          font-family: 'Roboto-bold';
+          color: $dark-black;
+          font-size: 2.25rem;
+          margin-bottom: 20px;
+        }
+
+        .info-text {
+          font-family: 'Roboto';
+          color: $light-black;
           font-size: 1.5rem;
-          color: #333;
-          background-image: url(/Utilities/backround-card.png);
-          background-position: right bottom;
-          background-repeat: no-repeat;
-          border-radius: 10px;
-          box-shadow: 0px 6px 16px rgba(106, 106, 106, 0.25);
-
-          @media (max-width: 768px) {
-            padding: 50px;
-          }
-
-          p{
-            margin-top: 0;
-            margin-bottom: 1rem;
-          }
+          font-weight: 400;
         }
-        
-        &:hover{
-          transform: scale(1.01);
-          box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.25);
-        }
+
       }
     }
   }

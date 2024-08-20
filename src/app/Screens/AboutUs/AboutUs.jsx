@@ -1,11 +1,17 @@
 // External Modules
 import React from 'react'
+import Image from 'next/image'
 
 // Internal modules
 import './AboutUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import {AppContext} from '../../AppContext'
+import bannerImg from 'Assets/Images/about-us-hero-bg.jpg'
+import firstElement from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png'
+import secondElement from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-right-elements.png'
+import mapArgentina from 'Assets/Utilities/Elements/desktop/hello-from-argentina/argentina-map.png'
+import flagElements from 'Assets/Utilities/Elements/desktop/hello-from-argentina/flag-and-elements.png'
 
 export default function AboutUs() {
 
@@ -37,25 +43,70 @@ export default function AboutUs() {
 
       <section className='section-title'>
         <div className='container'>
-          <div className='main-title'>
-            <h5>
-              {language.label}
-            </h5>
-            <h1>
-              {language.title}
+          <div className='container-titles'>
+            <h1 id='we-are'>
+              We are
             </h1>
+            <h2 id='devias'>
+              Devias
+            </h2>
+          </div>
+
+          <div id='placeholder'/>
+          <Image src={bannerImg} alt="banner" id='banner'/>
+          <Image src={firstElement} alt="element" id='element-left'/>
+          <Image src={secondElement} alt="element" id='element-right'/>
+        </div>
+      </section>
+
+      <section id='hello-from-argentina'>
+        <div className='container'>
+          <div id='card'>
+            <Image src={mapArgentina} alt="element" id='map'/>
+
+            <div id='container-title-hello'>
+              <h3 id='hello'>Hello from</h3>
+              <h3 id='argentina'>ARGENTINA</h3>
+              <Image src={flagElements} alt="element" id='elements'/>
+            </div>
+
           </div>
         </div>
       </section>
+
       <section className='section-info'>
         <div className='container'>
-          <div className='container-card'>
-            <div className='text-card'>
-              {language.card}
-            </div>
+          <div className='info-container'>
+            <h4 className='info-title'>
+              Who We Are
+            </h4>
+            <p className='info-text'>
+            We are a dynamic team of innovative thinkers and expert developers with a global reach. For over 17 years, weve partnered with our clients to create bespoke digital solutions that drive success. Our approach is grounded in human values, ensuring that every interaction and project is a testament to our commitment to building lasting partnerships. <br /><br /> For nearly two decades, we have built a reputation for delivering high-quality solutions. Our portfolio includes significant projects for major national clients, including leading health insurance companies. Our teams commitment to excellence and innovation has driven our growth and success. <br /><br /> At our core, we believe in the power of collaboration and the strength of diversity. Our teams collective expertise, coupled with our passion for cutting-edge technology, fuels our ability to transform complex challenges into simple, effective solutions.
+            </p>
+          </div>
+          <div className='info-container'>
+            <h4 className='info-title'>
+              Our Philosophy
+            </h4>
+            <p className='info-text'>
+              We understand that technology alone isnt enough. “Humanizing digital products” means we prioritize the people who use them. We work closely with our clients, understanding their needs and aspirations to deliver solutions that truly resonate. Our dedicated team brings together technical expertise and a deep commitment to quality, ensuring that our projects not only meet but exceed expectations.
+            </p>
+          </div>
+          <div className='info-container'>
+            <h4 className='info-title'>
+              Why Choose Us?
+            </h4>
+            <p className='info-text'>
+              Our approach is personalized, agile, and grounded in a deep understanding of your needs. By leveraging the latest technology and fostering a culture of teamwork, we deliver solutions that are not only effective but also sustainable and scalable.
+            </p>
           </div>
         </div>
       </section>
+
+      <section id='slider-team'>
+        
+      </section>
+
       <Footer />
     </main>
   )
