@@ -344,9 +344,10 @@
   },
   "footer": {
     "links": {
-      "customers": "Our Customers",
-      "about_us": "About Us",
-      "our_way": "Our Way"
+      "about_us":"About Us",
+      "projects": "Projects",
+      "our_workflow":"Our Workflow",
+      "contact": "Contact Us"
     }
   }
 }

@@ -1,93 +1,100 @@
+@import 'Sass/config.scss';
+
 footer{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: black;
+  background-color: $withe;
   padding: 2rem 0px;
   position: absolute;
 
   .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .container-footer-links{
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-direction: row;
-      
-      .container-footer-links{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        height: 100%;
+      justify-content: flex-start;
+      height: 100%;
 
-        ul{
-          list-style: none;
-          padding: 0;
+      ul{
+        list-style: none;
+        padding: 0;
 
-          li{
-            a {
-              color: #ffffff;
-              font-size: 0.9rem;
+        li{
+          a {
+            color: $dark-blue;
+            font-size: 1rem;
 
-              &:hover {
-                color: #EBC95C;
-                transition: .2s;
-              }
-              }
-              &:focus {
-                color: #598392;
-              }
-
-            @media (max-width: 768px){
-              margin-top: 1rem;
+            &:hover {
+              color: $green;
+              transition: .2s;
             }
-          }
+            }
+            &:focus {
+              font-weight: 700;
+            }
 
           @media (max-width: 768px){
-            padding: 0;
+            margin-top: 1rem;
+          }
+        }
+
+        @media (max-width: 768px){
+          padding: 0;
+        }
+      }
+    }
+
+    #social-icons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      a{
+
+        i {
+          margin: 0 1rem;
+          font-size: 2rem;
+          color: $dark-blue;
+    
+          &:hover{
+            color: $green;
+            transition: .2s;
           }
         }
       }
-      .container-footer-logo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+    }
 
-          a{
-              img{
-                width: 160px;
-                height: 39px;
+    .container-footer-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
 
-                @media (max-width: 768px) {
-                  width: 130px;
-                  height: auto;
-                }
-              }
+        a{
+            img{
+              width: 58px;
+              height: auto;
+
               @media (max-width: 768px) {
-                  margin-top: 60px;
+                width: 130px;
+                height: auto;
               }
-          }
-      }
-      @media (max-width: 768px) {
-          flex-direction: column;
-      }
-  }
-  
-  #social-icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  
-    i {
-      margin: 0 1rem;
-      font-size: 2rem;
-      color: #FFFFFF;
-
-      &:hover{
-        color: #EBC95C;
-        transition: .2s;
-      }
+            }
+            @media (max-width: 768px) {
+                margin-top: 60px;
+            }
+        }
     }
   }
 }
