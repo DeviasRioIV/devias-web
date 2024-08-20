@@ -197,7 +197,7 @@ header {
         .container-header-links {
           position: absolute;
           width: 100%;
-          top: 110px;
+          top: 105px;
           left: 0;
           height: 0;
           background: $withe;
@@ -225,6 +225,7 @@ header {
           &.show {
             display: flex;
             height: 100vh;
+            z-index: 99;
             transition:
               height 0.5s ease-in,
               box-shadow 0.5s ease-in-out;
