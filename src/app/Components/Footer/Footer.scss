@@ -17,6 +17,7 @@ footer{
 
     @media (max-width: 768px) {
       flex-direction: column;
+      gap: 50px;
     }
 
     .container-footer-links{
@@ -33,14 +34,6 @@ footer{
           a {
             color: $dark-blue;
             font-size: 1rem;
-
-            &:hover {
-              color: $green;
-              transition: .2s;
-            }
-            }
-            &:focus {
-              font-weight: 700;
             }
 
           @media (max-width: 768px){
@@ -60,18 +53,10 @@ footer{
       justify-content: center;
       cursor: pointer;
 
-      a{
-
-        i {
-          margin: 0 1rem;
-          font-size: 2rem;
-          color: $dark-blue;
-    
-          &:hover{
-            color: $green;
-            transition: .2s;
-          }
-        }
+      i {
+        margin: 1rem;
+        font-size: 1.5rem;
+        color: $dark-blue;
       }
     }
 
@@ -83,16 +68,8 @@ footer{
 
         a{
             img{
-              width: 58px;
+              width: 65px;
               height: auto;
-
-              @media (max-width: 768px) {
-                width: 130px;
-                height: auto;
-              }
-            }
-            @media (max-width: 768px) {
-                margin-top: 60px;
             }
         }
     }
