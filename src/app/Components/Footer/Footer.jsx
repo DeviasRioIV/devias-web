@@ -1,6 +1,6 @@
 // External Modules
 import React from 'react'
-import { RiTwitterXFill, RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
+import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 // Internal modules
 import './Footer.scss'
@@ -48,11 +48,6 @@ export default function Footer() {
           <a href='https://www.facebook.com/devias.ar' target='_blank' rel='noreferrer'>
             <i>
               <RiFacebookFill />
-            </i>
-          </a>
-          <a href='#' target='_blank' rel='noreferrer'>
-            <i>
-              <RiTwitterXFill />
             </i>
           </a>
           <a href='https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true' target='_blank' rel='noreferrer'>
