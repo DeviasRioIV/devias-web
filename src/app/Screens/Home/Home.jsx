@@ -11,11 +11,29 @@ import {AppContext} from '../../AppContext'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import InsigniaClutch from 'Components/InsigniaClutch/InsigniaClutch'
 import bannerImg from 'Assets/Images/home_banner.jpg'
-import firstElement from 'Assets/Utilities/Elements/desktop/home-hero/left-elements.png'
-import secondElement from 'Assets/Utilities/Elements/desktop/home-hero/right-elements.png'
+import firstElementDesktop from 'Assets/Utilities/Elements/desktop/home-hero/left-elements.png'
+import firstElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-left-elements.png'
+import secondElementDesktop from 'Assets/Utilities/Elements/desktop/home-hero/right-elements.png'
+import secondElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-top-right-element.png'
+import bottomElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-bottom-right-element.png'
 import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
 
 export default function Home() {
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
 
   // Global state
   const {state} = React.useContext(AppContext)
@@ -56,8 +74,11 @@ export default function Home() {
 
           <div id='placeholder'/>
           <Image src={bannerImg} alt="banner" id='banner'/>
-          <Image src={firstElement} alt="element" id='element-left'/>
-          <Image src={secondElement} alt="element" id='element-right'/>
+          <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id='element-left'/>
+          <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id='element-right'/>
+          {
+            width <= 768 ? <Image src={bottomElementMobile} alt="element" id='element-bottom'/> : ''
+          }
         </div>
       </section>
 
