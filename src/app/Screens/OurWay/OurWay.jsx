@@ -1,5 +1,6 @@
 // External modules
 import React from 'react'
+import Image from 'next/image'
 
 // Internal modules
 import './OurWay.scss'
@@ -10,13 +11,16 @@ import Footer from 'Components/Footer/Footer'
 import TechStack from 'Components/TechStack/TechStack'
 import {AppContext} from '../../AppContext'
 
+// Assets
+import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
+
 export default function OurWay() {
 
   // Global state
   const {state} = React.useContext(AppContext)
 
   // Local state
-  const [language, setLanguage] = React.useState(state.language_content.home)
+  const [language, setLanguage] = React.useState(state.language_content)
 
   // Scroll effect
   React.useEffect(() => {
@@ -30,7 +34,7 @@ export default function OurWay() {
   // Language Effect
   React.useEffect(() => {
 
-    setLanguage(state.language_content.home)
+    setLanguage(state.language_content)
 
   }, [state.language])
 
@@ -39,15 +43,15 @@ export default function OurWay() {
       <Header />
 
       {/* Section title */}
-      <section className='primari-section'>
+      <section className='primary-section'>
         <div className='container'>
           <div className='main-title'>
-            <h5>
-              {language.services.label_section}
-            </h5>
             <h1>
-              {language.services.title_section}
+              {language.home.services.title_section}
             </h1>
+            <h5>
+              {language.home.services.label_section}
+            </h5>
           </div>
         </div>
       </section>
@@ -55,56 +59,64 @@ export default function OurWay() {
       <section className='process-steps'>
         <div className='container'>
           <div className='container-steps'>
-            <ItemStep />
+            {
+              language.our_way.items.map((item, index) => (
+                <>
+                  <h3>0{item.number}</h3>
+                  <h2>{item.name}</h2>
+                  <p>{item.description}</p>
+                </>
+              ))
+            }
+            {/* <ItemStep /> */}
           </div>
         </div>
       </section>
       {/* Section cards */}
-
-      <section className='services-cards'>
+      <section className='services-card'>
         <div className='container'>
-          <div className='row'>
-            <div className='container-dev-card'>
-              <div className='dev-card'>
-                <h2>
-                  {language.services.development.title}
-                </h2>
-                <h3>
-                  {language.services.development.service_1}
-                </h3>
-                <h3>
-                  {language.services.development.service_2}
-                </h3>
-                <h3>
-                  {language.services.development.service_3}
-                </h3>
+          <div className='container-dev-card'>
+            <div id="title-and-services">
+              <h2>
+                {language.home.services.development.title}
+              </h2>
+              <div className='services-card'>
+                <div id="services">
+                  <div className='services-description' id="design-side">
+                    <h3>
+                      {language.home.services.development.service_1}
+                    </h3>
+                    <h3>
+                      {language.home.services.development.service_2}
+                    </h3>
+                    <h3>
+                      {language.home.services.development.service_3}
+                    </h3>
+                  </div>
+                  <div className='services-description' id="dev-side">
+                    <h3>
+                      {language.home.services.development.service_4}
+                    </h3>
+                    <h3>
+                      {language.home.services.development.service_5}
+                    </h3>
+                    <h3>
+                      {language.home.services.development.service_6}
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className='container-design-card'>
-              <div className='design-card'>
-                <h2>
-                  {language.services.design.title}
-                </h2>
-                <h3>
-                  {language.services.design.service_1}
-                </h3>
-                <h3>
-                  {language.services.design.service_2}
-                </h3>
-                <h3>
-                  {language.services.design.service_3}
-                </h3>
-              </div>
-            </div>
+            <Image src={servicesElement} alt='services' id='services-element'/>
           </div>
         </div>
       </section>
-      <TechStack />
+
       {/* Section projects */}
       <section className='highlighted-project'>
         <div className='container'>
           <h2>
-            {language.projects_section.title}
+            {language.home.projects_section.title}
           </h2>
           <ProjectDetails />
         </div>
