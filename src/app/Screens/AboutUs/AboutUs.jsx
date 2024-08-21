@@ -1,6 +1,8 @@
 // External Modules
 import React from 'react'
 import Image from 'next/image'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {Autoplay} from 'swiper/modules'
 
 // Internal modules
 import './AboutUs.scss'
@@ -13,6 +15,13 @@ import secondElement from 'Assets/Utilities/Elements/desktop/about-us-hero/about
 import mapArgentina from 'Assets/Utilities/Elements/desktop/hello-from-argentina/argentina-map.png'
 import flagElements from 'Assets/Utilities/Elements/desktop/hello-from-argentina/flag-and-elements.png'
 
+// Carousel images
+import imageTeam_1 from 'Assets/AboutUs_Carousel/about-us-ph-1.jpg'
+import imageTeam_2 from 'Assets/AboutUs_Carousel/about-us-ph-2.jpg'
+import imageTeam_3 from 'Assets/AboutUs_Carousel/about-us-ph-3.jpg'
+import imageTeam_4 from 'Assets/AboutUs_Carousel/about-us-ph-4.jpg'
+import imageTeam_5 from 'Assets/AboutUs_Carousel/about-us-ph-5.jpg'
+
 export default function AboutUs() {
 
   // Global state
@@ -20,6 +29,9 @@ export default function AboutUs() {
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.about_us)
+
+  // Consta,   // Constants
+  const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
 
   // Scroll Effect
   React.useEffect(() => {
@@ -104,7 +116,29 @@ export default function AboutUs() {
       </section>
 
       <section id='slider-team'>
-        
+        <div className='container'>
+
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={0}
+            loop={true}
+            autoplay={{
+              delay: 9000,
+              disableOnInteraction: false
+            }}
+            modules={[Autoplay]}
+            className='swiper'
+          >
+
+            {
+              imagesCarousel.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image src={image} alt={`Image ${index + 1}`} />
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
+        </div>
       </section>
 
       <Footer />
