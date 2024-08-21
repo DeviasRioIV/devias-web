@@ -36,6 +36,8 @@ export default function AboutUs() {
   // Constants
   const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
 
+  const width = window.innerWidth
+
   // Scroll Effect
   React.useEffect(() => {
 
