@@ -7,6 +7,7 @@ import './Customer.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
+import Card from 'Components/ProjectDetails/Card/Card'
 import {AppContext} from '../../../AppContext'
 
 export default function Costumer() {
@@ -46,9 +47,6 @@ export default function Costumer() {
         <section className='section-title'>
           <div className='container'>
             <div className='main-title'>
-              <h5>
-                — Customers
-              </h5>
               <h1>
                 {customer.name}
               </h1>
@@ -59,15 +57,15 @@ export default function Costumer() {
         <section className='post-content'>
           <div className='container'>
             <div className='contain-content'>
+              <div className='customer-page'>
+                <Card img={customer['img-page']} alt={customer.name} background={customer.color}/>
+              </div>
               <div className='customer-logo'>
                 <img src={customer['img-logo']} alt={customer.name} />
               </div>
               <p>
                 {customer['long-description']}
               </p>
-              <div className='customer-page'>
-                <img src={customer['img-page']} alt={customer.name} />
-              </div>
             </div>
           </div>
         </section>

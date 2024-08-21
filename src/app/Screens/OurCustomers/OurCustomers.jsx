@@ -1,4 +1,5 @@
-// External Modules
+'use client'
+// External modules
 import React from 'react'
 
 // Internal modules
@@ -19,7 +20,7 @@ export default function OurCustomers() {
   // Effects
   React.useEffect(() => {
 
-    const container = document.getElementById('our-customers')
+    const container = document?.getElementById('our-customers')
 
     container.scrollIntoView({behavior: 'smooth'})
 
@@ -41,29 +42,20 @@ export default function OurCustomers() {
       <section className='section-title'>
         <div className='container'>
           <div className='main-title'>
-            <h5>
-              {language.label}
-            </h5>
             <h1>
               {language.title}
             </h1>
+            <h2>
+              {language.label}
+            </h2>
           </div>
         </div>
       </section>
-      {/* Card info */}
-      <section className='info'>
-        <div className='container'>
-          <div className='container-card'>
-            <div className='text-card'>
-              {language.card}
-            </div>
-          </div>
-        </div>
-      </section>
+
       {/* Section projects */}
       <section className='container-project-detail'>
         <div className='container'>
-          <ProjectDetails />
+          <ProjectDetails page />
         </div>
       </section>
       {/* Footer */}

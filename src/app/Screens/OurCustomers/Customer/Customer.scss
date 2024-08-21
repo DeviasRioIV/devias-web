@@ -1,16 +1,19 @@
+@import 'Sass/config.scss';
+
 #customer-single-page {
   background-color: #FAFAFA;
 
   /* Section title */
   .section-title {
-    color: #333;
+    color: $dark-blue;
 
     .container {
       .main-title {
         margin: 100px 0 64px 0;
 
         h1 {
-          font-size: 6rem;
+          font-size: 4rem;
+          text-transform: uppercase;
           font-weight: 500;
           margin: 0;
 
@@ -21,12 +24,6 @@
           @media all and (max-width: 768px) {
             margin-top: 0px;
           }
-        }
-
-        h5 {
-          font-size: 1.5rem;
-          font-weight: 300;
-          color: #828282;
         }
 
         /* Responsive margin title */
@@ -49,8 +46,7 @@
         .customer-logo {
           display: flex;
           justify-content: center;
-          margin: 0 0 1rem;
-
+          margin-top: 3rem;
           img {
             max-height: 300px;
             max-width: 100%;

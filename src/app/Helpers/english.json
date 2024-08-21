@@ -14,8 +14,8 @@
       "legend": "We work along our customers to deliver the best solutions."
     },
     "services": {
-      "label_section":"— Our process",
-      "title_section":"This is how we work.",
+      "label_section":"This is how we work.",
+      "title_section":"Our Workflow",
       "development": {
         "title": "DESIGN & DEVELOPMENT",
         "service_1": "UX Research",
@@ -28,15 +28,14 @@
     },
     "technologies": {},
     "projects_section": {
-      "title": "OUR PROJECTS",
+      "title": "PROJECTS",
       "projects": {}
     },
     "clutch": "AWARDS"
   },
   "our_customers": {
-    "label":"— Meet our customers",
-    "title":"Take a look at what we’ve been working on",
-    "card": "We are proud to have launched a lot of products, from landing pages to large web applications. We create solutions focused on scalability, performance and user experience.",
+    "title":"PROJECTS",
+    "label": "Take a look at what we’ve been working on",
     "projects": [
       {
         "code": "bucked-up",
@@ -85,7 +84,7 @@
       },
       {
         "code": "presupuesto-participativo",
-        "color":"#00006C",
+        "color":"#00C800",
         "name": "Presupuesto Participativo",
         "img-logo": "/Assets/Projects/PresupuestoParticipativo/logo.png",
         "img-page": "/Assets/Projects/PresupuestoParticipativo/project-view.png",
@@ -100,7 +99,7 @@
       },
       {
         "code": "mitext",
-        "color":"#EDC14F",
+        "color":"#995EF8",
         "name": "Mi Text",
         "img-logo": "/Assets/Projects/Mitext/logo.png",
         "img-page": "/Assets/Projects/Mitext/project-view.png",
@@ -119,7 +118,7 @@
       },
       {
         "code": "jovenes-+16",
-        "color":"#00006C",
+        "color":"#80BCE5 ",
         "name": "Jovenes +16",
         "img-logo": "/Assets/Projects/jovenes/logo.png",
         "img-page": "/Assets/Projects/jovenes/project-view.png",

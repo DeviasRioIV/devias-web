@@ -14,8 +14,8 @@
       "legend": "Trabajamos junto a nuestros clientes para ofrecer las mejores soluciones."
     },
     "services": {
-      "label_section": "— Nuestro proceso",
-      "title_section": "Así es como trabajamos.",
+      "label_section": "Así es como trabajamos",
+      "title_section": "Nuestro Proceso",
       "development": {
         "title": "Design & Development",
         "service_1": "Investigación UX",
@@ -34,9 +34,8 @@
     "clutch": "INSIGNIAS"
   },
   "our_customers": {
-    "label": "— Conoce a nuestros clientes",
-    "title": "Echa un vistazo a lo que hemos estado haciendo",
-    "card": "Estamos orgullosos de haber lanzado una cantidad importante de productos al mercado, desde landings pages hasta complejas aplicaciones webs. \n Creamos soluciones enfocados en la escalabilidad, la performance, y la experiencia de usuario",
+    "title": "PROYECTOS",
+    "label": "Hecha un vistazo a lo que hemos estado haciendo",
     "projects": [
       {
         "code": "bucked-up",
@@ -85,7 +84,7 @@
       },
       {
         "code": "presupuesto-participativo",
-        "color":"#00006C",
+        "color":"#00C800",
         "name": "Presupuesto Participativo",
         "img-logo": "/Assets/Projects/PresupuestoParticipativo/logo.png",
         "img-page": "/Assets/Projects/PresupuestoParticipativo/project-view.png",
@@ -100,7 +99,7 @@
       },
       {
         "code": "mitext",
-        "color":"#EDC14F",
+        "color":"#995EF8",
         "name": "Mi Text",
         "img-logo": "/Assets/Projects/Mitext/logo.png",
         "img-page": "/Assets/Projects/Mitext/project-view.png",
@@ -119,7 +118,7 @@
       },
       {
         "code": "jovenes-+16",
-        "color":"#00006C",
+        "color":"#80BCE5",
         "name": "Jovenes +16",
         "img-logo": "/Assets/Projects/jovenes/logo.png",
         "img-page": "/Assets/Projects/jovenes/project-view.png",
