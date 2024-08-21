@@ -10,10 +10,13 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import {AppContext} from '../../AppContext'
 import bannerImg from 'Assets/Images/about-us-hero-bg.jpg'
-import firstElement from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png'
-import secondElement from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-right-elements.png'
+import firstElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png'
+import secondElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-right-elements.png'
+import firstElementMobile from 'Assets/Utilities/Elements/mobile/about-us-hero/about-us-left-elements.png'
+import secondElementMobile from 'Assets/Utilities/Elements/mobile/about-us-hero/about-us-right-elements.png'
 import mapArgentina from 'Assets/Utilities/Elements/desktop/hello-from-argentina/argentina-map.png'
-import flagElements from 'Assets/Utilities/Elements/desktop/hello-from-argentina/flag-and-elements.png'
+import flagElementsDesktop from 'Assets/Utilities/Elements/desktop/hello-from-argentina/flag-and-elements.png'
+import flagElementsMobile from 'Assets/Utilities/Elements/mobile/hello-from-argentina/flag-and-elements.png'
 
 // Carousel images
 import imageTeam_1 from 'Assets/AboutUs_Carousel/about-us-ph-1.jpg'
@@ -30,7 +33,7 @@ export default function AboutUs() {
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.about_us)
 
-  // Consta,   // Constants
+  // Constants
   const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
 
   // Scroll Effect
@@ -60,14 +63,14 @@ export default function AboutUs() {
               We are
             </h1>
             <h2 id='devias'>
-              Devias
+              DEVIAS
             </h2>
           </div>
 
           <div id='placeholder'/>
           <Image src={bannerImg} alt="banner" id='banner'/>
-          <Image src={firstElement} alt="element" id='element-left'/>
-          <Image src={secondElement} alt="element" id='element-right'/>
+          <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id='element-left'/>
+          <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id='element-right'/>
         </div>
       </section>
 
@@ -79,7 +82,7 @@ export default function AboutUs() {
             <div id='container-title-hello'>
               <h3 id='hello'>Hello from</h3>
               <h3 id='argentina'>ARGENTINA</h3>
-              <Image src={flagElements} alt="element" id='elements'/>
+              <Image src={width > 596 ? flagElementsDesktop : flagElementsMobile} alt="element" id='elements'/>
             </div>
 
           </div>
@@ -123,7 +126,7 @@ export default function AboutUs() {
             spaceBetween={0}
             loop={true}
             autoplay={{
-              delay: 9000,
+              delay: 10000,
               disableOnInteraction: false
             }}
             modules={[Autoplay]}
