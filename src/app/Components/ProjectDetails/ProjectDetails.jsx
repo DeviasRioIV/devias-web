@@ -8,7 +8,7 @@ import {AppContext} from '../../AppContext'
 import './ProjectDetails.scss'
 import Card from './Card/Card'
 
-export default function ProjectDetails({customerView}) {
+export default function ProjectDetails({customerView, page}) {
 
   // Global State
   const {state} = React.useContext(AppContext)
@@ -86,14 +86,17 @@ export default function ProjectDetails({customerView}) {
       </div>
 
       {/* Buttons */}
-      <div className='see-all'>
-        <Link to='/our-customers'>
-          See all projects
-        </Link>
-      </div>
+      {
+        !page &&
+        <div className='see-all'>
+          <Link to='/our-customers'>
+            See all projects
+          </Link>
+        </div>
+      }
 
       {/* Lets this comment until know what they want to do with this functionality */}
-      {/* {visibleProjects < projectsList.length && (
+      {page && visibleProjects < projectsList.length && (
         <div id='container-button-spinner'>
           {
             !loading
@@ -101,7 +104,7 @@ export default function ProjectDetails({customerView}) {
               : <div className='icon-container'> <i className='fa-solid fa-circle-notch fa-spin' /> </div>
           }
         </div>
-      )} */}
+      )}
     </>
   )
 
