@@ -1,6 +1,8 @@
 // External modules
 import React from 'react'
 import emailjs from '@emailjs/browser'
+import { GrLocation } from "react-icons/gr";
+import { MdOutlineEmail } from "react-icons/md";
 
 // Internal modules
 import './ContactForm.scss'
@@ -228,7 +230,7 @@ export default function ContactForm ({home}){
               <input
                 className={`${!allFieldsValid ? 'form-empty' : ''}`}
                 type='submit'
-                value={isLoading ? 'Sending...' : 'Send'}
+                value={isLoading ? 'Sending...' : 'Submit'}
                 disabled={!allFieldsValid}
               />
             </div>
@@ -236,6 +238,9 @@ export default function ContactForm ({home}){
 
           <div className="location-data">
             <br />
+            <span>
+              <GrLocation />
+            </span>
             <p>San Martín 1496, 5800</p>
             <p>Rio Cuarto, Córdoba</p>
             <p className="country">
@@ -248,6 +253,9 @@ export default function ContactForm ({home}){
             </p>
             <br />
             <br />
+            <span>
+              <MdOutlineEmail />
+            </span>
             <p>hola@devias.ar</p>
           </div>
         </div>
