@@ -1,7 +1,6 @@
 // External modules
 import React from 'react'
 import {useParams} from 'react-router'
-import { GrReactjs } from "react-icons/gr";
 
 // Internal modules
 import './Customer.scss'
@@ -85,7 +84,7 @@ export default function Costumer() {
         <section className='highlighted-project'>
           <div className='container'>
             <h2>
-              Check out our projects.
+              OTHER PROJECTS
             </h2>
             <ProjectDetails customerView={isInCustomerView} />
           </div>
