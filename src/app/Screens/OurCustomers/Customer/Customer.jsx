@@ -1,6 +1,7 @@
 // External modules
 import React from 'react'
 import {useParams} from 'react-router'
+import { GrReactjs } from "react-icons/gr";
 
 // Internal modules
 import './Customer.scss'
@@ -8,6 +9,7 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Card from 'Components/ProjectDetails/Card/Card'
+import TechStack from 'Components/TechStack/TechStack';
 import {AppContext} from '../../../AppContext'
 
 export default function Costumer() {
@@ -63,36 +65,22 @@ export default function Costumer() {
               <div className='customer-logo'>
                 <img src={customer['img-logo']} alt={customer.name} />
               </div>
-              <p>
-                {customer['long-description']}
-              </p>
+              {
+                customer['project-description'].map((desc, index) => (
+                  <div key={index} className='project-description'>
+                    {desc['title'] ? <h3 className='description-title' >{desc['title']}</h3> : ''}
+                    <p>
+                      {desc['description']}
+                    </p>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </section>
         {/* Section stech */}
-        <section className='tech-stack'>
-          <div className='container'>
-            <div className='contain-tech'>
-              <div className='tech-title'>
-                <h2>
-                  Tech stack.
-                </h2>
-              </div>
-              <div className='container-tech-card'>
-                {
-                  customer['tech-stack'].map((tech, ind) => (
-                    <div key={ind} className='tech-card'>
-                      <img src={tech['tech-img']} alt={tech['tech-name']} />
-                      <p>
-                        {tech['tech-name']}
-                      </p>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        </section>
+        <TechStack tech_stack={customer['tech-stack']} />
+
         {/* Section projects */}
         <section className='highlighted-project'>
           <div className='container'>

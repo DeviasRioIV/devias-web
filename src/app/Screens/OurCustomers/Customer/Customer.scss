@@ -43,23 +43,6 @@
       .contain-content {
         width: 100%;
 
-        .customer-logo {
-          display: flex;
-          justify-content: center;
-          margin-top: 3rem;
-          img {
-            max-height: 300px;
-            max-width: 100%;
-            vertical-align: bottom;
-          }
-        }
-
-        p {
-          margin-top: 0;
-          margin-bottom: 1rem;
-          white-space: pre-wrap;
-        }
-
         .customer-page {
           display: flex;
           justify-content: center;
@@ -71,6 +54,38 @@
             vertical-align: bottom;
           }
         }
+
+        .customer-logo {
+          display: flex;
+          justify-content: center;
+          margin: 5rem 0;
+          img {
+            max-height: 300px;
+            max-width: 100%;
+            vertical-align: bottom;
+          }
+        }
+
+        .project-description {
+          width: 50%;
+          margin-bottom: 50px;
+
+          .description-title {
+            font-family: 'Roboto-bold';
+            font-weight: 700;
+            font-size: 2.25rem;
+            color: $dark-black;
+            margin-bottom: 30px;
+          }
+
+          p {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $light-black;
+          }
+        }
+
       }
     }
   }
