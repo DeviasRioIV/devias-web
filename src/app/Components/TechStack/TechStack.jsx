@@ -1,31 +1,21 @@
 // External modules
 import React from 'react'
+import { SiReact, SiJavascript, SiCss3, SiDelphi, SiFigma, SiRubyonrails } from "react-icons/si";
 
 // Internal modules
 import './TechStack.scss'
 
-// Assets
-import logoReact from 'Assets/techStack/logo-react.png'
-import logoRails from 'Assets/techStack/logo-rails.png'
-import logoFigma from 'Assets/techStack/logo-figma.png'
-
-export default function TechStack() {
+export default function TechStack({tech_stack}) {
 
   // Constants
-  const tech = [
-    {
-      name: 'React',
-      img: logoReact.src
-    },
-    {
-      name: 'Figma',
-      img: logoFigma.src
-    },
-    {
-      name: 'Rails',
-      img: logoRails.src
-    }
-  ]
+  const techIcons = {
+    React: <SiReact />,
+    Javascript: <SiJavascript />,
+    CSS: <SiCss3 />,
+    Delphi: <SiDelphi />,
+    Figma: <SiFigma />,
+    'Ruby on Rails': <SiRubyonrails />
+  }
 
   return (
     <section className='tech-stack'>
@@ -33,16 +23,18 @@ export default function TechStack() {
         <div className='contain-tech'>
           <div className='tech-title'>
             <h2>
-              Tech stack.
+              TECH STACK
             </h2>
           </div>
           <div className='contain-tech-card'>
             {
-              tech.map((tech, index) => (
+              tech_stack.map((tech, index) => (
                 <div key={index} className='tech-card'>
-                  <img src={tech.img} alt={tech.name} />
+                  <span>
+                    {techIcons[tech['tech-name']]}
+                  </span>
                   <p>
-                    {tech.name}
+                    {tech['tech-name']}
                   </p>
                 </div>
               ))
