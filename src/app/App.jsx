@@ -18,6 +18,8 @@ export default function App() {
   // Mount effect
   React.useEffect(() => {
 
+    getLanguage()
+
     // Update loading
     setLoading(false)
 
@@ -27,6 +29,12 @@ export default function App() {
     document.body.appendChild(configFA)
 
   }, [])
+
+  const getLanguage = async () => {
+    const res = await fetch('/api/language/english')
+
+    console.log(res)
+  }
 
   return (
 
