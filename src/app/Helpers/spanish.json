@@ -60,7 +60,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           }
         ]
@@ -84,7 +83,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           }
         ]
@@ -120,7 +118,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           }
         ]
@@ -148,7 +145,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -184,11 +180,9 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           },
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -216,7 +210,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -256,7 +249,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -296,15 +288,12 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           },
           {
-            "tech-img": "/Assets/techStack/javascript-logo.png",
             "tech-name": "Javascript"
           },
           {
-            "tech-img": "/Assets/techStack/logo-css.png",
             "tech-name": "CSS"
           }
         ]
@@ -332,15 +321,12 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           },
           {
-            "tech-img": "/Assets/techStack/javascript-logo.png",
             "tech-name": "Javascript"
           },
           {
-            "tech-img": "/Assets/techStack/logo-css.png",
             "tech-name": "CSS"
           }
         ]
@@ -380,7 +366,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-delphi.png",
             "tech-name": "Delphi"
           }
         ]
@@ -416,7 +401,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -448,7 +432,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -484,7 +467,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -528,11 +510,9 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-react.png",
             "tech-name": "React"
           },
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -568,7 +548,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
@@ -612,7 +591,6 @@
         ],
         "tech-stack": [
           {
-            "tech-img": "/Assets/techStack/logo-rails.png",
             "tech-name": "Ruby on Rails"
           }
         ]
