@@ -6,13 +6,10 @@ import Image from 'next/image'
 import './OurWay.scss'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
-import ItemStep from 'Components/ItemStep/ItemStep'
 import Footer from 'Components/Footer/Footer'
-import TechStack from 'Components/TechStack/TechStack'
 import {AppContext} from '../../AppContext'
+import ServicesCard from 'Components/ServicesCard/ServicesCard'
 
-// Assets
-import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
 
 export default function OurWay() {
 
@@ -61,56 +58,20 @@ export default function OurWay() {
           <div className='container-steps'>
             {
               language.our_way.items.map((item, index) => (
-                <>
+                <div key={index} className='step'>
                   <h3>0{item.number}</h3>
                   <h2>{item.name}</h2>
                   <p>{item.description}</p>
-                </>
+                </div>
               ))
             }
             {/* <ItemStep /> */}
           </div>
         </div>
       </section>
+
       {/* Section cards */}
-      <section className='services-card'>
-        <div className='container'>
-          <div className='container-dev-card'>
-            <div id="title-and-services">
-              <h2>
-                {language.home.services.development.title}
-              </h2>
-              <div className='services-card'>
-                <div id="services">
-                  <div className='services-description' id="design-side">
-                    <h3>
-                      {language.home.services.development.service_1}
-                    </h3>
-                    <h3>
-                      {language.home.services.development.service_2}
-                    </h3>
-                    <h3>
-                      {language.home.services.development.service_3}
-                    </h3>
-                  </div>
-                  <div className='services-description' id="dev-side">
-                    <h3>
-                      {language.home.services.development.service_4}
-                    </h3>
-                    <h3>
-                      {language.home.services.development.service_5}
-                    </h3>
-                    <h3>
-                      {language.home.services.development.service_6}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image src={servicesElement} alt='services' id='services-element'/>
-          </div>
-        </div>
-      </section>
+      <ServicesCard services={language.home.services.development}/>
 
       {/* Section projects */}
       <section className='highlighted-project'>

@@ -4,19 +4,21 @@ import Image from 'next/image'
 
 // Internal modules
 import './Home.scss'
+import {AppContext} from '../../AppContext'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
-import {AppContext} from '../../AppContext'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import InsigniaClutch from 'Components/InsigniaClutch/InsigniaClutch'
+import ServicesCard from 'Components/ServicesCard/ServicesCard'
+
+// Assets
 import bannerImg from 'Assets/Images/home_banner.jpg'
 import firstElementDesktop from 'Assets/Utilities/Elements/desktop/home-hero/left-elements.png'
 import firstElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-left-elements.png'
 import secondElementDesktop from 'Assets/Utilities/Elements/desktop/home-hero/right-elements.png'
 import secondElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-top-right-element.png'
 import bottomElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-bottom-right-element.png'
-import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
 
 export default function Home() {
 
@@ -82,44 +84,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='services-card'>
-        <div className='container'>
-          <div className='container-dev-card'>
-            <div id="title-and-services">
-              <h2>
-                {language.services.development.title}
-              </h2>
-              <div className='services-card'>
-                <div id="services">
-                  <div className='services-description' id="design-side">
-                    <h3>
-                      {language.services.development.service_1}
-                    </h3>
-                    <h3>
-                      {language.services.development.service_2}
-                    </h3>
-                    <h3>
-                      {language.services.development.service_3}
-                    </h3>
-                  </div>
-                  <div className='services-description' id="dev-side">
-                    <h3>
-                      {language.services.development.service_4}
-                    </h3>
-                    <h3>
-                      {language.services.development.service_5}
-                    </h3>
-                    <h3>
-                      {language.services.development.service_6}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image src={servicesElement} alt='services' id='services-element'/>
-          </div>
-        </div>
-      </section>
+      {/* Section cards */}
+      <ServicesCard services={language.services.development}/>
 
       <section className='highlighted-project container'>
 

@@ -5,9 +5,17 @@
 
   .section-title {
     .container {
+      @media (max-width: 503px) {
+        max-width: 100%;
+      }
+
       .main-title {
         margin: 100px 0 64px 0;
-        
+
+        @media (max-width: 991px){
+          margin: 5rem 0;
+        }
+
         h1 {
           font-family: 'Univia Pro';
           font-size: 4rem;
@@ -21,16 +29,22 @@
           @media (max-width: 991px) {
             font-size: 3rem;
           }
+
+          @media (max-width: 768px) {
+            font-size: 2.5rem;
+          }
         }
 
         h2 {
           font-family: 'Roboto';
-          color: $dark-blue;
+          font-weight: 400;
           font-size: 3rem;
-        }
+          margin-top: 30px;
+          color: $dark-blue;
 
-        @media (max-width: 991px){
-          margin: 5rem 0;
+          @media (max-width: 768px) {
+            font-size: 2rem;
+          }
         }
       }
     }

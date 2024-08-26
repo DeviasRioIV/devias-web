@@ -62,12 +62,12 @@ export default function ContactUs() {
       <section className='section-title'>
         <div className='container'>
           <div className='main-title'>
-            <h5>
-              {language.title}
-            </h5>
             <h1>
               {language.sub_title}
             </h1>
+            <h5>
+              {language.title}
+            </h5>
           </div>
         </div>
       </section>
