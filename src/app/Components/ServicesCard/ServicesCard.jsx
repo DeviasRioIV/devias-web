@@ -1,13 +1,15 @@
+// External modules
 import React from 'react'
 import Image from 'next/image'
 
-// Assets
+// Internal modules
 import './ServicesCard.scss'
+
+// Assets
 import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
 
 export default function ServicesCard({ services }) {
 
-  console.log(services)
   return (
     <section id='services-card'>
         <div className='container'>
