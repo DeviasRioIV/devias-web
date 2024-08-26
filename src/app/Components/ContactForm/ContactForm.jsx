@@ -126,13 +126,15 @@ export default function ContactForm ({home}){
       <div className='form-container container'>
 
         {/* Title formularie */}
-        <div className='contact-title'>
-
-          <h2>
-            LET'S TALK
-          </h2>
-
-        </div>
+        {
+          home && (
+            <div className='contact-title'>
+              <h2>
+                LET'S TALK
+              </h2>
+            </div>
+          )
+        }
 
         <div id="container-form-location">
 
