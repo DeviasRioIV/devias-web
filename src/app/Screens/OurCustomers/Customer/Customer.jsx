@@ -1,7 +1,6 @@
 // External modules
 import React from 'react'
 import {useParams} from 'react-router'
-import Image from 'next/image'
 
 // Internal modules
 import './Customer.scss'
@@ -59,11 +58,11 @@ export default function Costumer() {
         <section className='post-content'>
           <div className='container'>
             <div className='contain-content'>
-              <div className='customer-page'>
-                <Card img={customer.img_page} alt={customer.name} background={customer.color}/>
+              <div className='customer-page' style={{background: customer.color}}>
+                <img src={customer.img_page} alt={customer.name} />
               </div>
               <div className='customer-logo'>
-                <Image src={customer.img_logo} alt={customer.name} />
+                <img src={customer.img_logo} alt={customer.name} />
               </div>
               {
                 customer.project_description.map((desc, index) => (

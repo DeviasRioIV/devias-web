@@ -10,10 +10,6 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: 503px) {
-      max-width: 100%;
-    }
-
     .container-dev-card{
       width: 100%;
       min-height: 366px;

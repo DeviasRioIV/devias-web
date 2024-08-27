@@ -87,12 +87,13 @@ export default function Home() {
       {/* Section cards */}
       <ServicesCard services={language.services.development}/>
 
-      <section className='highlighted-project container'>
-
+      <section className='highlighted-project '>
+        <div className='container'>
           <h2>
             {language.projects_section.title}
           </h2>
           <ProjectDetails />
+        </div>
 
       </section>
 

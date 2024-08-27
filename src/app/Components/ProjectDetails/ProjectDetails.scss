@@ -30,9 +30,9 @@
       }
 
       /* Media Thumbnail */
-      /* @media (max-width: 991px) {
-        width: 50%;
-      }*/
+      @media (max-width: 768px) {
+        padding: 0;
+      }
 
     }
   
@@ -81,14 +81,12 @@
   justify-content: center;
 
   a {
+    margin-top: 25px;
     padding: 0.6rem 0.9rem;
     color: $dark-blue;
     font-family: 'Roboto-Bold';
-    font-size: 1.2rem;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: ease 0.2s;
+    font-size: 1.5rem;
+    transition: .2s ease;
 
     &:hover {
       opacity: .9;

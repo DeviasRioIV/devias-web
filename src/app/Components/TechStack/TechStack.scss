@@ -14,6 +14,10 @@
           color: $dark-black;
           font-weight: 500;
           margin-bottom: 0.5rem;
+
+          @media (max-width: 768px) {
+            font-size: 2.25rem;
+          }
         }
       }
       .contain-tech-card{

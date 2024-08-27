@@ -5,10 +5,6 @@
 
   .section-title {
     .container {
-      @media (max-width: 503px) {
-        max-width: 100%;
-      }
-
       .main-title {
         margin: 100px 0 64px 0;
 
@@ -59,13 +55,13 @@
         .contain-info {
           .project-title {
             a {
-              color: #333;
+              /* color: $dark-black; */
             }
           }
 
           .project-description {
             p {
-              color: #828282;
+              color: $light-black
             }
           }
 

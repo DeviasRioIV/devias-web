@@ -47,11 +47,12 @@
           display: flex;
           justify-content: center;
           margin: 0 0 1rem;
+          padding: 0px 23%;
+          border-radius: 10px;
 
           img {
             height: auto;
-            max-width: 100%;
-            vertical-align: bottom;
+            width: 100%;
           }
         }
 
@@ -70,12 +71,20 @@
           width: 50%;
           margin-bottom: 50px;
 
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+
           .description-title {
             font-family: 'Roboto-bold';
             font-weight: 700;
             font-size: 2.25rem;
             color: $dark-black;
             margin-bottom: 30px;
+
+            @media (max-width: 988px) {
+              font-size: 2rem;
+            }
           }
 
           p {
@@ -83,6 +92,10 @@
             font-weight: 400;
             font-size: 1.5rem;
             color: $light-black;
+
+            @media (max-width: 988px) {
+              font-size: 1.2rem;
+            }
           }
         }
 
@@ -94,15 +107,18 @@
   .highlighted-project {
     margin: 8rem 0 6rem 0;
 
-    h2 {
-      font-family: 'Univia Pro';
-      font-size: 3rem;
-      color: $dark-black;
-      font-weight: 400;
-
-      @media (max-width: 991px) {
-        font-size: 2.5rem;
+    .container {
+      h2 {
+        font-family: 'Univia Pro';
+        font-size: 3rem;
+        color: $dark-black;
+        font-weight: 400;
+  
+        @media (max-width: 768px) {
+          font-size: 2.25rem;
+        }
       }
     }
+
   }
 }

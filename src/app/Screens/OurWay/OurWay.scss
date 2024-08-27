@@ -6,9 +6,6 @@
   .primary-section {
 
     .container {
-      @media (max-width: 503px) {
-        max-width: 100%;
-      }
 
       .main-title {
         margin: 100px 0 64px 0;
@@ -68,10 +65,6 @@
     animation: slideDown 1.5s ease-in-out;
 
     .container {
-      @media (max-width: 503px) {
-        max-width: 100%;
-      }
-
       .container-steps{
         width: 50%;
 

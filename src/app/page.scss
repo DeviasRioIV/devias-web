@@ -123,6 +123,11 @@ button:focus-visible {
   @media (min-width: 1400px) {
     max-width: 1320px;
   }
+
+  /* Responsive */
+  @media (max-width: 503px) {
+    max-width: 100%;
+  }
 }
 
 @media (prefers-color-scheme: light) {
