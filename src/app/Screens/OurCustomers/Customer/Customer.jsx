@@ -1,6 +1,7 @@
 // External modules
 import React from 'react'
 import {useParams} from 'react-router'
+import Image from 'next/image'
 
 // Internal modules
 import './Customer.scss'
@@ -59,17 +60,17 @@ export default function Costumer() {
           <div className='container'>
             <div className='contain-content'>
               <div className='customer-page'>
-                <Card img={customer['img-page']} alt={customer.name} background={customer.color}/>
+                <Card img={customer.img_page} alt={customer.name} background={customer.color}/>
               </div>
               <div className='customer-logo'>
-                <img src={customer['img-logo']} alt={customer.name} />
+                <Image src={customer.img_logo} alt={customer.name} />
               </div>
               {
-                customer['project-description'].map((desc, index) => (
+                customer.project_description.map((desc, index) => (
                   <div key={index} className='project-description'>
-                    {desc['title'] ? <h3 className='description-title' >{desc['title']}</h3> : ''}
+                    {desc.title ? <h3 className='description-title' >{desc.title}</h3> : ''}
                     <p>
-                      {desc['description']}
+                      {desc.description}
                     </p>
                   </div>
                 ))
@@ -78,7 +79,7 @@ export default function Costumer() {
           </div>
         </section>
         {/* Section stech */}
-        <TechStack tech_stack={customer['tech-stack']} />
+        <TechStack tech_stack={customer.tech_stack} />
 
         {/* Section projects */}
         <section className='highlighted-project'>

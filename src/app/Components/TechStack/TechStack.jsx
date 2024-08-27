@@ -31,10 +31,10 @@ export default function TechStack({tech_stack}) {
               tech_stack.map((tech, index) => (
                 <div key={index} className='tech-card'>
                   <span>
-                    {techIcons[tech['tech-name']]}
+                    {techIcons[tech.tech_name]}
                   </span>
                   <p>
-                    {tech['tech-name']}
+                    {tech.tech_name}
                   </p>
                 </div>
               ))

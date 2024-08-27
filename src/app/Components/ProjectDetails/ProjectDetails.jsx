@@ -63,7 +63,7 @@ export default function ProjectDetails({customerView, page}) {
             {/* Link image */}
             <div className='project-thumbnail'>
               <Link to={`/customer/${project.code}`}>
-                <Card img={project['img-page']} alt={project.name} background={project.color}/>
+                <Card img={project.img_page} alt={project.name} background={project.color}/>
               </Link>
             </div>
             {/* Contain Info */}
