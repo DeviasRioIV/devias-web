@@ -12,6 +12,10 @@
           margin: 5rem 0;
         }
 
+        @media (max-width: 768px){
+          margin: 2rem 0;
+        }
+
         h1 {
           font-family: 'Univia Pro';
           font-size: 4rem;

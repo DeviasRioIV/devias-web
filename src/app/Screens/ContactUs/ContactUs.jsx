@@ -8,6 +8,7 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import MyMapComponent from 'Components/Map/MyMapComponent'
+import ElementTitle from 'Components/ElementTitle/ElementTitle'
 import {AppContext} from '../../AppContext'
 
 export default function ContactUs() {
@@ -62,6 +63,7 @@ export default function ContactUs() {
       <section className='section-title'>
         <div className='container'>
           <div className='main-title'>
+          <ElementTitle page={'contact'}/>
             <h1>
               {language.title}
             </h1>

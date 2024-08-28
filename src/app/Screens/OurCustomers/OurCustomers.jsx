@@ -8,6 +8,7 @@ import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import {AppContext} from '../../AppContext'
+import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 export default function OurCustomers() {
 
@@ -42,6 +43,7 @@ export default function OurCustomers() {
       <section className='section-title'>
         <div className='container'>
           <div className='main-title'>
+            <ElementTitle page={'project'}/>
             <h1>
               {language.title}
             </h1>

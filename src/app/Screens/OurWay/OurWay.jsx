@@ -9,6 +9,7 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import {AppContext} from '../../AppContext'
 import ServicesCard from 'Components/ServicesCard/ServicesCard'
+import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 
 export default function OurWay() {
@@ -43,6 +44,7 @@ export default function OurWay() {
       <section className='primary-section'>
         <div className='container'>
           <div className='main-title'>
+            <ElementTitle page={'ourWorkflow'}/>
             <h1>
               {language.home.services.title_section}
             </h1>
