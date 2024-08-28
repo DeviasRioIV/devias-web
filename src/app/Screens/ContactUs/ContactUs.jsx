@@ -63,10 +63,10 @@ export default function ContactUs() {
         <div className='container'>
           <div className='main-title'>
             <h1>
-              {language.sub_title}
+              {language.title}
             </h1>
             <h5>
-              {language.title}
+              {language.sub_title}
             </h5>
           </div>
         </div>
