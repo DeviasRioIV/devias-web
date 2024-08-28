@@ -1,5 +1,6 @@
 // External modules
 import React from 'react'
+import Image from 'next/image'
 import {useParams} from 'react-router'
 
 // Internal modules
@@ -7,9 +8,11 @@ import './Customer.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
-import Card from 'Components/ProjectDetails/Card/Card'
 import TechStack from 'Components/TechStack/TechStack';
 import {AppContext} from '../../../AppContext'
+
+// Assets
+import imgPlaceholder from 'Assets/Projects/no-thumbnail.webp'
 
 export default function Costumer() {
 
@@ -59,10 +62,10 @@ export default function Costumer() {
           <div className='container'>
             <div className='contain-content'>
               <div className='customer-page' style={{background: customer.color}}>
-                <img src={customer.img_page} alt={customer.name} />
+                <Image src={customer.img_page ? customer.img_page : imgPlaceholder} alt={customer.name} width={300} height={300}/>
               </div>
               <div className='customer-logo'>
-                <img src={customer.img_logo} alt={customer.name} />
+                <img src={customer.img_logo ? customer.img_logo : ''} alt={customer.name} />
               </div>
               {
                 customer.project_description.map((desc, index) => (
