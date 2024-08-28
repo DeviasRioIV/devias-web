@@ -42,7 +42,7 @@
         "color":"#DD3636",
         "name": "Bucked Up",
         "img_logo": "/Assets/Projects/BuckedUp/logo.webp",
-        "img_page": "/Assets/Projects/BuckedUp/project-view.png",
+        "img_page": "/Assets/Projects/BuckedUp/project-view.webp",
         "description": "Plataforma ecommerce para venta de productos fitness, aplicación móvil para embajadores de marca, disponible para android y iOS y plataforma Bootcamp para clientes.",
         "project_description": [
           {
@@ -69,7 +69,7 @@
         "color":"#EDC14F",
         "name": "Mi Osfatun",
         "img_logo": "/Assets/Projects/MiOsfatun/logo-normal.svg",
-        "img_page": "/Assets/Projects/MiOsfatun/project-view.png",
+        "img_page": "/Assets/Projects/MiOsfatun/project-view.webp",
         "description": "Aplicación móvil para afiliados de mutual médica destinada a realizar distintos trámites, disponible para android y iOS.",
         "project_description": [
           {
@@ -92,7 +92,7 @@
         "color":"#00006C",
         "name": "Portal ODS",
         "img_logo": "/Assets/Projects/ODS/logo.png",
-        "img_page": "/Assets/Projects/ODS/project-view.png",
+        "img_page": "/Assets/Projects/ODS/project-view.webp",
         "description": "Plataforma web diseñada para demostrar el compromiso de un gobierno con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas.",
         "project_description": [
           {
@@ -127,7 +127,7 @@
         "color":"#00C800",
         "name": "Presupuesto Participativo",
         "img_logo": "/Assets/Projects/PresupuestoParticipativo/logo.png",
-        "img_page": "/Assets/Projects/PresupuestoParticipativo/project-view.png",
+        "img_page": "/Assets/Projects/PresupuestoParticipativo/project-view.webp",
         "description": "Plataforma de Votación y Escrutinio de Presupuesto Participativo Ciudadano",
         "project_description": [
           {
@@ -154,7 +154,7 @@
         "color":"#995EF8",
         "name": "Mi Text",
         "img_logo": "/Assets/Projects/Mitext/logo.png",
-        "img_page": "/Assets/Projects/Mitext/project-view.png",
+        "img_page": "/Assets/Projects/Mitext/project-view.webp",
         "description": "Plataforma web que permite planificar, crear y ejecutar campañas de SMS de manera eficiente y personalizada.",
         "project_description": [
           {
@@ -192,7 +192,7 @@
         "color":"#80BCE5",
         "name": "Jovenes +16",
         "img_logo": "/Assets/Projects/jovenes/logo.png",
-        "img_page": "/Assets/Projects/jovenes/project-view.png",
+        "img_page": "/Assets/Projects/jovenes/project-view.webp",
         "description": "Sistema de control de acceso que facilita la regulación y seguridad de la entrada de menores de edad a eventos.",
         "project_description": [
           {
@@ -219,7 +219,7 @@
         "color":"#00006C",
         "name": "BabyCarePro",
         "img_logo": "/Assets/Projects/sistemaEmbarazos/logo.png",
-        "img_page": "/Assets/Projects/sistemaEmbarazos/project-view.png",
+        "img_page": "/Assets/Projects/sistemaEmbarazos/project-view.webp",
         "description": "Plataforma web integral y personalizada para el seguimiento y la gestión de embarazos.",
         "project_description": [
           {
@@ -258,7 +258,7 @@
         "color":"#00006C",
         "name": "Dipres",
         "img_logo": "/Assets/Projects/Dipres/logo.png",
-        "img_page": "/Assets/Projects/Dipres/project-view.png",
+        "img_page": "/Assets/Projects/Dipres/project-view.webp",
         "description": "Plataforma web que simplifica la gestión del gasto prestacional y proporciona una serie de características clave que mejoran la calidad de la atención médica y optimiza el uso de los recursos financieros.",
         "project_description": [
           {
@@ -302,8 +302,8 @@
         "code": "quickup",
         "color":"#00006C",
         "name": "Quickup",
-        "img_logo": "/logo-amarillo.svg",
-        "img_page": "/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "Plataforma de gestión de citas y turnos médicos diseñada con un enfoque en la comodidad y la accesibilidad.",
         "project_description": [
           {
@@ -336,7 +336,7 @@
         "color":"#00006C",
         "name": "Meditec",
         "img_logo": "/Assets/Projects/Meditec/logo.png",
-        "img_page": "/Assets/Projects/Meditec/project-view.png",
+        "img_page": "/Assets/Projects/Meditec/project-view.webp",
         "description": "Software de gestión diseñado específicamente para atender las complejas necesidades administrativas, financieras y contables de las Obras Sociales y Gerenciadoras de Salud",
         "project_description": [
           {
@@ -375,7 +375,7 @@
         "color":"#00006C",
         "name": "Ditrack",
         "img_logo": "/Assets/Projects/ditrack/logo.png",
-        "img_page": "/Assets/Projects/ditrack/project-view.png",
+        "img_page": "/Assets/Projects/ditrack/project-view.webp",
         "description": "Plataforma avanzada y eficiente para la gestión y el seguimiento de su ganado en campos y fincas ganaderas",
         "project_description": [
           {
@@ -410,7 +410,7 @@
         "color":"#00006C",
         "name": "Gremitec",
         "img_logo": "/Assets/Projects/gremiotec/logo.png",
-        "img_page": "/Assets/Projects/gremiotec/project-view.png",
+        "img_page": "/Assets/Projects/gremiotec/project-view.webp",
         "description": "Plataforma web diseñada para simplificar y fortalecer la administración de sindicatos de trabajadores.",
         "project_description": [
           {
@@ -440,8 +440,8 @@
         "code": "namhut",
         "color":"#00006C",
         "name": "Namhut",
-        "img_logo": "/logo-amarillo.svg",
-        "img_page": "/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "plataforma E-commerce para petshop",
         "project_description": [
           {
@@ -475,8 +475,8 @@
         "code": "SIGCon",
         "color":"#00006C",
         "name": "SIGCon",
-        "img_logo": "/logo-amarillo.svg",
-        "img_page": "/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": " Plataforma de Gestión de Cobranzas para Gobiernos",
         "project_description": [
           {
@@ -522,7 +522,7 @@
         "color":"#00006C",
         "name": "Recuperos",
         "img_logo": "/Assets/Projects/recupero/logo.png",
-        "img_page": "/Assets/Projects/recupero/project-view.png",
+        "img_page": "/Assets/Projects/recupero/project-view.webp",
         "description": "Plataforma web diseñada para simplificar y fortalecer la administración de sindicatos de trabajadores.",
         "project_description": [
           {
@@ -556,8 +556,8 @@
         "code": "sistema-de-gestión-de-ordene-para-organización-gremial-ATUNPA",
         "color":"#00006C",
         "name": "Sistema de Gestión de Órdenes para Organización Gremial ATUNPA",
-        "img_logo": "/logo-amarillo.svg",
-        "img_page": "/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "Sistema de gestión desarrollado para la Organización Gremial ATUNPA",
         "project_description": [
           {
@@ -632,8 +632,8 @@
     ] 
   },
   "contact": {
-    "title": "— Contacto",
-    "sub_title": "Conocénos"
+    "title": "Contacto",
+    "sub_title": "Hablemos"
   },
   "footer": {
     "links":{

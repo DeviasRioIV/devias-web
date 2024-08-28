@@ -42,7 +42,7 @@
         "color":"#DD3636",
         "name": "Bucked Up",
         "img_logo": "/Assets/Projects/BuckedUp/logo.webp",
-        "img_page": "/Assets/Projects/BuckedUp/project-view.png",
+        "img_page": "/Assets/Projects/BuckedUp/project-view.webp",
         "description": "E-commerce platform for selling fitness products, a mobile app for brand ambassadors, available for both Android and iOS, and a Bootcamp platform for customers.",
         "project_description": [
           {
@@ -69,7 +69,7 @@
         "color":"#EDC14F",
         "name": "Mi Osfatun",
         "img_logo": "/Assets/Projects/MiOsfatun/logo-normal.svg",
-        "img_page": "/Assets/Projects/MiOsfatun/project-view.png",
+        "img_page": "/Assets/Projects/MiOsfatun/project-view.webp",
         "description": "Mobile app for mutual medical affiliates designed for handling various procedures, available for Android and iOS.",
         "project_description": [
           {
@@ -92,7 +92,7 @@
         "color":"#00006C",
         "name": "Portal ODS",
         "img_logo": "/Assets/Projects/ODS/logo.png",
-        "img_page": "/Assets/Projects/ODS/project-view.png",
+        "img_page": "/Assets/Projects/ODS/project-view.webp",
         "description": "A web platform designed to showcase a government's commitment to the United Nations Sustainable Development Goals (SDGs) Agenda.",
         "project_description": [
           {
@@ -127,7 +127,7 @@
         "color":"#00C800",
         "name": "Presupuesto Participativo",
         "img_logo": "/Assets/Projects/PresupuestoParticipativo/logo.png",
-        "img_page": "/Assets/Projects/PresupuestoParticipativo/project-view.png",
+        "img_page": "/Assets/Projects/PresupuestoParticipativo/project-view.webp",
         "description": "Participatory Citizen Budget Voting and Tallying Platform",
         "project_description": [
           {
@@ -154,7 +154,7 @@
         "color":"#995EF8",
         "name": "Mi Text",
         "img_logo": "/Assets/Projects/Mitext/logo.png",
-        "img_page": "/Assets/Projects/Mitext/project-view.png",
+        "img_page": "/Assets/Projects/Mitext/project-view.webp",
         "description": "A web platform that allows for efficient and personalized planning, creation, and execution of SMS campaigns.",
         "project_description": [
           {
@@ -192,7 +192,7 @@
         "color":"#80BCE5 ",
         "name": "Jovenes +16",
         "img_logo": "/Assets/Projects/jovenes/logo.png",
-        "img_page": "/Assets/Projects/jovenes/project-view.png",
+        "img_page": "/Assets/Projects/jovenes/project-view.webp",
         "description": "Access control system that facilitates the regulation and security of minors' entry to events.",
         "project_description": [
           {
@@ -219,7 +219,7 @@
         "color":"#00006C",
         "name": "BabyCarePro",
         "img_logo": "/Assets/Projects/sistemaEmbarazos/logo.png",
-        "img_page": "/Assets/Projects/sistemaEmbarazos/project-view.png",
+        "img_page": "/Assets/Projects/sistemaEmbarazos/project-view.webp",
         "description": "Comprehensive and personalized web platform for the tracking and management of pregnancies.",
         "project_description": [
           {
@@ -258,7 +258,7 @@
         "color":"#00006C",
         "name": "Dipres",
         "img_logo": "/Assets/Projects/Dipres/logo.png",
-        "img_page": "/Assets/Projects/Dipres/project-view.png",
+        "img_page": "/Assets/Projects/Dipres/project-view.webp",
         "description": "Web platform that simplifies the management of benefit expenditure and provides a set of key features that enhance the quality of healthcare and optimize the use of financial resources.",
         "project_description": [
           {
@@ -302,8 +302,8 @@
         "code": "quickup",
         "color":"#00006C",
         "name": "Quickup",
-        "img_logo": "/Assets/logo-amarillo.svg",
-        "img_page": "/Assets/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "Medical appointment and scheduling management platform designed with a focus on convenience and accessibility.",
         "project_description": [
           {
@@ -336,7 +336,7 @@
         "color":"#00006C",
         "name": "Meditec",
         "img_logo": "/Assets/Projects/Meditec/logo.png",
-        "img_page": "/Assets/Projects/Meditec/project-view.png",
+        "img_page": "/Assets/Projects/Meditec/project-view.webp",
         "description": "Management software specifically designed to address the complex administrative, financial, and accounting needs of Social Works and Health Management Organizations.",
         "project_description": [
           {
@@ -375,7 +375,7 @@
         "color":"#00006C",
         "name": "Ditrack",
         "img_logo": "/Assets/Projects/ditrack/logo.png",
-        "img_page": "/Assets/Projects/ditrack/project-view.png",
+        "img_page": "/Assets/Projects/ditrack/project-view.webp",
         "description": "Advanced and efficient platform for the management and tracking of your livestock in fields and cattle farms.",
         "project_description": [
           {
@@ -410,7 +410,7 @@
         "color":"#00006C",
         "name": "Gremitec",
         "img_logo": "/Assets/Projects/gremiotec/logo.png",
-        "img_page": "/Assets/Projects/gremiotec/project-view.png",
+        "img_page": "/Assets/Projects/gremiotec/project-view.webp",
         "description": "Web platform designed to simplify and strengthen the administration of workers' unions.",
         "project_description": [
           {
@@ -440,8 +440,8 @@
         "code": "namhut",
         "color":"#00006C",
         "name": "Namhut",
-        "img_logo": "/Assets/logo-amarillo.svg",
-        "img_page": "/Assets/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "Pet shop e-commerce platform.",
         "project_description": [
           {
@@ -475,8 +475,8 @@
         "code": "SIGCon",
         "color":"#00006C",
         "name": "SIGCon",
-        "img_logo": "/Assets/logo-amarillo.svg",
-        "img_page": "/Assets/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "Government Debt Collection Management Platform.",
         "project_description": [
           {
@@ -522,7 +522,7 @@
         "color":"#00006C",
         "name": "Recuperos",
         "img_logo": "/Assets/Projects/recupero/logo.png",
-        "img_page": "/Assets/Projects/recupero/project-view.png",
+        "img_page": "/Assets/Projects/recupero/project-view.webp",
         "description": "A web platform designed to simplify and strengthen the administration of workers' unions.",
         "project_description": [
           {
@@ -556,8 +556,8 @@
         "code": "sistema-de-gestión-de-ordene-para-organización-gremial-ATUNPA",
         "color":"#00006C",
         "name": "Sistema de Gestión de Órdenes para Organización Gremial ATUNPA",
-        "img_logo": "/Assets/logo-amarillo.svg",
-        "img_page": "/Assets/logo-amarillo.svg",
+        "img_logo": "",
+        "img_page": "",
         "description": "Management system developed for the labor organization ATUNPA.",
         "project_description": [
           {
@@ -632,8 +632,8 @@
     ]
   },
   "contact": {
-    "title" : "— Contact",
-    "sub_title":"Get to know us"
+    "title" : "Contact Us",
+    "sub_title":"Let's talk"
   },
   "footer": {
     "links": {
