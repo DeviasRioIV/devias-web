@@ -1,13 +1,11 @@
 // External modules
 import React from 'react'
-import {Wrapper, Status} from '@googlemaps/react-wrapper'
 
 // Internal modules
 import './ContactUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
-import MyMapComponent from 'Components/Map/MyMapComponent'
 import ElementTitle from 'Components/ElementTitle/ElementTitle'
 import {AppContext} from '../../AppContext'
 
@@ -18,11 +16,6 @@ export default function ContactUs() {
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.contact)
-
-  // Constants
-  const API_KEY = 'AIzaSyA7u1yNadkGlTvSssNK6UbIIC9L0FumQto'
-  const center = {lat: -33.118228960761876, lng: -64.36557908465618}
-  const zoom = 16
 
   React.useEffect(() => {
 
@@ -38,22 +31,6 @@ export default function ContactUs() {
     setLanguage(state.language_content.contact)
 
   }, [state.language])
-
-  // Methods
-  const render = (status) => {
-
-    switch (status) {
-
-      case Status.LOADING:
-        return null
-      case Status.FAILURE:
-        return null
-      case Status.SUCCESS:
-        return <MyMapComponent center={center} zoom={zoom} />
-
-    }
-
-  }
 
   return (
     <main id='contact-us'>
@@ -78,9 +55,6 @@ export default function ContactUs() {
 
         {/* Contact form */}
         <ContactForm />
-
-        {/* Google maps */}
-        <Wrapper apiKey={API_KEY} render={render} />
 
       </section>
 

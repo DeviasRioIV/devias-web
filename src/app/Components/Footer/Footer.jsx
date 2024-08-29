@@ -34,7 +34,7 @@ export default function Footer() {
               <NavLink to='/about-us'> {language.about_us} </NavLink>
             </li>
             <li>
-              <NavLink to='/our-customers'> {language.projects} </NavLink>
+              <NavLink to='/our-projects'> {language.projects} </NavLink>
             </li>
             <li>
               <NavLink to='/our-way'> {language.our_workflow} </NavLink>

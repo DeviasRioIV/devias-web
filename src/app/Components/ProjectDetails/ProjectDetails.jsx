@@ -15,7 +15,7 @@ export default function ProjectDetails({customerView, page}) {
 
   // Local State
   const [projectsList, setProjectsList]       = React.useState(state.language_content.our_customers.projects)
-  const [visibleProjects, setVisibleProjects] = React.useState(3)
+  const [visibleProjects, setVisibleProjects] = React.useState(page ? 6 : 3)
   const [loading, setLoading]                 = React.useState(false)
 
   // Constants
@@ -89,7 +89,7 @@ export default function ProjectDetails({customerView, page}) {
       {
         !page &&
         <div className='see-all'>
-          <Link to='/our-customers'>
+          <Link to='/our-projects'>
             See all projects
           </Link>
         </div>
