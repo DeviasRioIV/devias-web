@@ -57,14 +57,14 @@ export default function Header() {
     // Remove loader
     setTimeout(() => {
 
-      const loader = document.getElementById('loader')
+      const loader = document?.getElementById('loader')
       loader?.classList.add('leave')
       setTimeout(() => {
 
         loader?.remove()
 
       }, 200)
-      document.body.classList.remove('loading')
+      document?.body.classList.remove('loading')
 
     }, 300)
 
@@ -140,7 +140,7 @@ export default function Header() {
               <li>
                 <NavLink
                   className={({isActive, isPending}) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-customers'
+                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-projects'
                 > {language.projects}
                 </NavLink>
               </li>

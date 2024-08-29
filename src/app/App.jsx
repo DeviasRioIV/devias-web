@@ -18,23 +18,24 @@ export default function App() {
   // Mount effect
   React.useEffect(() => {
 
-    getLanguage()
+    // getLanguage()
+
 
     // Update loading
     setLoading(false)
 
     // Config fontAwesome
-    const configFA = document.createElement('script')
+    const configFA = document?.createElement('script')
     configFA.innerHTML = 'FontAwesomeConfig = { autoReplaceSvg: "nest"};'
-    document.body.appendChild(configFA)
+    document?.body.appendChild(configFA)
 
   }, [])
 
-  const getLanguage = async () => {
-    const res = await fetch('/api/language/english')
+  // const getLanguage = async () => {
+  //   const res = await fetch('/api/language/english')
 
-    console.log(res)
-  }
+  //   console.log(res)
+  // }
 
   return (
 

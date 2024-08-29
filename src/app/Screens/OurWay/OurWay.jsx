@@ -23,7 +23,7 @@ export default function OurWay() {
   // Scroll effect
   React.useEffect(() => {
 
-    const container = document.getElementById('our-way')
+    const container = document?.getElementById('our-way')
 
     container.scrollIntoView({behavior: 'smooth'})
 

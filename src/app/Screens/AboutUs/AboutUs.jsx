@@ -41,7 +41,7 @@ export default function AboutUs() {
   // Scroll Effect
   React.useEffect(() => {
 
-    const container = document.getElementById('about-us')
+    const container = document?.getElementById('about-us')
 
     container.scrollIntoView({behavior: 'smooth'})
 

@@ -31,7 +31,7 @@ export default function Costumer() {
   // Scroll effect
   React.useEffect(() => {
 
-    const container = document.getElementById('customer-single-page')
+    const container = document?.getElementById('customer-single-page')
 
     container.scrollIntoView({behavior: 'smooth'})
 

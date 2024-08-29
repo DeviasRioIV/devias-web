@@ -26,7 +26,7 @@ export default function ContactUs() {
 
   React.useEffect(() => {
 
-    const container = document.getElementById('contact-us')
+    const container = document?.getElementById('contact-us')
 
     container.scrollIntoView({behavior: 'smooth'})
 

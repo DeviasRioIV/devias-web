@@ -53,7 +53,7 @@ export default function Home() {
   // Scroll effect
   React.useEffect(() => {
 
-    const container = document.getElementById('home')
+    const container = document?.getElementById('home')
 
     container.scrollIntoView({behavior: 'smooth'})
 
