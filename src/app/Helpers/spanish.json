@@ -189,7 +189,7 @@
       },
       {
         "code": "jovenes-+16",
-        "color":"#80BCE5",
+        "color":"#DD3636",
         "name": "Jovenes +16",
         "img_logo": "/Assets/Projects/jovenes/logo.png",
         "img_page": "/Assets/Projects/jovenes/project-view.webp",
@@ -216,7 +216,7 @@
       },
       {
         "code": "babycarepro",
-        "color":"#00006C",
+        "color":"#DD3636",
         "name": "BabyCarePro",
         "img_logo": "/Assets/Projects/sistemaEmbarazos/logo.png",
         "img_page": "/Assets/Projects/sistemaEmbarazos/project-view.webp",
@@ -255,7 +255,7 @@
       },
       {
         "code": "dipres",
-        "color":"#00006C",
+        "color":"#80BCE5",
         "name": "Dipres",
         "img_logo": "/Assets/Projects/Dipres/logo.png",
         "img_page": "/Assets/Projects/Dipres/project-view.webp",
@@ -300,7 +300,7 @@
       },
       {
         "code": "quickup",
-        "color":"#00006C",
+        "color":"#EDC14F",
         "name": "Quickup",
         "img_logo": "",
         "img_page": "",
@@ -333,7 +333,7 @@
       },
       {
         "code": "meditec",
-        "color":"#00006C",
+        "color":"#995EF8",
         "name": "Meditec",
         "img_logo": "/Assets/Projects/Meditec/logo.png",
         "img_page": "/Assets/Projects/Meditec/project-view.webp",
@@ -372,7 +372,7 @@
       },
       {
         "code": "ditrack",
-        "color":"#00006C",
+        "color":"#00C800",
         "name": "Ditrack",
         "img_logo": "/Assets/Projects/ditrack/logo.png",
         "img_page": "/Assets/Projects/ditrack/project-view.webp",
@@ -438,7 +438,7 @@
       },
       {
         "code": "namhut",
-        "color":"#00006C",
+        "color":"#DD3636",
         "name": "Namhut",
         "img_logo": "",
         "img_page": "",
@@ -473,7 +473,7 @@
       },
       {
         "code": "SIGCon",
-        "color":"#00006C",
+        "color":"#EDC14F",
         "name": "SIGCon",
         "img_logo": "",
         "img_page": "",
@@ -519,7 +519,7 @@
       },
       {
         "code": "recuperos",
-        "color":"#00006C",
+        "color":"#80BCE5",
         "name": "Recuperos",
         "img_logo": "/Assets/Projects/recupero/logo.png",
         "img_page": "/Assets/Projects/recupero/project-view.webp",
@@ -554,7 +554,7 @@
       },
       {
         "code": "sistema-de-gestión-de-ordene-para-organización-gremial-ATUNPA",
-        "color":"#00006C",
+        "color":"#995EF8",
         "name": "Sistema de Gestión de Órdenes para Organización Gremial ATUNPA",
         "img_logo": "",
         "img_page": "",
