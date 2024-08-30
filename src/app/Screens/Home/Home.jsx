@@ -21,27 +21,27 @@ import secondElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home
 import bottomElementMobile from 'Assets/Utilities/Elements/mobile/home-hero/home-bottom-right-element.png'
 
 export default function Home() {
+  // Global state
+  const {state} = React.useContext(AppContext)
 
-  const [width, setWidth] = React.useState(window.innerWidth);
+  // Local state
+  const [width, setWidth] = React.useState(window.innerWidth)
+  const [isShaking, setIsShaking] = React.useState(false)
+  const [language, setLanguage] = React.useState(state.language_content.home)
+    
 
   React.useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 
     // Cleanup event listener when component unmounts
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
-
-  // Global state
-  const {state} = React.useContext(AppContext)
-
-  // Local state
-  const [language, setLanguage] = React.useState(state.language_content.home)
 
   // Language Effect
   React.useEffect(() => {
@@ -50,12 +50,36 @@ export default function Home() {
 
   }, [state.language])
 
-  // Scroll effect
+  // Scroll & animation effect
   React.useEffect(() => {
 
     const container = document?.getElementById('home')
 
     container.scrollIntoView({behavior: 'smooth'})
+
+    const humanizing = document.getElementById('humanizing')
+    const digital = document.getElementById('digital')
+    if (humanizing) {
+
+      humanizing.style.animation = 'slideRight 0.6s ease-in-out'
+      digital.style.animation = 'slideRight 0.6s ease-in-out'
+      setTimeout(() => {
+
+        humanizing.style.animation = 'scaleUpAndDown 0.6s ease-in-out'
+        digital.style.animation = 'shake 0.4s ease-in-out'
+
+      }, [1000])
+    }
+
+    const interval = setInterval(() => {
+      setIsShaking(true)
+
+      setTimeout(() => {
+        setIsShaking(false)
+      }, 400)
+    }, 6000)
+
+    return () => clearInterval(interval)
 
   }, [])
 
@@ -68,8 +92,9 @@ export default function Home() {
         <div className='container'>
           <div className="container-titles">
             <h1 id='humanizing'>Humanizing</h1>
-            <h1 id='digital'>
-              Digital <br />
+            <h1 id='digital' className={isShaking ? 'shaking' : ''}>
+              Digital 
+              <br />
               Products
             </h1>
           </div>

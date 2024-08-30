@@ -32,6 +32,7 @@ export default function AboutUs() {
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.about_us)
+  const [isShaking, setIsShaking] = React.useState(false)
 
   // Constants
   const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
@@ -44,6 +45,31 @@ export default function AboutUs() {
     const container = document?.getElementById('about-us')
 
     container.scrollIntoView({behavior: 'smooth'})
+
+    const weAre = document.getElementById('we-are')
+    const devias = document.getElementById('devias')
+  
+    if (weAre) {
+
+      weAre.style.animation = 'slideRight 0.6s ease-in-out'
+      devias.style.animation = 'slideRight 0.6s ease-in-out'
+      setTimeout(() => {
+
+        weAre.style.animation = 'scaleUpAndDown 0.6s ease-in-out'
+        devias.style.animation = 'shake 0.4s ease-in-out'
+
+      }, [1000])
+    }
+    
+    const interval = setInterval(() => {
+      setIsShaking(true)
+
+      setTimeout(() => {
+        setIsShaking(false)
+      }, 400)
+    }, 6000)
+
+    return () => clearInterval(interval)
 
   }, [])
 
@@ -64,7 +90,7 @@ export default function AboutUs() {
             <h1 id='we-are'>
               We are
             </h1>
-            <h2 id='devias'>
+            <h2 id='devias' className={isShaking ? 'shaking' : ''}>
               DEVIAS
             </h2>
           </div>
@@ -82,8 +108,8 @@ export default function AboutUs() {
             <Image src={mapArgentina} alt="element" id='map'/>
 
             <div id='container-title-hello'>
-              <h3 id='hello'>Hello from</h3>
-              <h3 id='argentina'>ARGENTINA</h3>
+              <h3 id='hello' className={isShaking ? 'shaking' : ''} >Hello from</h3>
+              <h3 id='argentina' className={isShaking ? 'shaking' : ''}>ARGENTINA</h3>
               <Image src={width > 596 ? flagElementsDesktop : flagElementsMobile} alt="element" id='elements'/>
             </div>
 
