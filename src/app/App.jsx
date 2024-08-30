@@ -21,6 +21,7 @@ export default function App() {
     // Update loading
     setLoading(false)
 
+    
     // Config fontAwesome
     if (typeof document !== 'undefined') {
       const configFA = document?.createElement('script')
