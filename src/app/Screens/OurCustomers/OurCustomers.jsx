@@ -21,9 +21,13 @@ export default function OurCustomers() {
   // Effects
   React.useEffect(() => {
 
-    const container = document?.getElementById('our-customers')
+    if (typeof document !== 'undefined'){
 
-    container.scrollIntoView({behavior: 'smooth'})
+      const container = document?.getElementById('our-customers')
+  
+      container.scrollIntoView({behavior: 'smooth'})
+    }
+
 
   }, [])
 

@@ -74,66 +74,71 @@ export default function InsigniaClutch({title}) {
 
     let cant = 0
 
-    const width = window.innerWidth
+    if (typeof window !== 'undefined') {
 
-    if (width >= 992) {
+      const width = window.innerWidth
 
-      cant = 7
-
-    } else if (width >= 768) {
-
-      cant = 5
-
-    } else if (width >= 576) {
-
-      cant = 3
-
-    } else if (width >= 460) {
-
-      cant = 2
-
-    } else {
-
-      cant = 1
-
-    }
-
-    const handleResize = () => {
-
-      let cantResize = 0
-      const newWidth = window.innerWidth
-
-      if (newWidth >= 992) {
-
-        cantResize = 5
-
-      } else if (newWidth >= 768) {
-
-        cantResize = 4
-
-      } else if (newWidth >= 576) {
-
-        cantResize = 3
-
-      } else if (newWidth >= 460) {
-
-        cantResize = 2
-
+      if (width >= 992) {
+  
+        cant = 7
+  
+      } else if (width >= 768) {
+  
+        cant = 5
+  
+      } else if (width >= 576) {
+  
+        cant = 3
+  
+      } else if (width >= 460) {
+  
+        cant = 2
+  
       } else {
-
-        cantResize = 1
-
+  
+        cant = 1
+  
       }
-
-      setCantInsignia(cantResize)
+  
+      const handleResize = () => {
+  
+        let cantResize = 0
+        const newWidth = window.innerWidth
+  
+        if (newWidth >= 992) {
+  
+          cantResize = 5
+  
+        } else if (newWidth >= 768) {
+  
+          cantResize = 4
+  
+        } else if (newWidth >= 576) {
+  
+          cantResize = 3
+  
+        } else if (newWidth >= 460) {
+  
+          cantResize = 2
+  
+        } else {
+  
+          cantResize = 1
+  
+        }
+  
+        setCantInsignia(cantResize)
+  
+      }
+  
+      window.addEventListener('resize', handleResize)
+  
+      setCantInsignia(cant)
+  
+      return () => window.removeEventListener('resize', handleResize)
 
     }
 
-    window.addEventListener('resize', handleResize)
-
-    setCantInsignia(cant)
-
-    return () => window.removeEventListener('resize', handleResize)
 
   }, [])
 

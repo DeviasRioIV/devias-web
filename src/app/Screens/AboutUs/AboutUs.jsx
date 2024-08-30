@@ -33,32 +33,41 @@ export default function AboutUs() {
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.about_us)
   const [isShaking, setIsShaking] = React.useState(false)
+  const [width, setWidth] = React.useState(null)
 
   // Constants
   const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
 
-  const width = window.innerWidth
-
   // Scroll Effect
   React.useEffect(() => {
+    if (typeof window !== 'undefined') {
 
-    const container = document?.getElementById('about-us')
+      setWidth(window.innerWidth)
 
-    container.scrollIntoView({behavior: 'smooth'})
+    }
 
-    const weAre = document.getElementById('we-are')
-    const devias = document.getElementById('devias')
+
+    if (typeof document !== 'undefined') {
+
+      const container = document?.getElementById('about-us')
+
+      container.scrollIntoView({behavior: 'smooth'})
   
-    if (weAre) {
+      const weAre = document.getElementById('we-are')
+      const devias = document.getElementById('devias')
+    
+      if (weAre) {
+  
+        weAre.style.animation = 'slideRight 0.6s ease-in-out'
+        devias.style.animation = 'slideRight 0.6s ease-in-out'
+        setTimeout(() => {
+  
+          weAre.style.animation = 'scaleUpAndDown 0.6s ease-in-out'
+          devias.style.animation = 'shake 0.4s ease-in-out'
+  
+        }, [1000])
+      }
 
-      weAre.style.animation = 'slideRight 0.6s ease-in-out'
-      devias.style.animation = 'slideRight 0.6s ease-in-out'
-      setTimeout(() => {
-
-        weAre.style.animation = 'scaleUpAndDown 0.6s ease-in-out'
-        devias.style.animation = 'shake 0.4s ease-in-out'
-
-      }, [1000])
     }
     
     const interval = setInterval(() => {
@@ -96,7 +105,7 @@ export default function AboutUs() {
           </div>
 
           <div id='placeholder'/>
-          <Image src={bannerImg} alt="banner" id='banner'/>
+          <Image priority src={bannerImg} alt="banner" id='banner'/>
           <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id='element-left'/>
           <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id='element-right'/>
         </div>

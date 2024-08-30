@@ -25,9 +25,11 @@ export default function App() {
     setLoading(false)
 
     // Config fontAwesome
-    const configFA = document?.createElement('script')
-    configFA.innerHTML = 'FontAwesomeConfig = { autoReplaceSvg: "nest"};'
-    document?.body.appendChild(configFA)
+    if (typeof document !== 'undefined') {
+      const configFA = document?.createElement('script')
+      configFA.innerHTML = 'FontAwesomeConfig = { autoReplaceSvg: "nest"};'
+      document?.body.appendChild(configFA)
+    }
 
   }, [])
 

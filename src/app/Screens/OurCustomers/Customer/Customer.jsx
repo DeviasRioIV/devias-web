@@ -31,9 +31,14 @@ export default function Costumer() {
   // Scroll effect
   React.useEffect(() => {
 
-    const container = document?.getElementById('customer-single-page')
+    if (typeof document !== 'undefined') {
 
-    container.scrollIntoView({behavior: 'smooth'})
+      const container = document?.getElementById('customer-single-page')
+  
+      container.scrollIntoView({behavior: 'smooth'})
+
+    }
+
 
   }, [client])
 

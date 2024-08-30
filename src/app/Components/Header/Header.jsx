@@ -56,15 +56,16 @@ export default function Header() {
 
     // Remove loader
     setTimeout(() => {
-
-      const loader = document?.getElementById('loader')
-      loader?.classList.add('leave')
-      setTimeout(() => {
-
-        loader?.remove()
-
-      }, 200)
-      document?.body.classList.remove('loading')
+      if (typeof document !== 'undefined') {
+        const loader = document?.getElementById('loader')
+        loader?.classList.add('leave')
+        setTimeout(() => {
+  
+          loader?.remove()
+  
+        }, 200)
+        document?.body.classList.remove('loading')
+      }
 
     }, 300)
 

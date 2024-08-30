@@ -1,6 +1,5 @@
 // External modules
 import React from 'react'
-
 import {createBrowserRouter} from 'react-router-dom'
 
 // Internal modules

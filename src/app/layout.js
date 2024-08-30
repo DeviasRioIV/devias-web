@@ -1,5 +1,5 @@
-import { Roboto } from "next/font/google";
-import "./globals.css";
+import { Roboto } from "next/font/google"
+import "./globals.css"
 
 
 const roboto = Roboto({
@@ -11,12 +11,12 @@ const roboto = Roboto({
 export const metadata = {
   title: "Devias",
   description: "Humanizing Digital Products",
-};
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.variable}>{children}</body>
     </html>
-  );
+  )
 }

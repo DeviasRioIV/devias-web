@@ -31,16 +31,20 @@ export default function Home() {
     
 
   React.useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
 
-    window.addEventListener('resize', handleResize)
-
-    // Cleanup event listener when component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize)
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWidth(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleResize)
+  
+      // Cleanup event listener when component unmounts
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }  
     }
+    
   }, [])
 
   // Language Effect
@@ -53,33 +57,36 @@ export default function Home() {
   // Scroll & animation effect
   React.useEffect(() => {
 
-    const container = document?.getElementById('home')
+    if (typeof document !== 'undefined') {
 
-    container.scrollIntoView({behavior: 'smooth'})
-
-    const humanizing = document.getElementById('humanizing')
-    const digital = document.getElementById('digital')
-    if (humanizing) {
-
-      humanizing.style.animation = 'slideRight 0.6s ease-in-out'
-      digital.style.animation = 'slideRight 0.6s ease-in-out'
-      setTimeout(() => {
-
-        humanizing.style.animation = 'scaleUpAndDown 0.6s ease-in-out'
-        digital.style.animation = 'shake 0.4s ease-in-out'
-
-      }, [1000])
+      const container = document?.getElementById('home')
+  
+      container.scrollIntoView({behavior: 'smooth'})
+  
+      const humanizing = document.getElementById('humanizing')
+      const digital = document.getElementById('digital')
+      if (humanizing) {
+  
+        humanizing.style.animation = 'slideRight 0.6s ease-in-out'
+        digital.style.animation = 'slideRight 0.6s ease-in-out'
+        setTimeout(() => {
+  
+          humanizing.style.animation = 'scaleUpAndDown 0.6s ease-in-out'
+          digital.style.animation = 'shake 0.4s ease-in-out'
+  
+        }, [1000])
+      }
+  
+      const interval = setInterval(() => {
+        setIsShaking(true)
+  
+        setTimeout(() => {
+          setIsShaking(false)
+        }, 400)
+      }, 6000)
+  
+      return () => clearInterval(interval)
     }
-
-    const interval = setInterval(() => {
-      setIsShaking(true)
-
-      setTimeout(() => {
-        setIsShaking(false)
-      }, 400)
-    }, 6000)
-
-    return () => clearInterval(interval)
 
   }, [])
 
@@ -100,7 +107,7 @@ export default function Home() {
           </div>
 
           <div id='placeholder'/>
-          <Image src={bannerImg} alt="banner" id='banner'/>
+          <Image priority src={bannerImg} alt="banner" id='banner'/>
           <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id='element-left'/>
           <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id='element-right'/>
           {

@@ -14,21 +14,33 @@ import projectElementMobile     from 'Assets/Utilities/Elements/mobile/section-n
 
 export default function ElementTitle({page}) {
 
-  // Constant
-  const width = window.innerWidth
+  // Local state
+  const [width, setWidh] = React.useState(null)
+  const [elementMobile, setElementMobile] = React.useState(null)
 
-  const elementMobile = {
-    contact: contactElementMobile,
-    ourWorkflow: ourWorkflowElementMobile,
-    project: projectElementMobile
-  }
+  // Effect
+  React.useEffect(() => {
 
+    if (typeof window !== 'undefined') {
+
+      setWidh(window.innerWidth)
+      setElementMobile(
+        {
+          contact: contactElementMobile,
+          ourWorkflow: ourWorkflowElementMobile,
+          project: projectElementMobile
+        }
+      )
+
+    }
+
+  }, [])
   return (
     <>
       {
-        width <= 768 && (
+        width & width <= 768 && (
           <Image
-            src={elementMobile[page]}
+            src={elementMobile && elementMobile[page]}
             alt="element"
             width={500}
             height={300}
