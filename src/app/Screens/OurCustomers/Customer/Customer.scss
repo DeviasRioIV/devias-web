@@ -44,13 +44,16 @@
         width: 100%;
 
         .customer-page {
+          position: relative;
           display: flex;
           justify-content: center;
           margin: 0 0 1rem;
           padding: 0px 23%;
           border-radius: 10px;
+          min-height: 700px;
 
           img {
+            position: relative !important;
             height: auto;
             width: 100%;
           }

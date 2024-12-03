@@ -67,7 +67,7 @@ export default function Costumer() {
           <div className='container'>
             <div className='contain-content'>
               <div className='customer-page' style={{background: customer.color}}>
-                <Image src={customer.img_page ? customer.img_page : imgPlaceholder} alt={customer.name} width={300} height={300}/>
+                <Image src={customer.img_page ? customer.img_page : imgPlaceholder} alt={customer.name} fill/>
               </div>
               <div className='customer-logo'>
                 <img src={customer.img_logo ? customer.img_logo : ''} alt={customer.name} />
