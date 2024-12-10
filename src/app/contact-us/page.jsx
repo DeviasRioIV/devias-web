@@ -1,13 +1,15 @@
+'use client'
+
 // External modules
 import React from 'react'
 
 // Internal modules
-import './ContactUs.scss'
+import './contact-us.module.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import ElementTitle from 'Components/ElementTitle/ElementTitle'
-import {AppContext} from '../../AppContext'
+import {AppContext} from '../AppContext'
 
 export default function ContactUs() {
 
@@ -32,7 +34,7 @@ export default function ContactUs() {
 
     setLanguage(state.language_content.contact)
 
-  }, [state.language])
+  }, [state.language_content.contact])
 
   return (
     <main id='contact-us'>

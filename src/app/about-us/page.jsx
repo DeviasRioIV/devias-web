@@ -1,3 +1,5 @@
+'use client'
+
 // External Modules
 import React from 'react'
 import Image from 'next/image'
@@ -8,7 +10,7 @@ import {Autoplay} from 'swiper/modules'
 import './AboutUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import {AppContext} from '../../AppContext'
+import {AppContext} from '../AppContext'
 import bannerImg from 'Assets/Images/about-us-hero-bg.jpg'
 import firstElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png'
 import secondElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-right-elements.png'
@@ -87,7 +89,7 @@ export default function AboutUs() {
 
     setLanguage(state.language_content.about_us)
 
-  }, [state.language])
+  }, [state.language_content.about_us])
 
   return (
     <main id='about-us'>

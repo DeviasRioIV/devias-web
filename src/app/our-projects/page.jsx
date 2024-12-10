@@ -3,11 +3,11 @@
 import React from 'react'
 
 // Internal modules
-import './OurCustomers.scss'
+import './OurCustomers.module.scss'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import {AppContext} from '../../AppContext'
+import {AppContext} from '../AppContext'
 import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 export default function OurCustomers() {

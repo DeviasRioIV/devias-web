@@ -1,12 +1,12 @@
 // External Modules
 import React from 'react'
-import {Link, NavLink, useHref} from 'react-router-dom'
+import Link from 'next/link'
 
 // Internal modules
 import './Header.scss'
 import {RxHamburgerMenu, RxCross2} from 'react-icons/rx'
-import en from '../../Helpers/english.json'
-import es from '../../Helpers/spanish.json'
+import en from 'Helpers/english.json'
+import es from 'Helpers/spanish.json'
 
 // Assets
 import logo from 'Assets/Utilities/Logos/logo-devias.svg'
@@ -20,9 +20,6 @@ export default function Header() {
   // Local state
   const [isOpen, setIsOpen] = React.useState(false)
   const [language, setLanguage] = React.useState(state.language_content.header.links)
-
-  // Constants
-  const history = useHref()
 
   // Language Effect
   React.useEffect(() => {
@@ -69,7 +66,7 @@ export default function Header() {
 
     }, 300)
 
-  }, [history])
+  }, [])
 
   // Methods
   const handleMenuToggle = () => {
@@ -115,7 +112,7 @@ export default function Header() {
 
           {/* Logo */}
           <section className='container-header-logo'>
-            <Link to='/'>
+            <Link href='/'>
               <img src={logo.src} alt='dev-logo' />
             </Link>
           </section>
@@ -124,41 +121,41 @@ export default function Header() {
           <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
             <ul>
               <li>
-                <NavLink
+                <Link
                   className={({isActive, isPending}) =>
                     isPending ? 'pending' : isActive ? 'active' : ''}
-                  to='/'
+                  href='/'
                 > {language.home}
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink
+                <Link
                   className={({isActive, isPending}) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} to='/about-us'
+                    isPending ? 'pending' : isActive ? 'active' : ''} href='/about-us'
                 > {language.about_us}
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink
+                <Link
                   className={({isActive, isPending}) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-projects'
+                    isPending ? 'pending' : isActive ? 'active' : ''} href='/our-projects'
                 > {language.projects}
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink
+                <Link
                   className={({isActive, isPending}) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} to='/our-way'
+                    isPending ? 'pending' : isActive ? 'active' : ''} href='/our-way'
                 > {language.our_workflow}
-                </NavLink>
+                </Link>
               </li>
               <li className='line' />
               <li className='container-btn-contact'>
-                <NavLink
+                <Link
                   id='btn-contact' className={({isActive, isPending}) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} to='/contact-us'
+                    isPending ? 'pending' : isActive ? 'active' : ''} href='/contact-us'
                 > {language.contact}
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </section>

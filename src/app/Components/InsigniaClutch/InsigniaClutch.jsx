@@ -1,6 +1,6 @@
 // External modules
 import React from 'react'
-import {Link} from 'react-router-dom'
+import Link from 'next/link'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Autoplay, Pagination, Navigation} from 'swiper/modules'
 
@@ -166,7 +166,7 @@ export default function InsigniaClutch({title}) {
             {insignias.map((insignia, index) => (
               <SwiperSlide key={index}>
 
-                <Link to='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank'>
+                <Link href='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank'>
                   <img src={insignia.img} alt={insignia.title} />
                 </Link>
               </SwiperSlide>

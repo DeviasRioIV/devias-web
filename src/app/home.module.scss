@@ -1,9 +1,9 @@
 @import 'Sass/config.scss';
 
-#home{
+.home{
   background-color: #FAFAFA;
 
-  .primary-section{
+  .primary_section{
     color: #333;
 
     .container{
@@ -16,7 +16,7 @@
         width: auto;
       }
 
-      .container-titles{
+      .container_titles{
         position: absolute;
         top: 30%;
         left: 14%;
@@ -30,7 +30,7 @@
         h1 {
           color:#FFFFFF;
 
-          &#humanizing {
+          &.humanizing {
             font-size: 7rem;
             font-family: 'Maqueen Sans';
 
@@ -231,7 +231,7 @@
     }
   }
 
-  .highlighted-project{
+  .highlighted_project{
     width: 100%;
     padding: 5rem 0;
   

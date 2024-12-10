@@ -1,7 +1,9 @@
+'use client'
+
 // External Modules
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {useParams} from 'react-router'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import {AppContext} from '../../AppContext'
 
 // Internal modules
@@ -17,9 +19,22 @@ export default function ProjectDetails({customerView, page}) {
   const [projectsList, setProjectsList]       = React.useState(state.language_content.our_customers.projects)
   const [visibleProjects, setVisibleProjects] = React.useState(page ? 6 : 3)
   const [loading, setLoading]                 = React.useState(false)
+  const [client, setClient]                   = React.useState(null)
 
   // Constants
-  const {client} = useParams()
+  const router = useRouter()
+
+  React.useEffect(() => {
+
+    if (router.isReady) {
+
+      const { client } = router.query
+
+      setClient(client)
+
+    }
+
+  }, [router.isReady, router.query])
 
   React.useEffect(() => {
 
@@ -39,7 +54,7 @@ export default function ProjectDetails({customerView, page}) {
 
     }
 
-  }, [client, state.language])
+  }, [client, state.language_content.our_customers.projects, customerView])
 
   const showMore = () => {
 
@@ -62,14 +77,14 @@ export default function ProjectDetails({customerView, page}) {
           <div key={index} className='project-detail'>
             {/* Link image */}
             <div className='project-thumbnail'>
-              <Link to={`/customer/${project.code}`}>
+              <Link href={`/customer/${project.code}`}>
                 <Card img={project.img_page} alt={project.name} background={project.color}/>
               </Link>
             </div>
             {/* Contain Info */}
             <div className='contain-info'>
               <div className='project-title'>
-                <Link to={`/customer/${project.code}`}>
+                <Link href={`/customer/${project.code}`}>
                   {project.name}
                 </Link>
               </div>
@@ -89,7 +104,7 @@ export default function ProjectDetails({customerView, page}) {
       {
         !page &&
         <div className='see-all'>
-          <Link to='/our-projects'>
+          <Link href='/our-projects'>
             See all projects
           </Link>
         </div>

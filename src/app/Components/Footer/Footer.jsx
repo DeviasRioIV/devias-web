@@ -4,7 +4,7 @@ import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri"
 
 // Internal modules
 import './Footer.scss'
-import {Link, NavLink} from 'react-router-dom'
+import Link from 'next/link'
 import {AppContext} from '../../AppContext'
 
 // Assets
@@ -31,16 +31,16 @@ export default function Footer() {
         <div className='container-footer-links'>
           <ul>
             <li>
-              <NavLink to='/about-us'> {language.about_us} </NavLink>
+              <Link href='/about-us'> {language.about_us} </Link>
             </li>
             <li>
-              <NavLink to='/our-projects'> {language.projects} </NavLink>
+              <Link href='/our-projects'> {language.projects} </Link>
             </li>
             <li>
-              <NavLink to='/our-way'> {language.our_workflow} </NavLink>
+              <Link href='/our-way'> {language.our_workflow} </Link>
             </li>
             <li>
-              <NavLink to='/contact-us'> {language.contact} </NavLink>
+              <Link href='/contact-us'> {language.contact} </Link>
             </li>
           </ul>
         </div>
@@ -62,7 +62,7 @@ export default function Footer() {
           </a>
         </div>
         <div className='container-footer-logo'>
-          <Link to='/'>
+          <Link href='/'>
             <img src={logoDevias.src} alt='dev-logo' />
           </Link>
         </div>

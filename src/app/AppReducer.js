@@ -1,25 +1,21 @@
-import en from './Helpers/english.json'
+import en from '../Helpers/english.json'
 
-const initialState = {
+export const initialState = {
   language: 'en',
-  language_content: en
+  language_content: en,
 }
 
-export const reducer = [reduce, initialState]
-
-function reduce(prevState, action) {
+export function reducer(prevState, action) {
 
   switch (action.type) {
 
     case 'UPDATE_LANGUAGE':
-      prevState.language = action.data
-      break
+      return { ...prevState, language: action.data }
 
     case 'UPDATE_CONTENT_LANGUAGE':
-      prevState.language_content = action.data
+      return { ...prevState, language_content: action.data }
 
+    default:
+      return prevState
   }
-
-  return {...prevState}
-
 }
