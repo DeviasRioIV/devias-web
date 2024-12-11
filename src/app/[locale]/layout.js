@@ -1,13 +1,11 @@
-'use client'
-
 // External Modules
 import React from 'react'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
-import {AppProvider} from './AppContext'
-import {reducer, initialState} from './AppReducer'
 
 import { Roboto } from "next/font/google"
-import './styles/globals.css'
+import '../styles/globals.css'
 
 
 const roboto = Roboto({
@@ -16,12 +14,9 @@ const roboto = Roboto({
   variable: '--font-roboto'
 })
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
 
-  // Declare reducer
-  const [state, dispatch] = React.useReducer(reducer, initialState)
-
-  // Local state
+  /* // Local state
   const [loading, setLoading] = React.useState(true)
 
   // Mount effect
@@ -30,16 +25,22 @@ export default function RootLayout({ children }) {
     // Update loading
     setLoading(false)
 
-  }, [])
+  }, []) */
+
+  const locale = params?.locale || 'en'
+
+  const messages = await getMessages(locale)
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={roboto.variable}>
-        {!loading &&
-        <AppProvider value={{state, dispatch}}>
+
+        <NextIntlClientProvider messages={messages}>
+
           {children}
-        </AppProvider>
-        }
+
+        </NextIntlClientProvider>
+
       </body>
     </html>
   )

@@ -3,13 +3,9 @@ import React from 'react'
 
 //Internal modules
 import './ItemStep.scss'
-import {AppContext} from '../../AppContext'
 import {GoChevronDown} from 'react-icons/go'
 
 export default function ItemStep() {
-
-  // Global state
-  const {state} = React.useContext(AppContext)
 
   // Local state
   const [step, setStep] = React.useState(state.language_content.our_way.items)

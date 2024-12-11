@@ -4,34 +4,26 @@ import Link from 'next/link'
 
 // Internal modules
 import './Header.scss'
-import {RxHamburgerMenu, RxCross2} from 'react-icons/rx'
-import en from 'Helpers/english.json'
-import es from 'Helpers/spanish.json'
+import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
 
 // Assets
 import logo from 'Assets/Utilities/Logos/logo-devias.svg'
-import {AppContext} from '../../AppContext'
+import { usePathname, useRouter } from 'next/navigation'
 
-export default function Header() {
-
-  // Global State
-  const {state, dispatch} = React.useContext(AppContext)
+export default function Header( params ) {
 
   // Local state
   const [isOpen, setIsOpen] = React.useState(false)
-  const [language, setLanguage] = React.useState(state.language_content.header.links)
+  /* const [language, setLanguage] = React.useState(state.language_content.header.links) */
 
-  // Language Effect
-  React.useEffect(() => {
-
-    setLanguage(state.language_content.header.links)
-
-  }, [state.language])
+  const pathname = usePathname()
+  const router = useRouter()
+  const locale = params?.locale || 'en'
 
   // Effects
-  React.useEffect(() => {
+  /* React.useEffect(() => {
 
-    if(state.language === 'en') {
+    if (state.language === 'en') {
 
       dispatch({
         type: 'UPDATE_CONTENT_LANGUAGE',
@@ -47,7 +39,7 @@ export default function Header() {
 
     }
 
-  },[])
+  }, []) */
 
   React.useEffect(() => {
 
@@ -57,9 +49,9 @@ export default function Header() {
         const loader = document?.getElementById('loader')
         loader?.classList.add('leave')
         setTimeout(() => {
-  
+
           loader?.remove()
-  
+
         }, 200)
         document?.body.classList.remove('loading')
       }
@@ -77,33 +69,12 @@ export default function Header() {
 
   const selectLanguage = (lan) => {
 
-    if (lan === 'en') {
-
-      dispatch({
-        type: 'UPDATE_LANGUAGE',
-        data: 'en'
-      })
-
-      dispatch({
-        type: 'UPDATE_CONTENT_LANGUAGE',
-        data: en
-      })
-
-    } else {
-
-      dispatch({
-        type: 'UPDATE_LANGUAGE',
-        data: 'es'
-      })
-
-      dispatch({
-        type: 'UPDATE_CONTENT_LANGUAGE',
-        data: es
-      })
+    const newLanguage = lan
+    const path = pathname.split('/').slice(2).join('/')
+    router.push(`/${newLanguage}/${path}`)
 
     }
 
-  }
 
   return (
     <header>
@@ -111,18 +82,18 @@ export default function Header() {
         <div className='container'>
 
           {/* Logo */}
-          <section className='container-header-logo'>
+          {/* <section className='container-header-logo'>
             <Link href='/'>
               <img src={logo.src} alt='dev-logo' />
             </Link>
-          </section>
+          </section> */}
 
           {/* NavBar */}
-          <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
+          {/* <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
             <ul>
               <li>
                 <Link
-                  className={({isActive, isPending}) =>
+                  className={({ isActive, isPending }) =>
                     isPending ? 'pending' : isActive ? 'active' : ''}
                   href='/'
                 > {language.home}
@@ -130,21 +101,21 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  className={({isActive, isPending}) =>
+                  className={({ isActive, isPending }) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} href='/about-us'
                 > {language.about_us}
                 </Link>
               </li>
               <li>
                 <Link
-                  className={({isActive, isPending}) =>
+                  className={({ isActive, isPending }) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} href='/our-projects'
                 > {language.projects}
                 </Link>
               </li>
               <li>
                 <Link
-                  className={({isActive, isPending}) =>
+                  className={({ isActive, isPending }) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} href='/our-way'
                 > {language.our_workflow}
                 </Link>
@@ -152,32 +123,32 @@ export default function Header() {
               <li className='line' />
               <li className='container-btn-contact'>
                 <Link
-                  id='btn-contact' className={({isActive, isPending}) =>
+                  id='btn-contact' className={({ isActive, isPending }) =>
                     isPending ? 'pending' : isActive ? 'active' : ''} href='/contact-us'
                 > {language.contact}
                 </Link>
               </li>
             </ul>
-          </section>
+          </section> */}
 
           {/* Language Toggle */}
 
           <section className='language-toggle'>
-            <button className={`${state.language === 'en' ? 'active' : ''}`} onClick={() => selectLanguage('en')}>
+            <button className={`${locale === 'en' ? 'active' : ''}`} onClick={() => selectLanguage('en')}>
               EN
             </button>
             |
-            <button className={`${state.language === 'es' ? 'active' : ''}`} onClick={() => selectLanguage('es')}>
+            <button className={`${locale === 'es' ? 'active' : ''}`} onClick={() => selectLanguage('es')}>
               ES
             </button>
           </section>
 
           {/* Burguer button responsive */}
-          <button className='menu-toggle' onClick={handleMenuToggle}>
+          {/* <button className='menu-toggle' onClick={handleMenuToggle}>
             <span className='navbar-toggler-icon'>
               {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
             </span>
-          </button>
+          </button> */}
         </div>
       </nav>
     </header>

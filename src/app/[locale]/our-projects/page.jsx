@@ -12,9 +12,6 @@ import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 export default function OurCustomers() {
 
-  // Global state
-  const {state} = React.useContext(AppContext)
-
   // Local state
   const[language, setLanguage] = React.useState(state.language_content.our_customers)
 

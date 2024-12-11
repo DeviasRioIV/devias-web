@@ -9,15 +9,11 @@ import './OurWay.module.scss'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import {AppContext} from '../AppContext'
 import ServicesCard from 'Components/ServicesCard/ServicesCard'
 import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 
 export default function OurWay() {
-
-  // Global state
-  const {state} = React.useContext(AppContext)
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content)

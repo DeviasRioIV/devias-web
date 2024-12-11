@@ -10,7 +10,6 @@ import {Autoplay} from 'swiper/modules'
 import './AboutUs.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import {AppContext} from '../AppContext'
 import bannerImg from 'Assets/Images/about-us-hero-bg.jpg'
 import firstElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png'
 import secondElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-right-elements.png'
@@ -28,9 +27,6 @@ import imageTeam_4 from 'Assets/AboutUs_Carousel/about-us-ph-4.jpg'
 import imageTeam_5 from 'Assets/AboutUs_Carousel/about-us-ph-5.jpg'
 
 export default function AboutUs() {
-
-  // Global state
-  const {state} = React.useContext(AppContext)
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.about_us)

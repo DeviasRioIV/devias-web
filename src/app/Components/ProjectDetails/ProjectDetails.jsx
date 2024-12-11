@@ -4,16 +4,12 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import {AppContext} from '../../AppContext'
 
 // Internal modules
 import './ProjectDetails.scss'
 import Card from './Card/Card'
 
 export default function ProjectDetails({customerView, page}) {
-
-  // Global State
-  const {state} = React.useContext(AppContext)
 
   // Local State
   const [projectsList, setProjectsList]       = React.useState(state.language_content.our_customers.projects)

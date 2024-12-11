@@ -9,15 +9,11 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import TechStack from 'Components/TechStack/TechStack';
-import {AppContext} from '../../../AppContext'
 
 // Assets
 import imgPlaceholder from 'Assets/Projects/no-thumbnail.webp'
 
 export default function Costumer() {
-
-  // Global State
-  const {state} = React.useContext(AppContext)
 
   // Constants
   const [projects, setProjects] = React.useState(state.language_content.our_customers.projects)

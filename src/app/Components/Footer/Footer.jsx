@@ -5,15 +5,11 @@ import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri"
 // Internal modules
 import './Footer.scss'
 import Link from 'next/link'
-import {AppContext} from '../../AppContext'
 
 // Assets
 import logoDevias from 'Assets/Utilities/Logos/iso-eslogan.svg'
 
 export default function Footer() {
-
-  // Global state
-  const {state} = React.useContext(AppContext)
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.footer.links)

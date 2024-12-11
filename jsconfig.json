@@ -6,7 +6,7 @@
       "Assets/*": ["src/Assets/*"],
       "Components/*": ["src/app/Components/*"],
       "Router/*": ["src/Router/*"],
-      "Sass/*": ["src/Sass/*"],
+      "Sass/*": ["src/app/Sass/*"],
       "Helpers/*": ["src/Helpers/*"]
     }
   }

@@ -9,12 +9,8 @@ import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import ElementTitle from 'Components/ElementTitle/ElementTitle'
-import {AppContext} from '../AppContext'
 
 export default function ContactUs() {
-
-  // Global state
-  const {state} = React.useContext(AppContext)
 
   // Local state
   const [language, setLanguage] = React.useState(state.language_content.contact)
