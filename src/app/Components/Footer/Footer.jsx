@@ -1,5 +1,6 @@
 // External Modules
 import React from 'react'
+import { useTranslations } from 'next-intl'
 import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 // Internal modules
@@ -11,15 +12,8 @@ import logoDevias from 'Assets/Utilities/Logos/iso-eslogan.svg'
 
 export default function Footer() {
 
-  // Local state
-  const [language, setLanguage] = React.useState(state.language_content.footer.links)
-
-  // Language Effect
-  React.useEffect(() => {
-
-    setLanguage(state.language_content.footer.links)
-
-  }, [state.language])
+  // Constants
+  const links = useTranslations('footer.links')
 
   return (
     <footer>
@@ -27,16 +21,16 @@ export default function Footer() {
         <div className='container-footer-links'>
           <ul>
             <li>
-              <Link href='/about-us'> {language.about_us} </Link>
+              <Link href='/about-us'> {links('about_us')} </Link>
             </li>
             <li>
-              <Link href='/our-projects'> {language.projects} </Link>
+              <Link href='/our-projects'> {links('projects')} </Link>
             </li>
             <li>
-              <Link href='/our-way'> {language.our_workflow} </Link>
+              <Link href='/our-way'> {links('our_workflow')} </Link>
             </li>
             <li>
-              <Link href='/contact-us'> {language.contact} </Link>
+              <Link href='/contact-us'> {links('contact')} </Link>
             </li>
           </ul>
         </div>

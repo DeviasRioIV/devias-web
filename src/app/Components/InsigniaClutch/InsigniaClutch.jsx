@@ -146,7 +146,7 @@ export default function InsigniaClutch({title}) {
 
   return (
     <div id='insignia-carousel' className='container'>
-      <h2>{title}</h2>
+      <h2>{title('title')}</h2>
       <div className='container'>
         <div className='carousel-container'>
           <Swiper

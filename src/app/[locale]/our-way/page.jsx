@@ -3,6 +3,7 @@
 // External modules
 import React from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 // Internal modules
 import './OurWay.module.scss'
@@ -15,8 +16,8 @@ import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 export default function OurWay() {
 
-  // Local state
-  const [language, setLanguage] = React.useState(state.language_content)
+  const ourWayPage = useTranslations('our_way')
+  const items = ourWayPage.raw('items')
 
   // Scroll effect
   React.useEffect(() => {
@@ -24,20 +25,15 @@ export default function OurWay() {
     if (typeof document !== 'undefined') {
 
       const container = document?.getElementById('our-way')
-  
+
       container.scrollIntoView({behavior: 'smooth'})
-      
+
     }
 
 
   }, [])
 
-  // Language Effect
-  React.useEffect(() => {
-
-    setLanguage(state.language_content)
-
-  }, [state.language])
+  console.log(ourWayPage('items'));
 
   return (
     <main id='our-way'>
@@ -49,10 +45,10 @@ export default function OurWay() {
           <div className='main-title'>
             <ElementTitle page={'ourWorkflow'}/>
             <h1>
-              {language.home.services.title_section}
+              {ourWayPage('title_section')}
             </h1>
             <h5>
-              {language.home.services.label_section}
+              {ourWayPage('label_section')}
             </h5>
           </div>
         </div>
@@ -61,30 +57,28 @@ export default function OurWay() {
       <section className='process-steps'>
         <div className='container'>
           <div className='container-steps'>
-            {
-              language.our_way.items.map((item, index) => (
-                <div key={index} className='step'>
-                  <h3>0{item.number}</h3>
-                  <h2>{item.name}</h2>
-                  <p>{item.description}</p>
-                </div>
-              ))
-            }
+            {items.map((item, index) => (
+              <div key={index} className='step'>
+                <h3>0{item.number}</h3>
+                <h2>{item.name}</h2>
+                <p>{item.description}</p>
+              </div>
+            ))}
             {/* <ItemStep /> */}
           </div>
         </div>
       </section>
 
       {/* Section cards */}
-      <ServicesCard services={language.home.services.development}/>
+      <ServicesCard />
 
       {/* Section projects */}
       <section className='highlighted-project'>
         <div className='container'>
           <h2>
-            {language.home.projects_section.title}
+            {ourWayPage('projects_section.title')}
           </h2>
-          <ProjectDetails />
+          {/* <ProjectDetails /> */}
         </div>
       </section>
       <Footer />

@@ -14,8 +14,6 @@
       "legend": "We work along our customers to deliver the best solutions."
     },
     "services": {
-      "label_section":"This is how we work.",
-      "title_section":"Our Workflow",
       "development": {
         "title": "DESIGN & DEVELOPMENT",
         "service_1": "UX Research",
@@ -28,10 +26,11 @@
     },
     "technologies": {},
     "projects_section": {
-      "title": "PROJECTS",
-      "projects": {}
+      "title": "PROJECTS"
     },
-    "clutch": "AWARDS"
+    "clutch": {
+      "title": "AWARDS"
+    }
   },
   "our_customers": {
     "title":"PROJECTS",
@@ -603,6 +602,8 @@
     "card": "We are a small team with great strength. \n We work along our customers to deliver the best solutions for them, customized to their needs, by using the latest programming tech and the best team work tools."
   },
   "our_way":{
+    "label_section":"This is how we work.",
+    "title_section":"Our Workflow",
     "items": [
       {
         "name": "Research",
@@ -629,7 +630,10 @@
         "description": "Once the product is developed and launched with you approval, an iterative cycle of testing begins. This iteration process exists in all of the above stages, but it’s most imperative following the product launch.\nWhile gathering post-launch analytics of performance, we'll also revisit the business’ needs and ensure that the solution is meeting your expectations. Once we have all knowledge in hand, we can continue to work with you to further refine their products and create additional solutions.",
         "number": 5
       }
-    ]
+    ],
+    "projects_section": {
+      "title": "PROJECTS"
+    }
   },
   "contact": {
     "title" : "Contact Us",

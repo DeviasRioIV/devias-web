@@ -28,8 +28,9 @@ export default function Home() {
   const [width, setWidth] = React.useState(window.innerWidth)
   const [isShaking, setIsShaking] = React.useState(false)
 
-  const home = useTranslations('home')
-  const mainTitle= home('main_title')
+  const mainTitle = useTranslations('home.main_title')
+  const projects = useTranslations('home.projects_section')
+  const clutch = useTranslations('home.clutch')
 
   React.useEffect(() => {
 
@@ -92,7 +93,7 @@ export default function Home() {
 
       <Header />
 
-      {/* <section className={styles.primary_section}>
+      <section className={styles.primary_section}>
         <div className={styles.container}>
           <div className={styles.container_titles}>
             <h1 id='humanizing' className={styles.humanizing}>Humanizing</h1>
@@ -111,28 +112,28 @@ export default function Home() {
             width <= 768 ? <Image src={bottomElementMobile} alt="element" id='element-bottom'/> : ''
           }
         </div>
-      </section> */}
+      </section>
 
       {/* Section cards */}
-      {/* <ServicesCard services={language.services.development}/> */}
+      <ServicesCard />
 
-      {/* <section className={styles.highlighted_project}>
+      <section className={styles.highlighted_project}>
         <div className={styles.container}>
           <h2>
-            {t('projects_section')}
+            {projects('title')}
           </h2>
-          <ProjectDetails />
+          {/* <ProjectDetails /> */}
         </div>
 
-      </section> */}
+      </section>
 
       {/* Insignias Clutch */}
-      {/* <InsigniaClutch title={language.clutch} /> */}
+      <InsigniaClutch title={clutch} />
 
       {/* Contact form */}
-     {/*  <ContactForm home />
+      <ContactForm home />
 
-      <Footer /> */}
+      <Footer />
     </main>
   )
 }

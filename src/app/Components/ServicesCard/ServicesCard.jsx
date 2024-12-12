@@ -1,6 +1,7 @@
 // External modules
 import React from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 // Internal modules
 import './ServicesCard.scss'
@@ -8,7 +9,9 @@ import './ServicesCard.scss'
 // Assets
 import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
 
-export default function ServicesCard({ services }) {
+export default function ServicesCard() {
+
+  const services = useTranslations('home.services')
 
   return (
     <section id='services-card'>
@@ -16,30 +19,30 @@ export default function ServicesCard({ services }) {
           <div className='container-dev-card'>
             <div id="title-and-services">
               <h2>
-                {services.title}
+                {services('development.title')}
               </h2>
               <div className='services-card'>
                 <div id="services">
                   <div className='services-description' id="design-side">
                     <h3>
-                      {services.service_1}
+                      {services('development.service_1')}
                     </h3>
                     <h3>
-                      {services.service_2}
+                      {services('development.service_2')}
                     </h3>
                     <h3>
-                      {services.service_3}
+                      {services('development.service_3')}
                     </h3>
                   </div>
                   <div className='services-description' id="dev-side">
                     <h3>
-                      {services.service_4}
+                      {services('development.service_4')}
                     </h3>
                     <h3>
-                      {services.service_5}
+                      {services('development.service_5')}
                     </h3>
                     <h3>
-                      {services.service_6}
+                      {services('development.service_6')}
                     </h3>
                   </div>
                 </div>

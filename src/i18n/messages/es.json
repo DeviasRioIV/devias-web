@@ -14,8 +14,6 @@
       "legend": "Trabajamos junto a nuestros clientes para ofrecer las mejores soluciones."
     },
     "services": {
-      "label_section": "Así es como trabajamos",
-      "title_section": "Nuestro Proceso",
       "development": {
         "title": "Design & Development",
         "service_1": "Investigación UX",
@@ -28,10 +26,11 @@
     },
     "technologies": {},
     "projects_section": {
-      "title": "NUESTROS PROYECTOS",
-      "projects": {}
+      "title": "NUESTROS PROYECTOS"
     },
-    "clutch": "INSIGNIAS"
+    "clutch": {
+      "title": "INSIGNIAS"
+    }
   },
   "our_customers": {
     "title": "PROYECTOS",
@@ -603,6 +602,8 @@
     "card": "Somos un pequeño equipo con gran potencia. \n Trabajamos con nuestros clientes para brindarles las mejores soluciones, personalizar sus necesidades, utilizando siempre la ùltima tecnologìa en programaciòn y las mejores herramientas de trabajo en equipo "
   },
   "our_way": {
+    "label_section": "Así es como trabajamos",
+    "title_section": "Nuestro Proceso",
     "items": [
       {
         "name": "Investigación",
@@ -629,7 +630,10 @@
         "description": "Una vez que el producto se desarrolla y lanza con su aprobación, comienza un ciclo iterativo de pruebas. Este proceso de iteración existe en todas las etapas anteriores, pero es más imperativo después del lanzamiento del producto.\nMientras recopilamos análisis de rendimiento posteriores al lanzamiento, también revisaremos las necesidades del negocio y nos aseguraremos de que la solución cumpla con sus expectativas. Una vez que tengamos todo el conocimiento a mano, podremos continuar trabajando con usted para perfeccionar aún más sus productos y crear soluciones adicionales.",
         "number": 5
       }
-    ] 
+    ],
+    "projects_section": {
+      "title": "NUESTROS PROYECTOS"
+    }
   },
   "contact": {
     "title": "Contacto",

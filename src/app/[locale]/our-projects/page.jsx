@@ -1,19 +1,20 @@
 'use client'
+
 // External modules
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 // Internal modules
 import './OurCustomers.module.scss'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import {AppContext} from '../AppContext'
 import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 export default function OurCustomers() {
 
-  // Local state
-  const[language, setLanguage] = React.useState(state.language_content.our_customers)
+  // Constants
+  const projectsPage = useTranslations('our_customers')
 
   // Effects
   React.useEffect(() => {
@@ -21,19 +22,12 @@ export default function OurCustomers() {
     if (typeof document !== 'undefined'){
 
       const container = document?.getElementById('our-customers')
-  
+
       container.scrollIntoView({behavior: 'smooth'})
     }
 
 
   }, [])
-
-  // Language Effect
-  React.useEffect(() => {
-
-    setLanguage(state.language_content.our_customers)
-
-  }, [state.language])
 
   return (
     <main id='our-customers'>
@@ -46,10 +40,10 @@ export default function OurCustomers() {
           <div className='main-title'>
             <ElementTitle page={'project'}/>
             <h1>
-              {language.title}
+              {projectsPage('title')}
             </h1>
             <h2>
-              {language.label}
+              {projectsPage('label')}
             </h2>
           </div>
         </div>
@@ -58,7 +52,7 @@ export default function OurCustomers() {
       {/* Section projects */}
       <section className='container-project-detail'>
         <div className='container'>
-          <ProjectDetails page />
+          {/* <ProjectDetails page /> */}
         </div>
       </section>
       {/* Footer */}

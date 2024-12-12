@@ -25,16 +25,18 @@ import imageTeam_2 from 'Assets/AboutUs_Carousel/about-us-ph-2.jpg'
 import imageTeam_3 from 'Assets/AboutUs_Carousel/about-us-ph-3.jpg'
 import imageTeam_4 from 'Assets/AboutUs_Carousel/about-us-ph-4.jpg'
 import imageTeam_5 from 'Assets/AboutUs_Carousel/about-us-ph-5.jpg'
+import { useTranslations } from 'next-intl'
 
 export default function AboutUs() {
 
   // Local state
-  const [language, setLanguage] = React.useState(state.language_content.about_us)
   const [isShaking, setIsShaking] = React.useState(false)
   const [width, setWidth] = React.useState(null)
 
   // Constants
   const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
+
+  const aboutPage = useTranslations('about_us')
 
   // Scroll Effect
   React.useEffect(() => {
@@ -79,13 +81,6 @@ export default function AboutUs() {
     return () => clearInterval(interval)
 
   }, [])
-
-  // Language Effect
-  React.useEffect(() => {
-
-    setLanguage(state.language_content.about_us)
-
-  }, [state.language_content.about_us])
 
   return (
     <main id='about-us'>

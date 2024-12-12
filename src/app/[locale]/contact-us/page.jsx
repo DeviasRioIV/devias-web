@@ -2,6 +2,7 @@
 
 // External modules
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 // Internal modules
 import './contact-us.module.scss'
@@ -12,8 +13,8 @@ import ElementTitle from 'Components/ElementTitle/ElementTitle'
 
 export default function ContactUs() {
 
-  // Local state
-  const [language, setLanguage] = React.useState(state.language_content.contact)
+  // Constants
+  const contactPage = useTranslations('contact')
 
   React.useEffect(() => {
 
@@ -25,13 +26,6 @@ export default function ContactUs() {
 
   }, [])
 
-  // Language Effect
-  React.useEffect(() => {
-
-    setLanguage(state.language_content.contact)
-
-  }, [state.language_content.contact])
-
   return (
     <main id='contact-us'>
       <Header />
@@ -42,10 +36,10 @@ export default function ContactUs() {
           <div className='main-title'>
           <ElementTitle page={'contact'}/>
             <h1>
-              {language.title}
+              {contactPage('title')}
             </h1>
             <h5>
-              {language.sub_title}
+              {contactPage('sub_title')}
             </h5>
           </div>
         </div>
