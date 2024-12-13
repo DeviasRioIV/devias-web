@@ -122,7 +122,7 @@ export default function Home() {
           <h2>
             {projects('title')}
           </h2>
-          {/* <ProjectDetails /> */}
+          <ProjectDetails />
         </div>
 
       </section>

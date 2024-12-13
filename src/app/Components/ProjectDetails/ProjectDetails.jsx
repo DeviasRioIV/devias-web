@@ -3,22 +3,27 @@
 // External Modules
 import React from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
 
 // Internal modules
 import './ProjectDetails.scss'
 import Card from './Card/Card'
 
-export default function ProjectDetails({customerView, page}) {
+export default function ProjectDetails({customerView, page, params}) {
 
   // Local State
-  const [projectsList, setProjectsList]       = React.useState(state.language_content.our_customers.projects)
+  const [projectsList, setProjectsList]       = React.useState()
   const [visibleProjects, setVisibleProjects] = React.useState(page ? 6 : 3)
   const [loading, setLoading]                 = React.useState(false)
   const [client, setClient]                   = React.useState(null)
+  const [cantProjects, setCantProjects]       = React.useState(0)
 
   // Constants
   const router = useRouter()
+  const projectsPage = useTranslations('our_customers')
+  const projectList = projectsPage.raw('projects')
+  const locale = params?.locale || 'en'
 
   React.useEffect(() => {
 
@@ -38,19 +43,21 @@ export default function ProjectDetails({customerView, page}) {
 
       if (customerView) {
 
-        const newList = state.language_content.our_customers.projects.filter(item => item.code !== client)
+        const newList = projectList.filter(item => item.code !== client)
 
         setProjectsList(newList)
+        setCantProjects(newList.length)
 
       }
 
     } else {
 
-      setProjectsList(state.language_content.our_customers.projects)
+      setProjectsList(projectList)
+      setCantProjects(projectList.length)
 
     }
 
-  }, [client, state.language_content.our_customers.projects, customerView])
+  }, [client, projectList, customerView])
 
   const showMore = () => {
 
@@ -73,14 +80,14 @@ export default function ProjectDetails({customerView, page}) {
           <div key={index} className='project-detail'>
             {/* Link image */}
             <div className='project-thumbnail'>
-              <Link href={`/customer/${project.code}`}>
+              <Link href={`/${locale}/our-projects/${project.code}`}>
                 <Card img={project.img_page} alt={project.name} background={project.color}/>
               </Link>
             </div>
             {/* Contain Info */}
             <div className='contain-info'>
               <div className='project-title'>
-                <Link href={`/customer/${project.code}`}>
+                <Link href={`/${locale}/our-projects/${project.code}`}>
                   {project.name}
                 </Link>
               </div>
@@ -100,14 +107,14 @@ export default function ProjectDetails({customerView, page}) {
       {
         !page &&
         <div className='see-all'>
-          <Link href='/our-projects'>
+          <Link href={`/${locale}/our-projects`}>
             See all projects
           </Link>
         </div>
       }
 
       {/* Lets this comment until know what they want to do with this functionality */}
-      {page && visibleProjects < projectsList.length && (
+      {page && visibleProjects < cantProjects && (
         <div id='container-button-spinner'>
           {
             !loading

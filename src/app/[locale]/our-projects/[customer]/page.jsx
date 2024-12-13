@@ -1,28 +1,45 @@
+'use client'
+
 // External modules
 import React from 'react'
 import Image from 'next/image'
-import {useParams} from 'react-router'
+import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 
 // Internal modules
-import './Customer.scss'
+import './Customer.module.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
-import TechStack from 'Components/TechStack/TechStack';
+import TechStack from 'Components/TechStack/TechStack'
 
 // Assets
 import imgPlaceholder from 'Assets/Projects/no-thumbnail.webp'
 
 export default function Costumer() {
 
+  // Local state
+  const [project, setProject] = React.useState()
+
   // Constants
-  const [projects, setProjects] = React.useState(state.language_content.our_customers.projects)
-  // const projects = json.projects
+  const { customer } = useParams()
+  const projectsPage = useTranslations('our_customers')
+
   const isInCustomerView = true
 
-  const {client} = useParams()
+  React.useEffect(() => {
 
-  const customer = projects.filter(project => project.code === client)
+    const projectList = projectsPage.raw('projects')
+
+    if (customer && projectList.length > 0) {
+
+      const project = projectList.filter(item => item.code === customer)
+
+      setProject(project)
+
+    }
+
+  }, [customer, projectsPage])
 
   // Scroll effect
   React.useEffect(() => {
@@ -30,22 +47,19 @@ export default function Costumer() {
     if (typeof document !== 'undefined') {
 
       const container = document?.getElementById('customer-single-page')
-  
-      container.scrollIntoView({behavior: 'smooth'})
+      
+      if (container) {
+        container.scrollIntoView({ behavior: 'smooth' })
+      } else {
+          console.warn('Element with id "customer-single-page" not found.')
+      }
 
     }
 
-
-  }, [client])
-
-  React.useEffect(() => {
-
-    setProjects(state.language_content.our_customers.projects)
-
-  }, [state.language])
+  }, [project])
 
   return (
-    customer.map((customer, index) => (
+    project?.map((customer, index) => (
       <main key={index} id='customer-single-page'>
         <Header />
         {/* Section title */}

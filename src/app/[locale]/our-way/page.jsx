@@ -26,14 +26,12 @@ export default function OurWay() {
 
       const container = document?.getElementById('our-way')
 
-      container.scrollIntoView({behavior: 'smooth'})
+      container.scrollIntoView({ behavior: 'smooth' })
 
     }
 
 
   }, [])
-
-  console.log(ourWayPage('items'));
 
   return (
     <main id='our-way'>
@@ -43,7 +41,7 @@ export default function OurWay() {
       <section className='primary-section'>
         <div className='container'>
           <div className='main-title'>
-            <ElementTitle page={'ourWorkflow'}/>
+            <ElementTitle page={'ourWorkflow'} />
             <h1>
               {ourWayPage('title_section')}
             </h1>
@@ -78,7 +76,7 @@ export default function OurWay() {
           <h2>
             {ourWayPage('projects_section.title')}
           </h2>
-          {/* <ProjectDetails /> */}
+          <ProjectDetails />
         </div>
       </section>
       <Footer />

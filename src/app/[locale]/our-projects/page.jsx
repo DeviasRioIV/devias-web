@@ -52,7 +52,7 @@ export default function OurCustomers() {
       {/* Section projects */}
       <section className='container-project-detail'>
         <div className='container'>
-          {/* <ProjectDetails page /> */}
+          <ProjectDetails page />
         </div>
       </section>
       {/* Footer */}
