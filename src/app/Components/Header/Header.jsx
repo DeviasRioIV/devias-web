@@ -3,28 +3,40 @@
 // External Modules
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { useParams, usePathname, useRouter } from 'next/navigation'
 
 // Internal modules
-import './Header.scss'
+import styles from './header.module.scss'
 import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
 
 // Assets
 import logo from 'Assets/Utilities/Logos/logo-devias.svg'
-import { usePathname, useRouter } from 'next/navigation'
 
-export default function Header({ params }) {
+export default function Header() {
 
   // Local state
   const [isOpen, setIsOpen] = React.useState(false)
+  const [locale, setLocale] = React.useState('en')
 
   const pathname = usePathname()
+
   const router = useRouter()
-  const locale = params?.locale || 'en'
+
+  const params = useParams()
 
   const link = useTranslations('header.links')
 
-  // Effects
+  //Locale Effect
+  React.useEffect(() => {
+
+    const locale = params.locale
+
+    setLocale(locale)
+
+  }, [params])
+
   React.useEffect(() => {
 
     // Remove loader
@@ -57,28 +69,27 @@ export default function Header({ params }) {
     const path = pathname.split('/').slice(2).join('/')
     router.push(`/${newLanguage}/${path}`)
 
-    }
-
+  }
 
   return (
-    <header>
-      <nav className='container-header'>
-        <div className='container'>
+    <header className={styles.header}>
+      <nav className={styles.container_header}>
+        <div className={`container ${styles.container}`}>
 
           {/* Logo */}
-          <section className='container-header-logo'>
+          <section className={styles.container_header_logo}>
             <Link href={`/${locale}/`}>
-              <img src={logo.src} alt='dev-logo' />
+              <Image src={logo.src} alt='dev-logo' width={115} height={115}/>
             </Link>
           </section>
 
           {/* NavBar */}
-          <section className={`container-header-links ${isOpen ? 'show' : ''}`}>
+          <section className={`${styles.container_header_links} ${isOpen ? styles.show : ''}`}>
             <ul>
               <li>
                 <Link
                   className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''}
+                    isPending ? styles.pending : isActive ? styles.active : ''}
                   href={`/${locale}/`}
                 > {link('home')}
                 </Link>
@@ -86,29 +97,29 @@ export default function Header({ params }) {
               <li>
                 <Link
                   className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} href={`/${locale}/about-us`}
+                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/about-us`}
                 > {link('about_us')}
                 </Link>
               </li>
               <li>
                 <Link
                   className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} href={`/${locale}/our-projects`}
+                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/our-projects`}
                 > {link('projects')}
                 </Link>
               </li>
               <li>
                 <Link
                   className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} href={`/${locale}/our-way`}
+                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/our-way`}
                 > {link('our_workflow')}
                 </Link>
               </li>
-              <li className='line' />
-              <li className='container-btn-contact'>
+              <li className={styles.line} />
+              <li className={styles.container_btn_contact}>
                 <Link
-                  id='btn-contact' className={({ isActive, isPending }) =>
-                    isPending ? 'pending' : isActive ? 'active' : ''} href={`/${locale}/contact-us`}
+                  id={styles.btn_contact} className={({ isActive, isPending }) =>
+                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/contact-us`}
                 > {link('contact')}
                 </Link>
               </li>
@@ -117,19 +128,19 @@ export default function Header({ params }) {
 
           {/* Language Toggle */}
 
-          <section className='language-toggle'>
-            <button className={`${locale === 'en' ? 'active' : ''}`} onClick={() => selectLanguage('en')}>
+          <section className={styles.language_toggle}>
+            <button className={`${locale === 'en' ? styles.active : ''}`} onClick={() => selectLanguage('en')}>
               EN
             </button>
             |
-            <button className={`${locale === 'es' ? 'active' : ''}`} onClick={() => selectLanguage('es')}>
+            <button className={`${locale === 'es' ? styles.active : ''}`} onClick={() => selectLanguage('es')}>
               ES
             </button>
           </section>
 
-          {/* Burguer button responsive */}
-          <button className='menu-toggle' onClick={handleMenuToggle}>
-            <span className='navbar-toggler-icon'>
+          {/* Burger button responsive */}
+          <button className={styles.menu_toggle} onClick={handleMenuToggle}>
+            <span className={styles.navbar_toggler_icon}>
               {isOpen ? <RxCross2 /> : <RxHamburgerMenu />}
             </span>
           </button>

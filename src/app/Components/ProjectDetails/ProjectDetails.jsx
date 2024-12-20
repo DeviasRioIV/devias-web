@@ -4,13 +4,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 
 // Internal modules
 import './ProjectDetails.scss'
 import Card from './Card/Card'
 
-export default function ProjectDetails({customerView, page, params}) {
+export default function ProjectDetails({customerView, page}) {
 
   // Local State
   const [projectsList, setProjectsList]       = React.useState()
@@ -18,13 +18,26 @@ export default function ProjectDetails({customerView, page, params}) {
   const [loading, setLoading]                 = React.useState(false)
   const [client, setClient]                   = React.useState(null)
   const [cantProjects, setCantProjects]       = React.useState(0)
+  const [locale, setLocale]                   = React.useState('en')
 
   // Constants
   const router = useRouter()
+
+  const params = useParams()
+
   const projectsPage = useTranslations('our_customers')
   const projectList = projectsPage.raw('projects')
-  const locale = params?.locale || 'en'
 
+  //Locale Effect
+  React.useEffect(() => {
+
+    const locale = params.locale
+
+    setLocale(locale)
+
+  }, [params])
+
+  // Client effect
   React.useEffect(() => {
 
     if (router.isReady) {

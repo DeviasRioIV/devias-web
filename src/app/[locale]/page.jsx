@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 
 // Internal modules
 import styles from './home.module.scss'
-import Header from '../Components/Header/Header'
+import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import ContactForm from 'Components/ContactForm/ContactForm'
@@ -94,22 +94,22 @@ export default function Home() {
       <Header />
 
       <section className={styles.primary_section}>
-        <div className={styles.container}>
+        <div className={`container ${styles.container}`}>
           <div className={styles.container_titles}>
-            <h1 id='humanizing' className={styles.humanizing}>Humanizing</h1>
-            <h1 id='digital' className={isShaking ? 'shaking' : ''}>
+            <h1 id={styles.humanizing}>Humanizing</h1>
+            <h1 id={styles.digital} className={isShaking ? styles.shaking : ''}>
               Digital
               <br />
               Products
             </h1>
           </div>
 
-          <div id='placeholder'/>
-          <Image priority src={bannerImg} alt="banner" id='banner'/>
-          <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id='element-left'/>
-          <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id='element-right'/>
+          <div id={styles.placeholder}/>
+          <Image priority src={bannerImg} alt="banner" id={styles.banner}/>
+          <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id={styles.element_left}/>
+          <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id={styles.element_right}/>
           {
-            width <= 768 ? <Image src={bottomElementMobile} alt="element" id='element-bottom'/> : ''
+            width <= 768 ? <Image src={bottomElementMobile} alt="element" id={styles.element_bottom}/> : ''
           }
         </div>
       </section>
@@ -118,7 +118,7 @@ export default function Home() {
       <ServicesCard />
 
       <section className={styles.highlighted_project}>
-        <div className={styles.container}>
+        <div className={`container ${styles.container}`}>
           <h2>
             {projects('title')}
           </h2>

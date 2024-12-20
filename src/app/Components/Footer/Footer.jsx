@@ -1,14 +1,15 @@
 // External Modules
 import React from 'react'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 // Internal modules
-import './Footer.scss'
-import Link from 'next/link'
+import styles from './footer.module.scss'
 
 // Assets
 import logoDevias from 'Assets/Utilities/Logos/iso-eslogan.svg'
+import Image from 'next/image';
 
 export default function Footer() {
 
@@ -16,9 +17,9 @@ export default function Footer() {
   const links = useTranslations('footer.links')
 
   return (
-    <footer>
-      <section className='container'>
-        <div className='container-footer-links'>
+    <footer id={styles.footer}>
+      <section className={`container ${styles.container}`}>
+        <div className={styles.container_footer_links}>
           <ul>
             <li>
               <Link href='/about-us'> {links('about_us')} </Link>
@@ -34,7 +35,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div id='social-icons'>
+        <div id={styles.social_icons}>
           <a href='https://www.facebook.com/devias.ar' target='_blank' rel='noreferrer'>
             <i>
               <RiFacebookFill />
@@ -51,9 +52,9 @@ export default function Footer() {
             </i>
           </a>
         </div>
-        <div className='container-footer-logo'>
+        <div className={styles.container_footer_logo}>
           <Link href='/'>
-            <img src={logoDevias.src} alt='dev-logo' />
+            <Image src={logoDevias.src} alt='dev-logo' width={65} height={65} />
           </Link>
         </div>
       </section>

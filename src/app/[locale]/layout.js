@@ -5,7 +5,10 @@ import { getMessages } from 'next-intl/server'
 
 
 import { Roboto } from "next/font/google"
-import '../styles/globals.css'
+import './global.css'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+
 
 
 const roboto = Roboto({
