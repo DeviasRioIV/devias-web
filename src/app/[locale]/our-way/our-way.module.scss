@@ -1,13 +1,14 @@
 @import 'Sass/config.scss';
 
-#our-way {
+#our_way {
   background-color: #FAFAFA;
+  width: 100%;
 
-  .primary-section {
+  .primary_section {
 
     .container {
 
-      .main-title {
+      .main_title {
         margin: 100px 0 64px 0;
 
         @media (max-width: 991px){
@@ -49,26 +50,13 @@
           }
         }
       }
-
-      .section-description {
-        margin-bottom: 200px;
-
-        h4 {
-          font-size: 1.5rem;
-          font-weight: 500;
-        }
-
-        @media all and (max-width: 768px) {
-          margin-bottom: 50px;
-        }
-      }
     }
   }
 
-  .process-steps {
+  .process_steps {
 
     .container {
-      .container-steps{
+      .container_steps{
         width: 50%;
 
         @media (max-width: 988px) {
@@ -105,93 +93,7 @@
     }
   }
 
-  .services-card{
-    display: flex;
-    flex-direction: column;
-
-    .container{
-      width: 100%;
-      margin-top: 3rem;
-      display: flex;
-      justify-content: center;
-
-      .container-dev-card{
-        width: 100%;
-        min-height: 366px;
-        display: flex;
-        flex-direction: row;
-        padding: 0 1rem;
-        background-color: $dark-blue;
-        border-radius: 10px;
-        transition: ease 0.2s;
-
-        #title-and-services {
-
-          h2{
-            margin-top: 1.5rem;
-            margin-left: 1.5rem;
-            font-family: 'Univia Pro';
-            font-size: 2.8rem;
-            color: #FFFFFF;
-            font-weight: 500;
-          }
-  
-          .services-card{
-            width: 100%;
-            padding: 1.5rem;
-            padding-top: 3rem;
-            display: flex;
-            flex-direction: row;
-  
-            #services {
-              display: flex;
-              flex-direction: row;
-
-              .services-description {
-                width: 50%;
-                h3{
-                  font-family: 'Roboto';
-                  font-size: 1.3rem; 
-                  font-weight: 500;
-                  margin-bottom: 15px;
-                  color: #FFFFFF;
-                }
-              }
-
-            }
-  
-            @media (max-width: 991px){
-              min-height: 300px;
-              margin-bottom: 50px;
-              h2{
-                font-size: 2rem;
-              }
-              h3{
-                font-size: 1.2rem;
-              }
-            }
-          }
-  
-
-        }
-
-        #services-element {
-          width: 33.3333%;
-          height: auto;
-        }
-
-        @media (max-width: 768px){
-          width: 100%;
-        }
-      }
-
-      @media (max-width: 768px){
-        flex-wrap: wrap;
-      }
-    }
-  }
-
-  .highlighted-project {
+  .highlighted_project {
     padding: 100px 0;
     color: #FFFFFF !important;
     .container {

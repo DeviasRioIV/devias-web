@@ -5,7 +5,7 @@ import { GrLocation } from "react-icons/gr";
 import { MdOutlineEmail } from "react-icons/md";
 
 // Internal modules
-import './ContactForm.scss'
+import styles from './contact-form.module.scss'
 
 export default function ContactForm ({home}){
 
@@ -121,14 +121,14 @@ export default function ContactForm ({home}){
   }
 
   return (
-    <form className={`contact-form ${home ? 'form-home' : ''}`} ref={form} onSubmit={sendEmail}>
+    <form className={`${styles.contact_form} ${home ? styles.form_home : ''}`} ref={form} onSubmit={sendEmail}>
 
-      <div className='form-container container'>
+      <div className={`${styles.form_container} container`}>
 
         {/* Title formularie */}
         {
           home && (
-            <div className='contact-title'>
+            <div className={styles.contact_title}>
               <h2>
                 LET'S TALK
               </h2>
@@ -136,14 +136,14 @@ export default function ContactForm ({home}){
           )
         }
 
-        <div id="container-form-location">
+        <div id={styles.container_form_location}>
 
-          <div className="container-form">
+          <div className={styles.container_form}>
             {/* Container of data */}
-            <div className='data-container'>
+            <div className={styles.data_container}>
 
-              <div className='locker'>
-                <label className='form-label '>Name <span>*</span></label>
+              <div className={styles.locker}>
+                <label className={styles.form_label}>Name <span>*</span></label>
                 <input
                   type='text'
                   name='user_name'
@@ -155,12 +155,12 @@ export default function ContactForm ({home}){
 
                 {/* Verify touched name and valid name */}
                 {touchedFields.user_name && !isFieldValid('user_name') && (
-                  <h4 className='input-incorrect'>Short name</h4>
+                  <h4 className={styles.input_incorrect}>Short name</h4>
                 )}
               </div>
 
-              <div className='locker'>
-                <label className='form-label' >Last name <span>*</span></label>
+              <div className={styles.locker}>
+                <label className={styles.form_label} >Last name <span>*</span></label>
                 <input
                   type='text'
                   name='user_last_name'
@@ -172,13 +172,13 @@ export default function ContactForm ({home}){
 
                 {/* Verify touched last name and valid last name */}
                 {touchedFields.user_last_name && !isFieldValid('user_last_name') && (
-                  <h4 className='input-incorrect'>Short last name</h4>
+                  <h4 className={styles.input_incorrect}>Short last name</h4>
                 )}
               </div>
 
-              <div className='locker'>
+              <div className={styles.locker}>
 
-                <label className='form-label' >Company <span>*</span></label>
+                <label className={styles.form_label} >Company <span>*</span></label>
                 <input
                   type='text'
                   name='user_company'
@@ -190,13 +190,13 @@ export default function ContactForm ({home}){
 
                 {/* Verify touched company and valid company */}
                 {touchedFields.user_company && !isFieldValid('user_company') && (
-                  <h4 className='input-incorrect'>Short name company</h4>
+                  <h4 className={styles.input_incorrect}>Short name company</h4>
                 )}
               </div>
 
-              <div className='locker'>
+              <div className={styles.locker}>
 
-                <label className='form-label' >E-mail <span>*</span></label>
+                <label className={styles.form_label} >E-mail <span>*</span></label>
                 <input
                   type='email'
                   name='user_email'
@@ -208,29 +208,30 @@ export default function ContactForm ({home}){
 
                 {/* Verify touched email and valid email */}
                 {touchedFields.user_email && !isFieldValid('user_email') && (
-                  <h4 className='input-incorrect'>Incorrect email</h4>
+                  <h4 className={styles.input_incorrect}>Incorrect email</h4>
                 )}
               </div>
             </div>
 
             {/* Container of consult */}
-            <div className='consult-container'>
+            <div className={styles.consult_container}>
 
-              <label className='form-label' >Message <span>*</span></label>
+              <label className={styles.form_label} >Message <span>*</span></label>
               <textarea
                 name='consult'
                 value={formData.consult}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 placeholder='Leave your message'
+                className={styles.textarea}
               />
 
               {/* Verify touched consult and valid consult */}
               {touchedFields.consult && !isFieldValid('consult') && (
-                <h4 className='input-incorrect-consult'>The minimum number of characters is (15)</h4>
+                <h4 className={styles.input_incorrect_consult}>The minimum number of characters is (15)</h4>
               )}
               <input
-                className={`${!allFieldsValid ? 'form-empty' : ''}`}
+                className={`${!allFieldsValid ? styles.form_empty : ''}`}
                 type='submit'
                 value={isLoading ? 'Sending...' : 'Submit'}
                 disabled={!allFieldsValid}
@@ -238,14 +239,14 @@ export default function ContactForm ({home}){
             </div>
           </div>
 
-          <div className="location-data">
+          <div className={styles.location_data}>
             <br />
             <span>
               <GrLocation />
             </span>
             <p>San Martín 1496, 5800</p>
             <p>Rio Cuarto, Córdoba</p>
-            <p className="country">
+            <p className={styles.country}>
               Argentina
             </p>
             <p>

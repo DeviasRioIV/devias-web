@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
 
 // Internal modules
-import './Customer.module.scss'
+import styles from './customer.module.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
@@ -46,12 +46,10 @@ export default function Costumer() {
 
     if (typeof document !== 'undefined') {
 
-      const container = document?.getElementById('customer-single-page')
-      
+      const container = document?.getElementById('customer_single_page')
+
       if (container) {
         container.scrollIntoView({ behavior: 'smooth' })
-      } else {
-          console.warn('Element with id "customer-single-page" not found.')
       }
 
     }
@@ -60,12 +58,12 @@ export default function Costumer() {
 
   return (
     project?.map((customer, index) => (
-      <main key={index} id='customer-single-page'>
+      <main key={index} id={styles.customer_single_page}>
         <Header />
         {/* Section title */}
-        <section className='section-title'>
-          <div className='container'>
-            <div className='main-title'>
+        <section className={styles.section_title}>
+          <div className={`container ${styles.container}`}>
+            <div className={styles.main_title}>
               <h1>
                 {customer.name}
               </h1>
@@ -73,19 +71,19 @@ export default function Costumer() {
           </div>
         </section>
         {/* Section post */}
-        <section className='post-content'>
-          <div className='container'>
-            <div className='contain-content'>
-              <div className='customer-page' style={{background: customer.color}}>
+        <section className={styles.post_content}>
+          <div className={`container ${styles.container}`}>
+            <div className={styles.contain_content}>
+              <div className={styles.customer_page} style={{background: customer.color}}>
                 <Image src={customer.img_page ? customer.img_page : imgPlaceholder} alt={customer.name} fill/>
               </div>
-              <div className='customer-logo'>
+              <div className={styles.customer_logo}>
                 <img src={customer.img_logo ? customer.img_logo : ''} alt={customer.name} />
               </div>
               {
                 customer.project_description.map((desc, index) => (
-                  <div key={index} className='project-description'>
-                    {desc.title ? <h3 className='description-title' >{desc.title}</h3> : ''}
+                  <div key={index} className={styles.project_description}>
+                    {desc.title ? <h3 className={styles.description_title} >{desc.title}</h3> : ''}
                     <p>
                       {desc.description}
                     </p>
@@ -99,8 +97,8 @@ export default function Costumer() {
         <TechStack tech_stack={customer.tech_stack} />
 
         {/* Section projects */}
-        <section className='highlighted-project'>
-          <div className='container'>
+        <section className={styles.highlighted_project}>
+          <div className={`container ${styles.container}`}>
             <h2>
               OTHER PROJECTS
             </h2>

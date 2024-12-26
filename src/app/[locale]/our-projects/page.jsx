@@ -5,7 +5,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 
 // Internal modules
-import './OurCustomers.module.scss'
+import styles from './our-customers.module.scss'
 import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
@@ -21,23 +21,25 @@ export default function OurCustomers() {
 
     if (typeof document !== 'undefined'){
 
-      const container = document?.getElementById('our-customers')
+      const container = document?.getElementById('our_customers')
 
-      container.scrollIntoView({behavior: 'smooth'})
+      if (container) {
+        container.scrollIntoView({behavior: 'smooth'})
+      }
     }
 
 
   }, [])
 
   return (
-    <main id='our-customers'>
+    <main id={styles.our_customers}>
       {/* Header */}
       <Header />
 
       {/* Title */}
-      <section className='section-title'>
-        <div className='container'>
-          <div className='main-title'>
+      <section className={styles.section_title}>
+        <div className={`container ${styles.container}`}>
+          <div className={styles.main_title}>
             <ElementTitle page={'project'}/>
             <h1>
               {projectsPage('title')}
@@ -50,8 +52,8 @@ export default function OurCustomers() {
       </section>
 
       {/* Section projects */}
-      <section className='container-project-detail'>
-        <div className='container'>
+      <section className={styles.container_project_detail}>
+        <div className={`container ${styles.container}`}>
           <ProjectDetails page />
         </div>
       </section>

@@ -1,17 +1,19 @@
 @import 'Sass/config.scss';
 
-#customer-single-page {
+#customer_single_page {
   background-color: #FAFAFA;
+  width: 100%;
 
   /* Section title */
-  .section-title {
+  .section_title {
     color: $dark-blue;
 
     .container {
-      .main-title {
+      .main_title {
         margin: 100px 0 64px 0;
 
         h1 {
+          font-family: 'Roboto';
           font-size: 4rem;
           text-transform: uppercase;
           font-weight: 500;
@@ -35,15 +37,15 @@
   }
 
   /* Section post */
-  .post-content {
+  .post_content {
     font-size: 1.125rem;
     color: #333;
 
     .container {
-      .contain-content {
+      .contain_content {
         width: 100%;
 
-        .customer-page {
+        .customer_page {
           position: relative;
           display: flex;
           justify-content: center;
@@ -59,7 +61,7 @@
           }
         }
 
-        .customer-logo {
+        .customer_logo {
           display: flex;
           justify-content: center;
           margin: 5rem 0;
@@ -70,7 +72,7 @@
           }
         }
 
-        .project-description {
+        .project_description {
           width: 50%;
           margin-bottom: 50px;
 
@@ -78,7 +80,7 @@
             width: 100%;
           }
 
-          .description-title {
+          .description_title {
             font-family: 'Roboto-bold';
             font-weight: 700;
             font-size: 2.25rem;
@@ -107,7 +109,7 @@
   }
 
   /* Section projects  */
-  .highlighted-project {
+  .highlighted_project {
     margin: 8rem 0 6rem 0;
 
     .container {

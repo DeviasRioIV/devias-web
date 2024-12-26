@@ -7,7 +7,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import {Autoplay} from 'swiper/modules'
 
 // Internal modules
-import styles from './aboutUs.module.scss'
+import styles from './about-us.module.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import bannerImg from 'Assets/Images/about-us-hero-bg.jpg'
@@ -148,7 +148,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section id={styles.slider_team}>
+      {/* <section id={styles.slider_team}>
         <div className={`container ${styles.container}`}>
 
           <Swiper
@@ -172,7 +172,7 @@ export default function AboutUs() {
             }
           </Swiper>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

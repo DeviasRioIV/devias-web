@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 // Internal modules
-import './ElementTitle.scss'
+import styles from './element-title.module.scss'
 
 //Assets
 
@@ -44,7 +44,7 @@ export default function ElementTitle({page}) {
             alt="element"
             width={500}
             height={300}
-            id={'element-mobile'}
+            id={styles.element_mobile}
           />
         )
       }

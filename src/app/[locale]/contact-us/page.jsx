@@ -5,7 +5,7 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 
 // Internal modules
-import './contact-us.module.scss'
+import styles from './contact-us.module.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
 import ContactForm from 'Components/ContactForm/ContactForm'
@@ -19,21 +19,23 @@ export default function ContactUs() {
   React.useEffect(() => {
 
     if (typeof document !== 'undefined') {
-      const container = document?.getElementById('contact-us')
+      const container = document?.getElementById('contact_us')
 
-      container.scrollIntoView({behavior: 'smooth'})
+      if (container) {
+        container.scrollIntoView({behavior: 'smooth'})
+      }
     }
 
   }, [])
 
   return (
-    <main id='contact-us'>
+    <main id={styles.contact_us}>
       <Header />
 
       {/* Section title */}
-      <section className='section-title'>
-        <div className='container'>
-          <div className='main-title'>
+      <section className={styles.section_title}>
+        <div className={`container ${styles.container}`}>
+          <div className={styles.main_title}>
           <ElementTitle page={'contact'}/>
             <h1>
               {contactPage('title')}
@@ -45,7 +47,7 @@ export default function ContactUs() {
         </div>
       </section>
 
-      <section id='form-map-section'>
+      <section id={styles.form_map_section}>
 
         {/* Contact form */}
         <ContactForm />
