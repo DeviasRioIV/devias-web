@@ -93,7 +93,7 @@ export default function Costumer() {
             </div>
           </div>
         </section>
-        {/* Section stech */}
+        {/* Section tech */}
         <TechStack tech_stack={customer.tech_stack} />
 
         {/* Section projects */}

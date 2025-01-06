@@ -1,6 +1,6 @@
 @import 'Sass/config.scss';
 
-#services-card{
+#services_card{
   display: flex;
   flex-direction: column;
 
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
 
-    .container-dev-card{
+    .container_dev_card{
       width: 100%;
       min-height: 366px;
       display: flex;
@@ -28,7 +28,7 @@
         max-height: 760px;
       }
 
-      #title-and-services {
+      #title_and_services {
 
         h2{
           margin-top: 2.5rem;
@@ -43,7 +43,7 @@
           }
         }
 
-        .services-card{
+        .services_card{
           width: 100%;
           padding: 2.5rem;
           padding-top: 3rem;
@@ -63,14 +63,14 @@
               gap: 30px;
             }
 
-            .services-description {
+            .services_description {
               width: 50%;
-              
+
               @media (max-width: 767px){
                 width: 100%;
               }
 
-              &#design-side {
+              &#design_side {
                 margin-right: 30px;
               }
               h3{
@@ -88,7 +88,7 @@
 
       }
 
-      #services-element {
+      #services_element {
         width: 33.3333%;
         height: auto;
 

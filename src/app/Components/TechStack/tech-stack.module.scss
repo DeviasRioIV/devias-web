@@ -1,11 +1,11 @@
 @import 'Sass/config.scss';
 
-.tech-stack {
+.tech_stack {
   margin: 4rem 0;
 
   .container {
-    .contain-tech {
-      .tech-title {
+    .contain_tech {
+      .tech_title {
         width: 100%;
 
         h2 {
@@ -20,12 +20,13 @@
           }
         }
       }
-      .contain-tech-card{
+      .contain_tech_card{
         display: flex;
         flex-wrap: wrap;
         margin-top: 1.5rem;
         gap: 1.5rem;
-        .tech-card {
+
+        .tech_card {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -44,6 +45,7 @@
             text-align: center;
             font-size: 0.875rem;
             color: $withe;
+            margin: 0;
           }
         }
       }

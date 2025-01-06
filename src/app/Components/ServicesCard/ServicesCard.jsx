@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 // Internal modules
-import './ServicesCard.scss'
+import styles from './services-card.module.scss'
 
 // Assets
 import servicesElement from 'Assets/Utilities/Elements/desktop/home-hero/services-card.png'
@@ -14,16 +14,16 @@ export default function ServicesCard() {
   const services = useTranslations('home.services')
 
   return (
-    <section id='services-card'>
-        <div className='container'>
-          <div className='container-dev-card'>
-            <div id="title-and-services">
+    <section id={styles.services_card}>
+        <div className={`container ${styles.container}`}>
+          <div className={styles.container_dev_card}>
+            <div id={styles.title_and_services}>
               <h2>
                 {services('development.title')}
               </h2>
-              <div className='services-card'>
-                <div id="services">
-                  <div className='services-description' id="design-side">
+              <div className={styles.services_card}>
+                <div id={styles.services}>
+                  <div className={styles.services_description} id={styles.design_side}>
                     <h3>
                       {services('development.service_1')}
                     </h3>
@@ -34,7 +34,7 @@ export default function ServicesCard() {
                       {services('development.service_3')}
                     </h3>
                   </div>
-                  <div className='services-description' id="dev-side">
+                  <div className={styles.services_description} id={styles.dev_side}>
                     <h3>
                       {services('development.service_4')}
                     </h3>
@@ -48,7 +48,7 @@ export default function ServicesCard() {
                 </div>
               </div>
             </div>
-            <Image src={servicesElement} alt='services' id='services-element'/>
+            <Image src={servicesElement} alt='services' id={styles.services_element}/>
           </div>
         </div>
       </section>
