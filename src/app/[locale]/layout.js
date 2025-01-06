@@ -40,7 +40,12 @@ export default async function RootLayout({ children, params }) {
 
         <NextIntlClientProvider messages={messages}>
 
-          {children}
+          <div id="root">
+
+            {children}
+
+          </div>
+
 
         </NextIntlClientProvider>
 
