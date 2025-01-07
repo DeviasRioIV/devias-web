@@ -148,7 +148,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* <section id={styles.slider_team}>
+      <section id={styles.slider_team}>
         <div className={`container ${styles.container}`}>
 
           <Swiper
@@ -160,19 +160,19 @@ export default function AboutUs() {
               disableOnInteraction: false
             }}
             modules={[Autoplay]}
-            className={styles.swiper}
+            className={`${styles.swiper_container} swiper`}
           >
 
             {
               imagesCarousel.map((image, index) => (
-                <SwiperSlide key={index}>
-                  <Image src={image} alt={`Image ${index + 1}`} />
+                <SwiperSlide key={index} className={styles.swiper_slide}>
+                  <Image src={image} alt={`Image ${index + 1}`} className={styles.image_slide} />
                 </SwiperSlide>
               ))
             }
           </Swiper>
         </div>
-      </section> */}
+      </section>
 
       <Footer />
     </main>

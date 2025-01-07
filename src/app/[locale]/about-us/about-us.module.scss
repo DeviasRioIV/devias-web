@@ -298,16 +298,16 @@
       position: relative;
       height: 100%;
       width: 100%;
-      max-width: 100%;
+      max-width: 98%;
 
-      .swiper {
+      .swiper_container {
         width: 100%;
         height: 100%;
 
-        .swiper-slide {
+        .swiper_slide {
           width: auto !important;
 
-          img {
+          .image_slide {
             margin: 0px 15px;
             height: 100%;
             width: auto;
