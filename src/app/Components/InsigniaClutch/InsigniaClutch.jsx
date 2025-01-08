@@ -3,11 +3,12 @@
 // External modules
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {Autoplay, Pagination, Navigation} from 'swiper/modules'
 
 // Internal modules
-import './InsigniaClutch.scss'
+import styles from './insignia-clutch.module.scss'
 
 // Styles
 import 'swiper/css'
@@ -145,10 +146,10 @@ export default function InsigniaClutch({title}) {
   }, [])
 
   return (
-    <div id='insignia-carousel' className='container'>
+    <div id={styles.insignia_carousel} className='container'>
       <h2>{title('title')}</h2>
-      <div className='container'>
-        <div className='carousel-container'>
+      <div className={`container ${styles.container}`}>
+        <div className={styles.carousel_container}>
           <Swiper
             slidesPerView={cantInsignia}
             spaceBetween={25}
@@ -162,14 +163,14 @@ export default function InsigniaClutch({title}) {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className='swiper'
+            className={`swiper ${styles.swiper_container}`}
           >
 
             {insignias.map((insignia, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className={styles.swiper_slide}>
 
-                <Link href='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank'>
-                  <img src={insignia.img} alt={insignia.title} />
+                <Link href='https://clutch.co/profile/devias?utm_source=clutch_top_company_badge&utm_medium=image_embed#highlights' target='_blank' className={styles.link_insignia}>
+                  <Image src={`/${insignia.img}`} alt={insignia.title} width={300} height={300} className={styles.image_slide} />
                 </Link>
               </SwiperSlide>
             ))}
