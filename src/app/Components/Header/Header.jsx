@@ -20,13 +20,23 @@ export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false)
   const [locale, setLocale] = React.useState('en')
 
+  // Constants
+
+  const links = [
+    { href: '', label: 'home' },
+    { href: '/about-us', label: 'about_us' },
+    { href: '/our-projects', label: 'projects' },
+    { href: '/our-way', label: 'our_workflow' },
+    { href: '/contact-us', label: 'contact', isButton: true },
+  ]
+
   const pathname = usePathname()
 
   const router = useRouter()
 
   const params = useParams()
 
-  const link = useTranslations('header.links')
+  const headerLink = useTranslations('header.links')
 
   //Locale Effect
   React.useEffect(() => {
@@ -86,43 +96,24 @@ export default function Header() {
           {/* NavBar */}
           <section className={`${styles.container_header_links} ${isOpen ? styles.show : ''}`}>
             <ul>
-              <li>
-                <Link
-                  className={({ isActive, isPending }) =>
-                    isPending ? styles.pending : isActive ? styles.active : ''}
-                  href={`/${locale}/`}
-                > {link('home')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={({ isActive, isPending }) =>
-                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/about-us`}
-                > {link('about_us')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={({ isActive, isPending }) =>
-                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/our-projects`}
-                > {link('projects')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={({ isActive, isPending }) =>
-                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/our-way`}
-                > {link('our_workflow')}
-                </Link>
-              </li>
-              <li className={styles.line} />
-              <li className={styles.container_btn_contact}>
-                <Link
-                  id={styles.btn_contact} className={({ isActive, isPending }) =>
-                    isPending ? styles.pending : isActive ? styles.active : ''} href={`/${locale}/contact-us`}
-                > {link('contact')}
-                </Link>
-              </li>
+              {links.map((link, index) => {
+                const isActive = pathname === `/${locale}${link.href}`
+
+                return (
+                  <li
+                    key={index}
+                    className={link.isButton ? styles.container_btn_contact : ''}
+                  >
+                    <Link
+                      href={`/${locale}${link.href}`}
+                      className={`${isActive ? styles.active : ''}`}
+                      id={link.isButton ? styles.btn_contact : ''}
+                    >
+                      {headerLink(link.label)}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </section>
 

@@ -95,8 +95,8 @@
               }
 
               &.active {
+                font-family: 'Roboto-bold';
                 color: $dark-blue;
-                font-weight: 700;
                 background-image: linear-gradient(to right, transparent 0%, $green 0%, $green 50%, transparent 50%);
                 background-size: 40px 8px;
                 background-position: left 1px bottom;
@@ -131,10 +131,6 @@
                   background-image: none;
                 }
               }
-            }
-
-            &.line {
-              display: none;
             }
           }
         }
