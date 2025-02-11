@@ -2,6 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 // Internal modules
@@ -13,8 +14,22 @@ import Image from 'next/image';
 
 export default function Footer() {
 
+  // Local state
+  const [locale, setLocale] = React.useState('en')
+
   // Constants
+  const params = useParams()
+
   const links = useTranslations('footer.links')
+
+  //Locale Effect
+    React.useEffect(() => {
+  
+      const locale = params.locale
+  
+      setLocale(locale)
+  
+    }, [params])
 
   return (
     <footer id={styles.footer}>
@@ -22,16 +37,16 @@ export default function Footer() {
         <div className={styles.container_footer_links}>
           <ul>
             <li>
-              <Link href='/about-us'> {links('about_us')} </Link>
+              <Link href={`/${locale}/about-us`}> {links('about_us')} </Link>
             </li>
             <li>
-              <Link href='/our-projects'> {links('projects')} </Link>
+              <Link href={`/${locale}/our-projects`}> {links('projects')} </Link>
             </li>
             <li>
-              <Link href='/our-way'> {links('our_workflow')} </Link>
+              <Link href={`/${locale}/our-way`}> {links('our_workflow')} </Link>
             </li>
             <li>
-              <Link href='/contact-us'> {links('contact')} </Link>
+              <Link href={`/${locale}/contact-us`}> {links('contact')} </Link>
             </li>
           </ul>
         </div>
@@ -53,7 +68,7 @@ export default function Footer() {
           </a>
         </div>
         <div className={styles.container_footer_logo}>
-          <Link href='/'>
+          <Link href={`/${locale}`}>
             <Image src={logoDevias.src} alt='dev-logo' width={65} height={65} />
           </Link>
         </div>
