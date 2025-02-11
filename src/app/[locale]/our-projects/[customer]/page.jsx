@@ -78,7 +78,7 @@ export default function Costumer() {
                 <Image src={customer.img_page ? customer.img_page : imgPlaceholder} alt={customer.name} fill/>
               </div>
               <div className={styles.customer_logo}>
-                <img src={customer.img_logo ? customer.img_logo : ''} alt={customer.name} />
+                <Image src={customer.img_logo ? customer.img_logo : ''} alt={customer.name} width={500} height={300} layout='intrinsic'/>
               </div>
               {
                 customer.project_description.map((desc, index) => (
