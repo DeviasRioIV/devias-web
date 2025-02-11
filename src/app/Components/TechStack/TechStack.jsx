@@ -3,10 +3,9 @@ import React from 'react'
 import { SiReact, SiJavascript, SiCss3, SiDelphi, SiFigma, SiRubyonrails } from "react-icons/si";
 
 // Internal modules
-import './TechStack.scss'
+import styles from './tech-stack.module.scss'
 
-export default function TechStack({tech_stack}) {
-
+export default function TechStack({ tech_stack }) {
   // Constants
   const techIcons = {
     React: <SiReact />,
@@ -18,18 +17,18 @@ export default function TechStack({tech_stack}) {
   }
 
   return (
-    <section className='tech-stack'>
-      <div className='container'>
-        <div className='contain-tech'>
-          <div className='tech-title'>
+    <section className={styles.tech_stack}>
+      <div className={`container ${styles.container}`}>
+        <div className={styles.contain_tech}>
+          <div className={styles.tech_title}>
             <h2>
               TECH STACK
             </h2>
           </div>
-          <div className='contain-tech-card'>
+          <div className={styles.contain_tech_card}>
             {
               tech_stack.map((tech, index) => (
-                <div key={index} className='tech-card'>
+                <div key={index} className={styles.tech_card}>
                   <span>
                     {techIcons[tech.tech_name]}
                   </span>
@@ -44,5 +43,4 @@ export default function TechStack({tech_stack}) {
       </div>
     </section>
   )
-
 }

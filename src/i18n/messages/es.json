@@ -1,0 +1,650 @@
+{
+  "header": {
+    "links": {
+      "home": "Inicio",
+      "about_us": "Nosotros",
+      "projects": "Proyectos",
+      "our_workflow": "Cómo trabajamos",
+      "contact": "Contáctanos"
+    }
+  },
+  "home": {
+    "main_title": {
+      "title": "Humanizando\nproductos digitales",
+      "legend": "Trabajamos junto a nuestros clientes para ofrecer las mejores soluciones."
+    },
+    "services": {
+      "development": {
+        "title": "Design & Development",
+        "service_1": "Investigación UX",
+        "service_2": "Diseño UX/UI",
+        "service_3": "Wireframes, Mockups y prototipos interactivos",
+        "service_4": "Desarrollo Back-End",
+        "service_5": "Desarrollo Front-end",
+        "service_6": "Desarrollo para IOS / Android"
+      }
+    },
+    "technologies": {},
+    "projects_section": {
+      "title": "NUESTROS PROYECTOS"
+    },
+    "clutch": {
+      "title": "INSIGNIAS"
+    }
+  },
+  "our_customers": {
+    "title": "PROYECTOS",
+    "label": "Hecha un vistazo a lo que hemos estado haciendo",
+    "projects": [
+      {
+        "code": "bucked-up",
+        "color":"#DD3636",
+        "name": "Bucked Up",
+        "img_logo": "/Assets/Projects/BuckedUp/logo.webp",
+        "img_page": "/Assets/Projects/BuckedUp/project-view.webp",
+        "description": "Plataforma ecommerce para venta de productos fitness, aplicación móvil para embajadores de marca, disponible para android y iOS y plataforma Bootcamp para clientes.",
+        "project_description": [
+          {
+            "title": "Plataforma de Ventas para Laboratorio",
+            "description": "Nuestro cliente requería una plataforma de ventas para comercializar los productos de su laboratorio de manera eficiente. A través de nuestra solución de software, logramos proporcionar al cliente una plataforma de comercio electrónico (eCommerce) desarrollada en React. Esta plataforma le permite gestionar las ventas, facturación y envíos de manera efectiva, además de servir a diferentes tipos de clientes. Debido a su alto volumen de ventas y la necesidad de tomar decisiones constantes, ofrecemos mantenimiento y actualizaciones periódicas para asegurar un funcionamiento óptimo."
+          },
+          {
+            "title": "Aplicación Móvil para Ambassadors",
+            "description": "El cliente necesitaba una aplicación móvil para sus embajadores de marca, que incluyen revendedores, entrenadores y sponsors. Estos embajadores comercializan los productos de la marca y nuestra solución consistió en desarrollar una aplicación móvil en React Native. A través de esta aplicación, mejoramos la experiencia de los embajadores al proporcionarles una plataforma de gestión de contenido, facturación, ventas, historial y entrenamiento. La aplicación funciona en dispositivos iOS y Android, brindando flexibilidad a los embajadores para acceder a herramientas clave en sus dispositivos preferidos."
+          },
+          {
+            "title": "Plataforma de Entrenamiento (Bootcamp)",
+            "description": "El cliente requería una plataforma de entrenamiento que se activara periódicamente en forma de bootcamps. Cada ciertos meses, se lleva a cabo un bootcamp de entrenamiento que incluye una plataforma con una aplicación de seguimiento exclusiva para dietas, ejercicios y objetivos físicos a corto plazo. Los usuarios ingresan su información nutricional y corporal, realizan tareas, ejercicios y rutinas diarias durante el bootcamp, y registran sus resultados. Nuestra solución maneja toda la carga de información y el seguimiento de los inscritos, lo que incluye el envío y recepción de datos, así como la visualización de la evolución y los resultados a través de gráficos.\n\nEstos tres proyectos son ejemplos de cómo nuestra empresa de desarrollo de software crea soluciones personalizadas para satisfacer las necesidades específicas de nuestros clientes, mejorando sus operaciones y la experiencia de sus usuarios."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "React"
+          }
+        ]
+      },
+      {
+        "code": "mi-osfatun",
+        "color":"#EDC14F",
+        "name": "Mi Osfatun",
+        "img_logo": "/Assets/Projects/MiOsfatun/logo-normal.svg",
+        "img_page": "/Assets/Projects/MiOsfatun/project-view.webp",
+        "description": "Aplicación móvil para afiliados de mutual médica destinada a realizar distintos trámites, disponible para android y iOS.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "En respuesta a las necesidades de nuestros clientes, hemos desarrollado una aplicación móvil de gestión de afiliados que ofrece comodidad y accesibilidad. Esta aplicación, creada en React Native, permite a los afiliados realizar una variedad de trámites y consultas de forma sencilla, con solo ingresar su número de documento de identidad. Entre las funcionalidades clave se incluyen la solicitud de autorizaciones, la consulta de la cartilla médica y la obtención de información sobre delegaciones y números de teléfono de emergencia."
+          },
+          {
+            "title": "",
+            "description": "El impacto de esta aplicación ha sido significativo, mejorando la experiencia de los afiliados y reduciendo la carga administrativa. Recientemente, hemos realizado un rediseño para ofrecer una experiencia aún más intuitiva y atractiva, y hemos desarrollado una versión compatible con dispositivos iOS. Estas mejoras reflejan nuestro compromiso con la excelencia y la satisfacción del usuario. Estamos orgullosos de haber contribuido a este proyecto innovador que continúa evolucionando para brindar un servicio de calidad a los afiliados."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "React"
+          }
+        ]
+      },
+      {
+        "code": "portal-ODS",
+        "color":"#00006C",
+        "name": "Portal ODS",
+        "img_logo": "/Assets/Projects/ODS/logo.png",
+        "img_page": "/Assets/Projects/ODS/project-view.webp",
+        "description": "Plataforma web diseñada para demostrar el compromiso de un gobierno con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "GovSDS es una plataforma web diseñada para demostrar el compromiso de un gobierno con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas. Esta herramienta innovadora no solo proporciona una visualización clara de cómo el gobierno se alinea con los ODS, sino que también tiene la capacidad de interconectarse con una variedad de sistemas gubernamentales y realizar análisis de datos para respaldar la toma de decisiones informadas."
+          },
+          {
+            "title": "",
+            "description": "El objetivo principal del proyecto GovSDS fue desarrollar una plataforma web innovadora y altamente funcional que permitiera a los gobiernos demostrar su compromiso con la Agenda de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas. Esta plataforma no solo busca visualizar claramente la alineación de políticas y proyectos gubernamentales con los ODS, sino también habilitar la interconexión con sistemas gubernamentales existentes, realizar análisis de datos avanzados y presentar información de manera interactiva para respaldar la toma de decisiones informadas."
+          },
+          {
+            "title": "",
+            "description": "El cliente enfrentaba varios desafíos, entre ellos la falta de transparencia en la demostración del compromiso del gobierno con los ODS, la dificultad en la recopilación de datos de múltiples sistemas gubernamentales y la necesidad de comunicarse efectivamente con ciudadanos y partes interesadas."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, se implementó GovSDS con estrategias clave que incluyen el desarrollo en React, la integración de web services, el análisis de datos avanzados y una interfaz de usuario diseñada para una comunicación efectiva."
+          },
+          {
+            "title": "",
+            "description": "GovSDS ha promovido la transparencia y la rendición de cuentas al permitir al gobierno demostrar su compromiso con los ODS. Los análisis de datos avanzados han respaldado la toma de decisiones informadas sobre la implementación de políticas relacionadas con los ODS. La plataforma ha identificado áreas de mejora, lo que ha permitido una asignación más eficiente de recursos para lograr los ODS. GovSDS ha facilitado la comunicación con ciudadanos y partes interesadas al proporcionar una visión clara del progreso hacia los ODS."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "React"
+          }
+        ]
+      },
+      {
+        "code": "presupuesto-participativo",
+        "color":"#00C800",
+        "name": "Presupuesto Participativo",
+        "img_logo": "/Assets/Projects/PresupuestoParticipativo/logo.png",
+        "img_page": "/Assets/Projects/PresupuestoParticipativo/project-view.webp",
+        "description": "Plataforma de Votación y Escrutinio de Presupuesto Participativo Ciudadano",
+        "project_description": [
+          {
+            "title": "",
+            "description": "Nuestro proyecto, conocido como PP, tenía como objetivo principal facilitar el proceso de presupuesto participativo ciudadano, empoderando a los residentes de una comunidad para tomar decisiones clave sobre la asignación de fondos públicos. Esta plataforma web fue desarrollada con un enfoque en la transparencia, la participación cívica y la toma de decisiones colaborativa."
+          },
+          {
+            "title": "",
+            "description": "El cliente se enfrentaba al desafío de involucrar efectivamente a los ciudadanos en el proceso de presupuesto participativo, garantizando la equidad y la transparencia en la toma de decisiones. La comunicación y el seguimiento de propuestas y votos eran áreas problemáticas que requerían soluciones."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, desarrollamos PP utilizando Ruby on Rails y web services para integrarnos con los sistemas de gestión existentes. Creamos una interfaz de usuario intuitiva que permitía a los residentes registrarse fácilmente, presentar propuestas de proyectos y emitir votos en línea. Además, fomentamos la comunicación y el debate entre los ciudadanos a través de la plataforma."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "mitext",
+        "color":"#995EF8",
+        "name": "Mi Text",
+        "img_logo": "/Assets/Projects/Mitext/logo.png",
+        "img_page": "/Assets/Projects/Mitext/project-view.webp",
+        "description": "Plataforma web que permite planificar, crear y ejecutar campañas de SMS de manera eficiente y personalizada.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "La plataforma web Mi text es una herramienta esencial para cualquier organización que busca establecer una comunicación efectiva y directa con su audiencia a través de mensajes de texto SMS. Diseñada con un enfoque en la facilidad de uso y la versatilidad, esta plataforma permite a los usuarios planificar, crear y ejecutar campañas de SMS de manera eficiente y personalizada."
+          },
+          {
+            "title": "",
+            "description": "El objetivo principal de mitext es proporcionar a las organizaciones una plataforma que les permita planificar, crear y ejecutar campañas de SMS de manera eficiente y personalizada."
+          },
+          {
+            "title": "",
+            "description": "El cliente se enfrentaba al desafío de mejorar su comunicación con clientes, empleados y otros miembros de su comunidad, y al mismo tiempo, optimizar el uso de sus recursos. La necesidad de personalización y automatización en las campañas de SMS era evidente."
+          },
+          {
+            "title": "",
+            "description": "Nuestro enfoque clave fue desarrollar una plataforma de fácil uso y alta eficiencia. Utilizamos tecnologías de vanguardia como Ruby on Rails en el backend y React en el frontend, y establecimos conexiones con proveedores de telefonía mediante web services para garantizar la entrega confiable de mensajes."
+          },
+          {
+            "title": "",
+            "description": "La implementación exitosa de mitext ha resultado en una comunicación directa y efectiva para el cliente con sus diversas audiencias. Los mensajes de texto tienen tasas de apertura significativamente más altas, lo que ha aumentado la participación y la eficiencia en la comunicación. La automatización y las plantillas han ahorrado tiempo y recursos, y la personalización ha mejorado la relación con los destinatarios."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "React"
+          },
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "jovenes-+16",
+        "color":"#DD3636",
+        "name": "Jovenes +16",
+        "img_logo": "/Assets/Projects/jovenes/logo.png",
+        "img_page": "/Assets/Projects/jovenes/project-view.webp",
+        "description": "Sistema de control de acceso que facilita la regulación y seguridad de la entrada de menores de edad a eventos.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "Nuestro proyecto, el Sistema de Jovenes +16 Control de Acceso para Menores en Eventos Públicos, es un testimonio de nuestra capacidad para abordar con éxito problemas complejos y proporcionar soluciones innovadoras."
+          },
+          {
+            "title": "",
+            "description": "Para este proyecto, utilizamos Ruby on Rails y web services para crear un sistema de control de acceso en tiempo real altamente efectivo. Simplificamos y agilizamos el proceso de empadronamiento, reduciendo la carga administrativa."
+          },
+          {
+            "title": "",
+            "description": "Nuestra solución transformó por completo el control de acceso en eventos públicos, garantizando que solo los menores empadronados y autorizados puedan ingresar. Logramos cumplir con las regulaciones relacionadas con menores de edad y mejoramos significativamente la seguridad en eventos."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "babycarepro",
+        "color":"#DD3636",
+        "name": "BabyCarePro",
+        "img_logo": "/Assets/Projects/sistemaEmbarazos/logo.png",
+        "img_page": "/Assets/Projects/sistemaEmbarazos/project-view.webp",
+        "description": "Plataforma web integral y personalizada para el seguimiento y la gestión de embarazos.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "El objetivo principal de nuestro proyecto, BabyCarePro, era proporcionar una plataforma web integral y personalizada para el seguimiento y la gestión de embarazos. Nos propusimos ofrecer un enfoque centrado en la detección temprana y la atención prenatal de alta calidad, garantizando la salud y el bienestar de las madres embarazadas y sus bebés a lo largo de todo el proceso de gestación."
+          },
+          {
+            "title": "",
+            "description": "Nuestro cliente, una clínica de atención prenatal, se enfrentaba a desafíos clave en la gestión de los embarazos. Estos incluían la necesidad de una atención prenatal más personalizada, la detección temprana de posibles riesgos y la comunicación eficaz entre las madres embarazadas y los profesionales de la salud."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, desarrollamos BabyCarePro utilizando Ruby on Rails y web services que se comunicaban con los sistemas de gestión de la clínica. Implementamos un sistema completo de seguimiento del embarazo que incluía registro de datos detallados, detección temprana de riesgos, registro de actividad fetal y recordatorios automáticos de citas y pruebas."
+          },
+          {
+            "title": "",
+            "description": "BabyCarePro se desarrolló utilizando Ruby on Rails como el marco principal y seguimos una metodología ágil para adaptarnos a las necesidades cambiantes. También integramos web services para comunicarse con los sistemas de gestión existentes."
+          },
+          {
+            "title": "",
+            "description": "Nuestro enfoque clave fue proporcionar una atención prenatal altamente personalizada. Desarrollamos algoritmos avanzados para la detección temprana de riesgos, facilitamos la comunicación directa con los profesionales de la salud y ofrecimos recursos educativos personalizados."
+          },
+          {
+            "title": "",
+            "description": "Los resultados fueron significativos: las madres embarazadas experimentaron una atención prenatal más personalizada, la detección temprana de riesgos permitió una intervención oportuna y la comunicación con los profesionales de la salud se volvió más eficiente."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "dipres",
+        "color":"#80BCE5",
+        "name": "Dipres",
+        "img_logo": "/Assets/Projects/Dipres/logo.png",
+        "img_page": "/Assets/Projects/Dipres/project-view.webp",
+        "description": "Plataforma web que simplifica la gestión del gasto prestacional y proporciona una serie de características clave que mejoran la calidad de la atención médica y optimiza el uso de los recursos financieros.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "La plataforma web Dipres ha sido diseñada para abordar un desafío crítico en el ámbito de las empresas y organizaciones de salud: la gestión eficaz del gasto prestacional. Durante mucho tiempo, esta tarea fue compleja y lenta, lo que obstaculizaba la capacidad de brindar atención médica de calidad mientras se mantenía un control estricto de los recursos financieros."
+          },
+          {
+            "title": "",
+            "description": "Dipres ofrece una solución completa y eficiente que simplifica la gestión del gasto prestacional y proporciona una serie de características clave que mejoran la calidad de la atención médica y optimizan el uso de los recursos financieros."
+          },
+          {
+            "title": "",
+            "description": "Una de las características destacadas de Dipres es la Autorización de Prestaciones, que permite a los prestadores médicos autorizar prestaciones de manera rápida y sencilla directamente a través de la plataforma. Esto agiliza significativamente el proceso y reduce los tiempos de espera para los pacientes, mejorando su experiencia de atención médica."
+          },
+          {
+            "title": "",
+            "description": "La plataforma también proporciona una visión completa y detallada del gasto prestacional, lo que permite un seguimiento exhaustivo de los recursos financieros y una asignación eficiente de los mismos. Además, los médicos auditores tienen la capacidad de identificar y gestionar desvíos de consumo, lo que contribuye significativamente al control de costos y garantiza que las prestaciones se brinden de manera adecuada y responsable."
+          },
+          {
+            "title": "",
+            "description": "Dipres se integra de manera perfecta con la red de prestadores de la organización de salud, facilitando la comunicación y la colaboración entre todas las partes involucradas en la atención médica. Esto mejora la coordinación de los servicios y garantiza una atención más efectiva."
+          },
+          {
+            "title": "",
+            "description": "Además genera informes y análisis detallados sobre el gasto prestacional, lo que proporciona información valiosa para la toma de decisiones estratégicas y la planificación futura."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          },
+          {
+            "tech_name": "Javascript"
+          },
+          {
+            "tech_name": "CSS"
+          }
+        ]
+      },
+      {
+        "code": "quickup",
+        "color":"#EDC14F",
+        "name": "Quickup",
+        "img_logo": "",
+        "img_page": "",
+        "description": "Plataforma de gestión de citas y turnos médicos diseñada con un enfoque en la comodidad y la accesibilidad.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "Quick up Online es una plataforma de gestión de citas y turnos médicos diseñada con un enfoque en la comodidad y la accesibilidad. Desarrollada en Ruby on Rails y con integración de web services, esta solución aborda los desafíos que enfrentaban los centros de salud, como la gestión ineficiente de las citas, las altas tasas de cancelación y la falta de acceso a historiales médicos."
+          },
+          {
+            "title": "",
+            "description": "Nuestra estrategia clave se centró en la experiencia del usuario, con una interfaz intuitiva que permite a los pacientes reservar citas en línea, recibir recordatorios automáticos y acceder a calificaciones y reseñas de otros pacientes. Los médicos pueden mantener actualizada su disponibilidad en tiempo real y gestionar sus agendas de manera eficiente."
+          },
+          {
+            "title": "",
+            "description": "Los resultados fueron notables: reducción de las tasas de cancelación, mayor eficiencia en la gestión de agendas y una experiencia mejorada para médicos y pacientes."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          },
+          {
+            "tech_name": "Javascript"
+          },
+          {
+            "tech_name": "CSS"
+          }
+        ]
+      },
+      {
+        "code": "meditec",
+        "color":"#995EF8",
+        "name": "Meditec",
+        "img_logo": "/Assets/Projects/Meditec/logo.png",
+        "img_page": "/Assets/Projects/Meditec/project-view.webp",
+        "description": "Software de gestión diseñado específicamente para atender las complejas necesidades administrativas, financieras y contables de las Obras Sociales y Gerenciadoras de Salud",
+        "project_description": [
+          {
+            "title": "",
+            "description": "El software de gestión Meditec es una solución integral diseñada específicamente para atender las complejas necesidades administrativas, financieras y contables de las Obras Sociales y Gerenciadoras de Salud. Su principal objetivo es simplificar y fortalecer la gestión de estas entidades, permitiendo un control preciso de los recursos y una toma de decisiones más informada y oportuna."
+          },
+          {
+            "title": "",
+            "description": "Este software afronta desafíos críticos que enfrentaban las Obras Sociales y Gerenciadoras de Salud. Estos desafíos incluían la complejidad en la gestión de afiliados, el procesamiento de prestaciones médicas y la gestión financiera. Anteriormente, la fragmentación de datos en múltiples sistemas y hojas de cálculo dificultaba la toma de decisiones informadas y la rendición de cuentas."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, se optó por implementar el software Meditec utilizando la tecnología Delphi como núcleo de desarrollo. La estrategia clave fue centralizar todos los procesos y la carga de datos en un solo software. Esto permitió eliminar la necesidad de sistemas fragmentados y hojas de cálculo, lo que condujo a una gestión más eficiente y simplificada de los recursos y procesos."
+          },
+          {
+            "title": "",
+            "description": "Los resultados obtenidos fueron notables. Meditec proporcionó a los cargos directivos y gerenciales las herramientas necesarias para tomar decisiones estratégicas de manera eficiente y oportuna. Esto se logró a través de indicadores de gestión personalizados y un Tablero de Control que brindaban información valiosa en tiempo real."
+          },
+          {
+            "title": "",
+            "description": "Además, la centralización de procesos y la automatización de tareas administrativas y financieras llevaron a una gestión más eficiente de los recursos y un uso más efectivo de los fondos disponibles. La transparencia y la rendición de cuentas se mejoraron significativamente gracias a un registro completo y seguro de todas las transacciones y actividades."
+          },
+          {
+            "title": "",
+            "description": "En última instancia, Meditec se convirtió en una solución esencial para las Obras Sociales y Gerenciadoras de Salud que buscaban mejorar la gestión en todos los niveles. Este software simplificó la gestión administrativa, financiera y contable, lo que llevó a una atención médica más eficiente y a una gestión institucional optimizada."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Delphi"
+          }
+        ]
+      },
+      {
+        "code": "ditrack",
+        "color":"#00C800",
+        "name": "Ditrack",
+        "img_logo": "/Assets/Projects/ditrack/logo.png",
+        "img_page": "/Assets/Projects/ditrack/project-view.webp",
+        "description": "Plataforma avanzada y eficiente para la gestión y el seguimiento de su ganado en campos y fincas ganaderas",
+        "project_description": [
+          {
+            "title": "",
+            "description": "El objetivo principal de nuestro proyecto, DiTrack, era proporcionar a los ganaderos una plataforma avanzada y eficiente para la gestión y el seguimiento de su ganado en campos y fincas ganaderas. Queríamos abordar los desafíos que enfrentaban los ganaderos en la gestión del ganado, incluyendo la falta de trazabilidad, la carga de trabajo manual y la necesidad de una gestión más eficiente de recursos."
+          },
+          {
+            "title": "",
+            "description": "Nuestro cliente, un productor ganadero, se enfrentaba a varios desafíos en la gestión de su ganado. Estos incluían la falta de un sistema de seguimiento eficiente, la dificultad para mantener registros de salud y alimentación de los animales, y la necesidad de tomar decisiones basadas en datos para mejorar la productividad."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, desarrollamos DiTrack utilizando Ruby on Rails y web services que se comunicaban con los sistemas de gestión del cliente. Implementamos un sistema completo de registro de datos del ganado, gestión de salud, seguimiento GPS en tiempo real y registro de actividades en el campo."
+          },
+          {
+            "title": "",
+            "description": "Utilizamos Ruby on Rails como el marco principal para el desarrollo del proyecto y seguimos una metodología ágil para asegurar la adaptabilidad a medida que evolucionaban los requisitos. También integramos dispositivos de hardware como collares GPS y sensores de salud."
+          },
+          {
+            "title": "",
+            "description": "Nuestro enfoque clave fue la automatización y la mejora de la eficiencia operativa. Queríamos simplificar la gestión del ganado, reducir la carga de trabajo manual y proporcionar a los ganaderos datos precisos para la toma de decisiones."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "gremitec",
+        "color":"#00006C",
+        "name": "Gremitec",
+        "img_logo": "/Assets/Projects/gremiotec/logo.png",
+        "img_page": "/Assets/Projects/gremiotec/project-view.webp",
+        "description": "Plataforma web diseñada para simplificar y fortalecer la administración de sindicatos de trabajadores.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "Gremitec es una plataforma web diseñada para satisfacer las necesidades de los sindicatos de trabajadores. Su misión principal es simplificar y fortalecer la administración de estos sindicatos, lo que se traduce en una comunicación más efectiva, una toma de decisiones más informada y una participación activa de los miembros."
+          },
+          {
+            "title": "",
+            "description": "Antes de implementar Gremitec, nuestros clientes, un sindicato de trabajadores, enfrentaban una serie de desafíos. La gestión de miembros era complicada y descentralizada, la comunicación entre los miembros era ineficiente y no existía un sistema transparente para tomar decisiones democráticas. Además, gestionar documentos importantes y proporcionar recursos educativos relacionados con los derechos laborales era un proceso laborioso."
+          },
+          {
+            "title": "",
+            "description": "Utilizamos la tecnología Ruby on Rails para el backend y web services para la integración con los sistemas de gestión existentes del cliente. El enfoque clave en el diseño de Gremitec fue hacer que la plataforma sea intuitiva y fácil de usar para usuarios de todas las edades y niveles de habilidad técnica."
+          },
+          {
+            "title": "",
+            "description": "La implementación de Gremitec ha llevado a una gestión sindical más eficiente, una comunicación más efectiva y una participación más activa de los miembros. La transparencia en la toma de decisiones ha aumentado, y la administración de documentos y recursos educativos es más eficiente. El sindicato ahora cuenta con un registro seguro y claro de sus actividades sindicales."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "namhut",
+        "color":"#DD3636",
+        "name": "Namhut",
+        "img_logo": "",
+        "img_page": "",
+        "description": "plataforma E-commerce para petshop",
+        "project_description": [
+          {
+            "title": "",
+            "description": "Nuestro proyecto Namhut E-commerce para Petshop ejemplifica nuestro compromiso con la excelencia y la satisfacción del cliente."
+          },
+          {
+            "title": "",
+            "description": "El objetivo principal de este proyecto era claro: proporcionar a nuestro cliente, un petshop visionario, una plataforma E-commerce de primera clase que no solo aumentara sus ventas en línea, sino que también mejorara significativamente la experiencia del cliente."
+          },
+          {
+            "title": "",
+            "description": "El cliente se enfrentaba a desafíos que incluían una presencia en línea limitada y la necesidad apremiante de integrar sus sistemas de pago y gestión de inventario de manera efectiva. Nuestra respuesta a estos desafíos fue una solución innovadora y eficiente."
+          },
+          {
+            "title": "",
+            "description": "Utilizamos Ruby on Rails, un marco de desarrollo ágil y escalable, como piedra angular de nuestro proyecto. Además, implementamos web services que se conectaron de manera fluida con plataformas de pago y el sistema de gestión de inventario del cliente, lo que resultó en una gestión de transacciones eficiente y un flujo de trabajo optimizado."
+          },
+          {
+            "title": "",
+            "description": "Nuestro cliente se benefició en gran medida de esta solución. Experimentaron un crecimiento sustancial en sus ventas en línea, lo que se tradujo en un aumento significativo en sus ingresos. Además, la gestión más eficiente de transacciones e inventario redujo los costos operativos y mejoró la satisfacción del cliente."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "SIGCon",
+        "color":"#EDC14F",
+        "name": "SIGCon",
+        "img_logo": "",
+        "img_page": "",
+        "description": " Plataforma de Gestión de Cobranzas para Gobiernos",
+        "project_description": [
+          {
+            "title": "",
+            "description": "Nuestra plataforma web, denominada SIGCon, emerge como una respuesta eficaz a la compleja problemática de la gestión de cobranzas gubernamentales. En un contexto en el que la eficiencia y la transparencia son esenciales, SIGCon ha sido diseñada específicamente para satisfacer las necesidades de entidades gubernamentales a nivel municipal, estatal o nacional."
+          },
+          {
+            "title": "",
+            "description": "El objetivo principal de SIGCon es proporcionar a los gobiernos una solución integral para gestionar eficazmente los procesos de cobranza, optimizar la recaudación de ingresos públicos y mejorar la relación con sus ciudadanos."
+          },
+          {
+            "title": "",
+            "description": "Nuestros clientes, entidades gubernamentales, se enfrentaban a varios desafíos. La gestión manual de cobranzas era propensa a errores y retrasos, lo que resultaba en una recaudación ineficiente. Además, la falta de una plataforma centralizada dificultaba el seguimiento y la comunicación efectiva con los deudores."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, adoptamos un enfoque centrado en la automatización y la transparencia. Implementamos tecnologías modernas, como Ruby on Rails en el backend y React en el frontend, para crear una plataforma robusta y de fácil uso."
+          },
+          {
+            "title": "",
+            "description": "Nuestra estrategia se centró en automatizar procesos, centralizar datos y ofrecer opciones de pago en línea. Implementamos procesos automáticos de notificación y recordatorio de pagos para reducir los incumplimientos y creamos un sistema centralizado para gestionar todas las deudas pendientes."
+          },
+          {
+            "title": "",
+            "description": "Integramos un sistema de pagos en línea seguro y conveniente para agilizar la recaudación. Los resultados de este proyecto han sido notables. Nuestros clientes experimentaron una recaudación más eficiente de ingresos públicos y una disminución significativa de la tasa de incumplimientos gracias a las notificaciones automatizadas."
+          },
+          {
+            "title": "",
+            "description": "SIGCon brindó mayor transparencia en la gestión de cobranzas gubernamentales, lo que generó confianza en los ciudadanos. Además, la plataforma simplificó la gestión de cobranzas, lo que resultó en un uso más eficiente de los recursos administrativos."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "React"
+          },
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "recuperos",
+        "color":"#80BCE5",
+        "name": "Recuperos",
+        "img_logo": "/Assets/Projects/recupero/logo.png",
+        "img_page": "/Assets/Projects/recupero/project-view.webp",
+        "description": "Plataforma web diseñada para simplificar y fortalecer la administración de sindicatos de trabajadores.",
+        "project_description": [
+          {
+            "title": "",
+            "description": "En un esfuerzo por abordar la compleja problemática de la gestión de prestaciones de salud brindadas por instituciones médicas privadas, nuestro equipo desarrolló con éxito la plataforma web RecuperaSalud. Este proyecto se centró en empoderar a los gobiernos argentinos para recuperar prestaciones y optimizar el uso de los fondos públicos asignados a la atención médica."
+          },
+          {
+            "title": "",
+            "description": "El objetivo principal de RecuperaSalud fue proporcionar a los gobiernos argentinos una solución eficiente y transparente para la recuperación de prestaciones de salud brindadas por instituciones médicas privadas. Queríamos mejorar la rendición de cuentas, la eficiencia en el gasto público y la transparencia en la gestión de recursos."
+          },
+          {
+            "title": "",
+            "description": "El cliente se enfrentaba a varios desafíos, incluyendo una falta de transparencia en la gestión de prestaciones médicas, procesos manuales que consumían tiempo y recursos, y la necesidad de una mejor asignación de fondos públicos para servicios de atención médica."
+          },
+          {
+            "title": "",
+            "description": "Para abordar estos desafíos, implementamos una estrategia que incluyó el desarrollo de la plataforma web utilizando Ruby on Rails y la integración de web services con sistemas de gestión existentes. Esto permitió el registro sistemático de prestaciones, la documentación digital de apoyo, el seguimiento en tiempo real y la verificación de prestaciones."
+          },
+          {
+            "title": "",
+            "description": "RecuperaSalud ha brindado resultados significativos para el cliente y la comunidad en general. La plataforma ha mejorado la transparencia, reducido el riesgo de fraude, ahorrado tiempo y recursos, permitido un mejor control de costos y facilitado la rendición de cuentas ante los ciudadanos."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "code": "sistema-de-gestión-de-ordene-para-organización-gremial-ATUNPA",
+        "color":"#995EF8",
+        "name": "Sistema de Gestión de Órdenes para Organización Gremial ATUNPA",
+        "img_logo": "",
+        "img_page": "",
+        "description": "Sistema de gestión desarrollado para la Organización Gremial ATUNPA",
+        "project_description": [
+          {
+            "title": "",
+            "description": "En el competitivo mundo actual, la eficiencia en la gestión administrativa y la capacidad de adaptación son esenciales para el éxito de cualquier organización. La Organización Gremial ATUNPA comprendió esta necesidad y tomó una decisión estratégica al colaborar con nuestra empresa de software para desarrollar un sistema que cambiaría su forma de operar. El resultado de esta colaboración es un sistema de gestión que ha agilizado significativamente sus procesos y ha añadido una valiosa trazabilidad a sus operaciones. Esta reseña destaca las principales características y beneficios de este sistema."
+          },
+          {
+            "title": "",
+            "description": "Administración y Gestión de los datos de los afiliados: Para “Atunpa” era esencial encontrar una manera de administrar y utilizar de manera ágil los datos de sus afiliados. Este sistema, con una flexible estructura de filtros, permite extraer la información necesaria para cada una de las acciones sociales y de gestión de la organización en relación a sus afiliados. "
+          },
+          {
+            "title": "",
+            "description": "Agilización del Proceso Administrativo: Una de las principales metas de la Organización Gremial ATUNPA era simplificar y acelerar su proceso administrativo. El nuevo sistema ha logrado esto con creces, eliminando ineficiencias y automatizando tareas repetitivas. La gestión de órdenes de compra para sus afiliados, utilizadas en diversos comercios adheridos, se ha vuelto más fluida y eficaz. Esto no solo ahorra tiempo, sino que también reduce la posibilidad de errores humanos, mejorando así la calidad del servicio proporcionado a los afiliados."
+          },
+          {
+            "title": "",
+            "description": "Trazabilidad y Transparencia: La capacidad de rastrear cada paso del proceso de órdenes de compra y consumos de afiliados se ha convertido en un activo invaluable para la Organización Gremial, ahora tienen acceso en tiempo real a información detallada sobre las solicitudes y consumos de sus afiliados. Esto no solo proporciona una mayor transparencia en sus operaciones, sino que también les permite tomar decisiones informadas basadas en datos actualizados."
+          },
+          {
+            "title": "",
+            "description": "Automatización de la Gestión de Cobros: Uno de los aspectos más destacados de este sistema es su capacidad para automatizar la gestión de cobros de consumos. A través de una integración efectiva con los recibos de sueldo de los afiliados, la Organización Gremial puede gestionar directamente con los empleadores el cobro de los consumos realizados por sus afiliados. Esto no solo ahorra tiempo y recursos, sino que también mejora la eficiencia y la precisión en la gestión financiera de la organización."
+          },
+          {
+            "title": "",
+            "description": "Acceso en Línea: La digitalización y la conectividad son elementos clave en el mundo moderno. Este sistema proporciona acceso en línea a solicitudes y consumos de afiliados, lo que significa que la Organización Gremial puede monitorear y gestionar sus operaciones en tiempo real desde cualquier lugar con conexión a Internet. Esto ha resultado esencial, especialmente en tiempos en que la flexibilidad y la movilidad son cruciales."
+          },
+          {
+            "title": "",
+            "description": "En resumen, el sistema de gestión desarrollado para la Organización Gremial ATUNPA ha sido un verdadero catalizador de cambios en su operación. Ha permitido una administración más eficiente, una mayor transparencia en las operaciones y una gestión financiera más precisa."
+          }
+        ],
+        "tech_stack": [
+          {
+            "tech_name": "Ruby on Rails"
+          }
+        ]
+      }
+    ]
+  },
+  "about_us": {
+    "label": "— Hola desde Argentina",
+    "title": "Somos Devias.",
+    "card": "Somos un pequeño equipo con gran potencia. \n Trabajamos con nuestros clientes para brindarles las mejores soluciones, personalizar sus necesidades, utilizando siempre la ùltima tecnologìa en programaciòn y las mejores herramientas de trabajo en equipo "
+  },
+  "our_way": {
+    "label_section": "Así es como trabajamos",
+    "title_section": "Nuestro Proceso",
+    "items": [
+      {
+        "name": "Investigación",
+        "description": "La etapa inicial (la más importante) de cualquier proyecto de desarrollo es la investigación. En nuestra compañía, la investigación constituye alrededor del 60% de todos los procesos de desarrollo; el otro 40% se divide entre las cuatro tácticas restantes.\n Antes de realizar cualquier investigación técnica, comenzamos investigando el elemento humano. \n Siempre trabajarenmos para comprender sus expectativas y motivaciones a fin de crear una excelente experiencia de desarrollo de software.\nUna vez establecidas sus expectativas, evaluaremos la tecnología necesaria para satisfacer estas necesidades.",
+        "number": 1
+      },
+      {
+        "name": "Ideación",
+        "description": "Una vez que sus necesidades y expectativas han sido atendidas e internalizadas y la invetigación sobre los aspectos técnicos ha finalizado, el proceso creativo comienza.\nDurante la etapa de Ideación, los desarrolladores echan a andar sus ideas. Algunas podrán ser nuevas o revolucionarias, otras podrán ser pequeñas y simples mejoras a soluciones existentes. De cualquier forma, el equipo creativo continuará analizando las ideas y combinándolas para crear una solución que satisfaga sus necesidades y expectativas. Durante este proceso, pueden surgir varias necesidades que nunca supo que existían; establecer estas necesidades insatisfechas también agrega valor, por lo que el tiempo dedicado a analizar ideas es una buena inversión.",
+        "number": 2
+      },
+      {
+        "name": "Diseño",
+        "description": "Cuando se han seleccionado todas las ideas, comienza el proceso de diseño del front-end. Primero, creamos prototipos de baja fidelidad. Estos son conceptos aproximados al principio del proceso que utilizamos para probar las diversas estructuras y flujos de trabajo de la solución. \nUna vez que se determina la maqueta final de baja fidelidad, los diseñadores gráficos, de interacción y de interfaz de usuario (UI) modifican aún más la idea para un prototipo de alta fidelidad que mostrará cómo aparecerá y funcionará la solución. Una vez estudiados estos comportamientos, el siguiente paso es crear un prototipo de Experiencia de Usuario (UX) interactivo para realizar pruebas.",
+        "number": 3
+      },
+      {
+        "name": "Desarrollo",
+        "description": "Una vez completado el proceso de diseño, puede continuar con el desarrollo creando una solución de back-end para respaldar el diseño de front-end. El proceso de desarrollo implica estudiar los datos, los comportamientos encontrados durante el proceso de diseño, producir un modelo de la base de datos y seleccionar el mejor lenguaje del lado del servidor para el proyecto.",
+        "number": 4
+      },
+      {
+        "name": "Iteración",
+        "description": "Una vez que el producto se desarrolla y lanza con su aprobación, comienza un ciclo iterativo de pruebas. Este proceso de iteración existe en todas las etapas anteriores, pero es más imperativo después del lanzamiento del producto.\nMientras recopilamos análisis de rendimiento posteriores al lanzamiento, también revisaremos las necesidades del negocio y nos aseguraremos de que la solución cumpla con sus expectativas. Una vez que tengamos todo el conocimiento a mano, podremos continuar trabajando con usted para perfeccionar aún más sus productos y crear soluciones adicionales.",
+        "number": 5
+      }
+    ],
+    "projects_section": {
+      "title": "NUESTROS PROYECTOS"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "sub_title": "Hablemos"
+  },
+  "footer": {
+    "links":{
+      "about_us": "Nosotros",
+      "projects": "Proyectos",
+      "our_workflow": "Cómo trabajamos",
+      "contact": "Contáctanos"
+    }
+  }
+}

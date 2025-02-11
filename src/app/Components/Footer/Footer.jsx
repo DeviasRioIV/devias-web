@@ -1,50 +1,56 @@
 // External Modules
 import React from 'react'
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { useParams } from 'next/navigation'
 import { RiFacebookFill, RiInstagramLine, RiLinkedinFill } from "react-icons/ri";
 
 // Internal modules
-import './Footer.scss'
-import {Link, NavLink} from 'react-router-dom'
-import {AppContext} from '../../AppContext'
+import styles from './footer.module.scss'
 
 // Assets
 import logoDevias from 'Assets/Utilities/Logos/iso-eslogan.svg'
+import Image from 'next/image';
 
 export default function Footer() {
 
-  // Global state
-  const {state} = React.useContext(AppContext)
-
   // Local state
-  const [language, setLanguage] = React.useState(state.language_content.footer.links)
+  const [locale, setLocale] = React.useState('en')
 
-  // Language Effect
-  React.useEffect(() => {
+  // Constants
+  const params = useParams()
 
-    setLanguage(state.language_content.footer.links)
+  const links = useTranslations('footer.links')
 
-  }, [state.language])
+  //Locale Effect
+    React.useEffect(() => {
+  
+      const locale = params.locale
+  
+      setLocale(locale)
+  
+    }, [params])
 
   return (
-    <footer>
-      <section className='container'>
-        <div className='container-footer-links'>
+    <footer id={styles.footer}>
+      <section className={`container ${styles.container}`}>
+        <div className={styles.container_footer_links}>
           <ul>
             <li>
-              <NavLink to='/about-us'> {language.about_us} </NavLink>
+              <Link href={`/${locale}/about-us`}> {links('about_us')} </Link>
             </li>
             <li>
-              <NavLink to='/our-projects'> {language.projects} </NavLink>
+              <Link href={`/${locale}/our-projects`}> {links('projects')} </Link>
             </li>
             <li>
-              <NavLink to='/our-way'> {language.our_workflow} </NavLink>
+              <Link href={`/${locale}/our-way`}> {links('our_workflow')} </Link>
             </li>
             <li>
-              <NavLink to='/contact-us'> {language.contact} </NavLink>
+              <Link href={`/${locale}/contact-us`}> {links('contact')} </Link>
             </li>
           </ul>
         </div>
-        <div id='social-icons'>
+        <div id={styles.social_icons}>
           <a href='https://www.facebook.com/devias.ar' target='_blank' rel='noreferrer'>
             <i>
               <RiFacebookFill />
@@ -61,9 +67,9 @@ export default function Footer() {
             </i>
           </a>
         </div>
-        <div className='container-footer-logo'>
-          <Link to='/'>
-            <img src={logoDevias.src} alt='dev-logo' />
+        <div className={styles.container_footer_logo}>
+          <Link href={`/${locale}`}>
+            <Image src={logoDevias.src} alt='dev-logo' width={65} height={65} />
           </Link>
         </div>
       </section>
