@@ -36,6 +36,10 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
+
+      <title>Devias</title>
+      <meta name="description" content="Humanizing Digital Products" />
+
       <body className={roboto.variable}>
 
         <NextIntlClientProvider messages={messages}>

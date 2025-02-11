@@ -88,9 +88,6 @@ export default function Home() {
   return (
     <main id='home' className={styles.home}>
 
-    <title>Devias</title>
-    <meta name="description" content="Humanizing Digital Products" />
-
       <Header />
 
       <section className={styles.primary_section}>
