@@ -139,6 +139,7 @@ export default function ContactForm ({home}){
         <div id={styles.container_form_location}>
 
           <div className={styles.container_form}>
+
             {/* Container of data */}
             <div className={styles.data_container}>
 
