@@ -31,7 +31,6 @@ export default function ContactForm ({home}){
   const form = React.useRef(null)
 
   // Effects
-
   // Verify is all fields valid
   React.useEffect(() => {
 
