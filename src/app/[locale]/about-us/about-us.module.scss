@@ -1,0 +1,366 @@
+@import 'Sass/config.scss';
+
+.about_us{
+  width: 100%;
+
+  .section_title{
+
+    .container{
+      position: relative;
+      width: 100%;
+      max-width: 98%;
+
+      @media (max-width: 768px) {
+        height: 700px;
+        width: auto;
+      }
+
+      .container_titles {
+        position: absolute;
+        top: 30%;
+        left: 14%;
+        z-index: 2;
+
+        @media (max-width: 480px) {
+          top: 40%;
+          left: 20%;
+        }
+
+        h1, h2 {
+          color:#FFFFFF;
+
+          &#we_are {
+            font-size: 7rem;
+            font-family: 'Maqueen Sans';
+
+            @media (max-width: 768px) {
+              font-size: 6rem;
+            }
+            @media (max-width: 480px) {
+              font-size: 4rem;
+            }
+          }
+          &#devias{
+            font-size: 5rem;
+            font-family: 'Univia Pro';
+
+            @media (max-width: 768px) {
+              font-size: 3rem;
+            }
+            @media (max-width: 480px) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+      #banner {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+
+        @media (max-width: 768px) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      #placeholder {
+        position: absolute;
+        top: 0;
+        left: 0.75rem;
+        right: 0.75rem;
+        width: calc(100% - 1.50rem);
+        height: calc(100% - 0.2rem);
+        background-color:#00000066;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+          height: 100%;
+        }
+      }
+
+      #element_left {
+        position: absolute;
+        width: 8vw;
+        height: auto;
+        left: 0.75rem;
+        top: 25%;
+
+        @media (max-width: 768px) {
+          width: 58px;
+          top: 15%;
+        }
+      }
+
+      #element_right {
+        position: absolute;
+        width: 32vw;
+        height: auto;
+        right: 0.75rem;
+        top: 25%;
+
+        @media (max-width: 768px) {
+          width: 130px;
+          top: 50%;
+          right: 2.5rem;
+        }
+        @media (max-width: 480px) {
+          width: 100px;
+          top: 50%;
+          right: 1.5rem;
+        }
+      }
+    }
+  }
+
+  #hello_from_argentina {
+    margin-top: 20px;
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 98%;
+
+      #card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $dark-blue;
+        border-radius: 10px;
+        padding: 80px 75px;
+        gap: 50px;
+
+        @media (max-width: 988px) {
+          padding: 80px 40px;
+          gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+          gap: 0px;
+          padding: 80px 35px;
+        }
+        @media (max-width: 596px) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+        }
+
+        @media (max-width: 536px) {
+          padding: 0px;
+        }
+
+        #map {
+          width: auto;
+          height: 100%;
+
+          @media (max-width: 988px) {
+            height: 230px;
+          }
+
+          @media (max-width: 536px) {
+            width: 180px;
+            height: auto;
+            margin: 30px 0px 0px 30px;
+            padding: 0px 0px 63px 0px;
+          }
+
+          @media (max-width: 380px) {
+            margin-left: 0px;
+          }
+        }
+
+        #container_title_hello {
+          padding: 0px 35px;
+
+          @media (max-width: 768px) {
+            padding: 0px 25px;
+          }
+
+          @media (max-width: 536px) {
+            padding: 80px 10px 0px 50px;
+          }
+
+          @media (max-width: 380px) {
+            padding: 80px 30px 0px 30px;
+          }
+
+          #hello {
+            font-family: 'Maqueen Sans';
+            font-size: 7rem;
+            color: $purple;
+
+            @media (max-width: 988px) {
+              font-size: 6rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 4rem;
+            }
+          }
+
+          #argentina {
+            font-family: 'Univia Pro';
+            font-size: 5rem;
+            color: $withe;
+
+            @media (max-width: 988px) {
+              font-size: 4rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 3rem;
+            }
+            @media (max-width: 596px) {
+              margin-bottom: 30px;
+            }
+          }
+
+          #elements {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .section_info{
+    margin-top: 150px;
+
+    @media (max-width: 768px) {
+      margin-top: 80px;
+    }
+
+    .container{
+
+      .info_container {
+        width: 50%;
+        overflow-wrap: break-word;
+        margin-bottom: 60px;
+
+        @media (max-width: 988px) {
+          width: 65%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        .info_title {
+          font-family: 'Roboto-bold';
+          color: $dark-black;
+          font-size: 2.25rem;
+          margin-bottom: 20px;
+
+          @media (max-width: 988px) {
+            font-size: 2rem;
+          }
+        }
+
+        .info_text {
+          font-family: 'Roboto';
+          color: $light-black;
+          font-size: 1.5rem;
+          font-weight: 400;
+
+          @media (max-width: 988px) {
+            font-size: 1.2rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  #slider_team {
+    height: 600px;
+    width: auto;
+    margin: 100px 10px;
+
+    @media (max-width: 768px) {
+      height: 400px;
+    }
+
+    @media (max-width: 530px) {
+      height: 300px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 470px) {
+      height: 225px;
+    }
+
+
+    .container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      max-width: 98%;
+
+      .swiper_container {
+        width: 100%;
+        height: 100%;
+
+        .swiper_slide {
+          width: auto !important;
+
+          .image_slide {
+            margin: 0px 15px;
+            height: 100%;
+            width: auto;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para hacer temblar "Digital Products" */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-2px);
+  }
+  40%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+.shaking {
+  animation: shake 0.4s ease-in-out;
+}

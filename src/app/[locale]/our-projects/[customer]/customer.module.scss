@@ -1,0 +1,128 @@
+@import 'Sass/config.scss';
+
+#customer_single_page {
+  background-color: #FAFAFA;
+  width: 100%;
+
+  /* Section title */
+  .section_title {
+    color: $dark-blue;
+
+    .container {
+      .main_title {
+        margin: 100px 0 64px 0;
+
+        h1 {
+          font-family: 'Roboto';
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-weight: 500;
+          margin: 0;
+
+          @media (max-width: 991px) {
+            font-size: 3rem;
+          }
+
+          @media all and (max-width: 768px) {
+            margin-top: 0px;
+          }
+        }
+
+        /* Responsive margin title */
+        @media (max-width: 991px) {
+          margin: 5rem 0;
+        }
+      }
+    }
+  }
+
+  /* Section post */
+  .post_content {
+    font-size: 1.125rem;
+    color: #333;
+
+    .container {
+      .contain_content {
+        width: 100%;
+
+        .customer_page {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin: 0 0 1rem;
+          padding: 0px 23%;
+          border-radius: 10px;
+
+          img {
+            position: relative !important;
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        .customer_logo {
+          display: flex;
+          justify-content: center;
+          margin: 5rem 0;
+
+          img {
+            max-height: 300px;
+            max-width: 100%;
+          }
+        }
+
+        .project_description {
+          width: 50%;
+          margin-bottom: 50px;
+
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+
+          .description_title {
+            font-family: 'Roboto-bold';
+            font-weight: 700;
+            font-size: 2.25rem;
+            color: $dark-black;
+            margin-bottom: 30px;
+
+            @media (max-width: 988px) {
+              font-size: 2rem;
+            }
+          }
+
+          p {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $light-black;
+
+            @media (max-width: 988px) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  /* Section projects  */
+  .highlighted_project {
+    margin: 8rem 0 6rem 0;
+
+    .container {
+      h2 {
+        font-family: 'Univia Pro';
+        font-size: 3rem;
+        color: $dark-black;
+        font-weight: 400;
+  
+        @media (max-width: 768px) {
+          font-size: 2.25rem;
+        }
+      }
+    }
+
+  }
+}

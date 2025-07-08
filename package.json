@@ -1,0 +1,36 @@
+{
+  "name": "devias-web-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "fortawesome": "^0.0.1-security",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.3",
+    "next": "14.2.3",
+    "next-intl": "^3.26.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.77.0",
+    "sharp": "^0.33.5",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "next": "14.2.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

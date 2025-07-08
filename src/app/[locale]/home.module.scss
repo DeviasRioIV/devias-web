@@ -1,0 +1,201 @@
+@import 'Sass/config.scss';
+
+.home{
+  background-color: #FAFAFA;
+  width: 100%;
+
+  .primary_section{
+    color: #333;
+
+    .container{
+      position: relative;
+      width: 100%;
+      max-width: 98%;
+
+      @media (max-width: 768px) {
+        height: 700px;
+        width: auto;
+      }
+
+      .container_titles{
+        position: absolute;
+        top: 30%;
+        left: 14%;
+        z-index: 2;
+
+        @media (max-width: 530px) {
+          top: 40%;
+          left: 20%;
+        }
+
+        h1 {
+          color:#FFFFFF;
+
+          &#humanizing {
+            font-size: 7rem;
+            font-family: 'Maqueen Sans';
+
+            @media (max-width: 960px) {
+              font-size: 6rem;
+            }
+            @media (max-width: 530px) {
+              font-size: 4rem;
+            }
+          }
+          &#digital{
+            font-size: 5rem;
+            font-family: 'Univia Pro';
+
+            @media (max-width: 960px) {
+              font-size: 3rem;
+            }
+            @media (max-width: 530px) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+      #banner {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: 65%;
+
+        @media (max-width: 768px) {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      
+      #placeholder {
+        position: absolute;
+        top: 0;
+        left: 0.75rem;
+        right: 0.75rem;
+        width: calc(100% - 1.50rem);
+        height: calc(100% - 0.2rem);
+        background-color:#00000066;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+          height: 100%;
+        }
+      }
+
+      #element_left {
+        position: absolute;
+        width: 9vw;
+        height: auto;
+        left: 0.75rem;
+        top: 25%;
+
+        @media (max-width: 768px) {
+          width: 58px;
+          top: 20%;
+        }
+      }
+
+      #element_right {
+        position: absolute;
+        width: 32vw;
+        height: auto;
+        right: 0.75rem;
+        top: 25%;
+
+        @media (max-width: 768px) {
+          width: 57px;
+          right: 1.5rem;
+          top: 10%;
+        }
+      }
+
+      #element_bottom {
+        position: absolute;
+        width: 99px;
+        height: auto;
+        right: 1rem;
+        top: 75%;
+      }
+
+    }
+  }
+
+  .highlighted_project{
+    width: 100%;
+    padding: 5rem 0;
+
+    h2{
+      color: $dark-black;
+      font-family: 'Univia Pro';
+      font-size: 3rem;
+      font-weight: 500;
+      @media (max-width: 991px){
+        font-size: 2.5rem;
+      }
+    }
+}
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para agrandar y achicar "Humanizing" */
+@keyframes scaleUpAndDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animación para hacer temblar "Digital Products" */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-2px);
+  }
+  40%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Aplicar las animaciones */
+#humanizing {
+  animation: scaleUpAndDown 0.6s ease-in-out forwards;
+}
+
+#digital.shaking {
+  animation: shake 0.4s ease-in-out;
+}

@@ -1,0 +1,132 @@
+@import 'Sass/config.scss';
+
+#our_way {
+  background-color: #FAFAFA;
+  width: 100%;
+
+  .primary_section {
+
+    .container {
+
+      .main_title {
+        margin: 100px 0 64px 0;
+
+        @media (max-width: 991px){
+          margin: 5rem 0;
+        }
+
+        @media (max-width: 768px){
+          margin: 2rem 0;
+        }
+
+        h1 {
+          font-family: 'Univia Pro';
+          text-transform: uppercase;
+          font-size: 4rem;
+          font-weight: 500;
+          color: $dark-blue;
+          margin: 0;
+          animation: slideRight 1s ease-in-out;
+
+          @media (max-width: 991px) {
+            font-size: 3rem;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 2.5rem;
+          }
+        }
+
+        h5 {
+          font-family: 'Roboto';
+          font-weight: 400;
+          font-size: 3rem;
+          margin-top: 30px;
+          color: $dark-blue;
+          animation: slideRight 0.5s ease-in-out;
+
+          @media (max-width: 768px) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .process_steps {
+
+    .container {
+      .container_steps{
+        width: 50%;
+
+        @media (max-width: 988px) {
+          width: 65%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        h3 {
+          margin-bottom: 1rem;
+          font-family: 'Univia Pro';
+          font-size: 2rem;
+          color: $purple;
+        }
+        h2 {
+          margin-bottom: 1rem;
+          font-size: 2rem;
+          font-family: 'Roboto-Bold';
+          color: $dark-black;
+        }
+        p{
+          margin-bottom: 2rem;
+          font-size: 1.3rem;
+          font-family: 'Roboto';
+          color: $dark-black;
+
+          @media (max-width: 768px) {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+
+  .highlighted_project {
+    padding: 100px 0;
+    color: #FFFFFF !important;
+    .container {
+      h2 {
+        font-size: 3rem;
+        font-weight: 500;
+
+        @media (max-width: 991px) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
