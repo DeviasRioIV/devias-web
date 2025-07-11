@@ -10,11 +10,7 @@ import {Autoplay} from 'swiper/modules'
 import styles from './about-us.module.scss'
 import Header from 'Components/Header/Header'
 import Footer from 'Components/Footer/Footer'
-import bannerImg from 'Assets/Images/about-us-hero-bg.jpg'
-import firstElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png'
-import secondElementDesktop from 'Assets/Utilities/Elements/desktop/about-us-hero/about-us-right-elements.png'
-import firstElementMobile from 'Assets/Utilities/Elements/mobile/about-us-hero/about-us-left-elements.png'
-import secondElementMobile from 'Assets/Utilities/Elements/mobile/about-us-hero/about-us-right-elements.png'
+import Banner from 'Components/Banner/Banner'
 import mapArgentina from 'Assets/Utilities/Elements/desktop/hello-from-argentina/argentina-map.png'
 import flagElementsDesktop from 'Assets/Utilities/Elements/desktop/hello-from-argentina/flag-and-elements.png'
 import flagElementsMobile from 'Assets/Utilities/Elements/mobile/hello-from-argentina/flag-and-elements.png'
@@ -87,21 +83,12 @@ export default function AboutUs() {
       <Header />
 
       <section className={styles.section_title}>
-        <div className={`container ${styles.container}`}>
-          <div className={styles.container_titles}>
-            <h1 id={styles.we_are}>
-              We are
-            </h1>
-            <h2 id={styles.devias} className={isShaking ? styles.shaking : ''}>
-              DEVIAS
-            </h2>
-          </div>
-
-          <div id={styles.placeholder}/>
-          <Image priority src={bannerImg} alt="banner" id={styles.banner}/>
-          <Image src={width > 768 ? firstElementDesktop : firstElementMobile} alt="element" id={styles.element_left}/>
-          <Image src={width > 768 ? secondElementDesktop : secondElementMobile} alt="element" id={styles.element_right}/>
-        </div>
+        <Banner
+          backgroundImg='/Assets/Images/about-us-hero-bg.jpg'
+          title='We are'
+          subTitle='DEVIAS'
+          variant
+        />
       </section>
 
       <section id={styles.hello_from_argentina}>
