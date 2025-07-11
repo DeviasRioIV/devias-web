@@ -39,15 +39,19 @@
 
     #container_form_location {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 50px;
+      
+
+      @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+      }
 
       .container_form {
-        width: 75%;
-
-        @media (max-width: 991px) {
-          width: 50%;
-        }
+        width: 100%;
+        max-width: 100%;
 
         .data_container {
           display: flex;
@@ -125,6 +129,9 @@
             border: none;
             border-radius: 5px;
             height: 5em;
+            min-height: 5em;
+            max-width: 100%;
+            min-width: 100%;
             color: $dark-black;
             background-color: rgba(0, 60, 123, 0.0901960784);
             margin-bottom: 22px;
@@ -179,6 +186,19 @@
       }
 
       .location_data {
+        width: 100%;
+
+        .map_container {
+          width: 100%;
+          height: 400px;
+          border-radius: 10px;
+          overflow: hidden;
+
+          @media (max-width: 768px) {
+            height: 300px;
+          }
+        }
+
         span {
           color: $dark-blue;
           font-size: 1.5rem;

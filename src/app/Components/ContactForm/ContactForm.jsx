@@ -3,6 +3,7 @@ import React from 'react'
 import emailjs from '@emailjs/browser'
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineEmail } from "react-icons/md";
+import Map from '@/app/Components/Map/Map'
 
 // Internal modules
 import styles from './contact-form.module.scss'
@@ -240,6 +241,9 @@ export default function ContactForm ({home}){
           </div>
 
           <div className={styles.location_data}>
+            <div className={styles.map_container}>
+              <Map />
+            </div>
             <br />
             <span>
               <GrLocation />
