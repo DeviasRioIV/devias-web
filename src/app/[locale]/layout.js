@@ -3,11 +3,13 @@ import React from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 
-
 import { Roboto } from "next/font/google"
 import './global.css'
 import 'swiper/css'
 import 'swiper/css/autoplay'
+
+// Internal modules
+import ClarityInit from '@/app/Components/Clarity/Clarity'
 
 
 
@@ -37,8 +39,11 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
 
-      <title>Devias</title>
-      <meta name="description" content="Humanizing Digital Products" />
+      <head>
+        <title>Devias</title>
+        <meta name="description" content="Humanizing Digital Products" />
+        <ClarityInit />
+      </head>
 
       <body className={roboto.variable}>
 
