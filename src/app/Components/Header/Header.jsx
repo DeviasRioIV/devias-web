@@ -27,7 +27,7 @@ export default function Header() {
     { href: '/about-us', label: 'about_us' },
     { href: '/our-projects', label: 'projects' },
     { href: '/our-way', label: 'our_workflow' },
-    // { href: '/ebook', label: 'ebook' },
+    { href: '/ebook', label: 'ebook' },
     { href: '/contact-us', label: 'contact', isButton: true },
   ]
 

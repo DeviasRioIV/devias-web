@@ -1,0 +1,21 @@
+@import 'Sass/config.scss';
+
+.btn_download {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    color: $withe;
+    background-color: $dark-blue;
+    transition: .2s ease;
+
+  &:hover {
+    background-color: $green;
+    color: $dark-blue;
+    background-image: none;
+  }
+
+  &.active {
+    background-image: none;
+  }
+}
