@@ -8,7 +8,7 @@ import styles from'./DownloadBtn.module.scss'
 export default function DownloadBtn() {
 
   return (
-    <a href="/Ebook_Devias.pdf" download className={styles.btn_download} onClick={() => Clarity.event("custom-event")}>
+    <a href="/Ebook_Devias.pdf" download className={styles.btn_download} onClick={() => Clarity.event("Download Ebook")}>
       Descargar Ebook
     </a>
   )
