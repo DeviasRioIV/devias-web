@@ -2,6 +2,7 @@
 // External modules
 import { useForm } from "react-hook-form"
 import {zodResolver} from '@hookform/resolvers/zod'
+import { LuLoader2 } from "react-icons/lu"
 
 // Internal modules
 import styles from './NewsletterForm.module.scss'
@@ -16,7 +17,7 @@ export default function NewsletterForm({handleCancel}) {
     formState: { errors, isValid, isSubmitting },
   } = useForm({
     resolver: zodResolver(schema),
-    mode: 'onBlur'
+    mode: 'onChange'
   })
 
   // Methods
@@ -73,7 +74,11 @@ export default function NewsletterForm({handleCancel}) {
           }
 
           <button type="submit" disabled={!isValid || isSubmitting} className={styles.btn_download}>
-            Enviar
+            {
+              !isSubmitting
+              ? 'Enviar'
+              : <div className={styles.loading}>Enviando <LuLoader2 /></div>
+            }
           </button>
         </div>
       </form>
