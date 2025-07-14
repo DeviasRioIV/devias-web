@@ -19,3 +19,22 @@
     background-image: none;
   }
 }
+
+.modal_content {
+  display: grid;
+  place-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;  
+  height: 100dvh;
+  inset: 0;
+
+  .background_modal {
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+  }
+}

@@ -1,0 +1,113 @@
+@import 'Sass/config.scss';
+
+.modal_container {
+  background-color: #FFF;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  width: 550px;
+
+  .title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Roboto-bold';
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+    .row {
+      display: flex;
+      gap: 10px;
+
+      & > div {
+        width: 100%;
+      }
+    }
+  
+    input {
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 3em;
+      color: $dark-black;
+      background-color: #003c7b17;
+      text-indent: 1rem;
+      transition: transform 0.1s ease;
+    
+      &::placeholder {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1rem;
+        color: $grey;
+        opacity: 1;
+      }
+    
+      &:focus-visible {
+        outline: #598392 solid 2px ;
+        transform: scale(1.01);
+      }
+    }
+    
+    .form_label {
+      font-family: 'Roboto';
+      font-weight: 400;
+      color: $dark-black;
+      font-size: 1rem;
+    
+      span {
+        color: $red;
+      }
+    }
+  
+    .error_message {
+      display: inline-block;
+      color: red;
+      width: fit-content;
+      font-family: 'Roboto';
+      font-size: 14px;
+      min-height: 21px;
+    }
+    
+    .btn_container {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      .btn_download, .btn_cancel {
+        align-self: flex-end;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        color: $withe;
+        background-color: $dark-blue;
+        transition: .2s ease;
+    
+        &:hover {
+          background-color: $green;
+          color: $dark-blue;
+          background-image: none;
+        }
+      
+        &.active {
+          background-image: none;
+        }
+      }
+
+      .btn_cancel {
+        background-color: #003c7b17;
+        color: black;
+
+        &:hover {
+          background-color: #003c7b17;
+          color: black;
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
