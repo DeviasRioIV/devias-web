@@ -13,7 +13,7 @@ export default function Ebook() {
       <main id={styles.ebook} className='container'>
 
         <div>
-          <h1 className={styles.title}>Devias EBook</h1>
+          <h1 className={styles.title}>Devias eBook</h1>
           <p className={styles.comment}>
             "Historias reales para founders latinos que empiezan en tech."
           </p>

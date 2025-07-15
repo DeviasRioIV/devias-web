@@ -25,7 +25,7 @@ export default function DownloadBtn() {
         download="Ebook Devias.pdf" 
         className={styles.btn_download}
         onClick={handlerDownload}>
-        Descargar Ebook
+        Descargar eBook
       </a>
 
       { 
