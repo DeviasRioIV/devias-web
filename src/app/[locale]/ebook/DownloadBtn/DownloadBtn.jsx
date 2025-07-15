@@ -21,11 +21,11 @@ export default function DownloadBtn() {
   return (
     <>
       <a
-        href="/Ebook_Devias.pdf"
-        download="Ebook Devias.pdf" 
+        href="/eBook_Devias.pdf"
+        download="eBook Devias.pdf" 
         className={styles.btn_download}
         onClick={handlerDownload}>
-        Descargar Ebook
+        Descargar eBook
       </a>
 
       { 
