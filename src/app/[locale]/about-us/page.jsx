@@ -88,6 +88,7 @@ export default function AboutUs() {
           title='We are'
           subTitle='DEVIAS'
           variant
+          placeholder
         />
       </section>
 

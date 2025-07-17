@@ -43,7 +43,7 @@ export default function Ebook() {
             </p>
 
             <p className={styles.text}>
-              Si te gustaría compartir tu historia o sumar tu experiencia para una próxima edición <a target='_blank' href='mailto:hola@devias.ar'>hola@devias.ar</a> o por <a target='_blank' href="https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true">LinkedIn</a>.
+              Si te gustaría compartir tu historia o sumar tu experiencia para una próxima edición escribínos a <a target='_blank' href='mailto:hola@devias.ar'>hola@devias.ar</a> o por <a target='_blank' href="https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true">LinkedIn</a>.
             </p>
 
             <p className={styles.text}>

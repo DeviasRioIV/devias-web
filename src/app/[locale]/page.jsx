@@ -31,7 +31,7 @@ export default function Home() {
           subTitle='Digital Products'
           content={
             <a href='/en/ebook' className={styles.ebook_btn_list}>
-              Descarga nuestro eBook <FaArrowRight />
+              Descarga nuestro eBook  <FaArrowRight />
             </a>
           } 
         />
