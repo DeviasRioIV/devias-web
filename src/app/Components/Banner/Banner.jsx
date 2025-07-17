@@ -5,7 +5,7 @@ import React from 'react'
 // Internal modules
 import styles from './banner.module.scss'
 
-export default function Banner({backgroundImg, title, subTitle, variant}) {
+export default function Banner({backgroundImg, title, subTitle, variant, content}) {
 
   const firstElementDesktop = variant ? '/Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png' :'/Assets/Utilities/Elements/desktop/home-hero/left-elements.png'
   const firstElementMobile = variant ? '/Assets/Utilities/Elements/mobile/about-us-hero/about-us-left-elements.png' : '/Assets/Utilities/Elements/mobile/home-hero/home-left-elements.png'
@@ -26,6 +26,8 @@ export default function Banner({backgroundImg, title, subTitle, variant}) {
             ))
           }
         </h2>
+
+        {content}
       </div>
 
       <div id={styles.placeholder}/>
