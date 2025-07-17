@@ -13,6 +13,7 @@ import ContactForm from 'Components/ContactForm/ContactForm'
 import InsigniaClutch from 'Components/InsigniaClutch/InsigniaClutch'
 import ServicesCard from 'Components/ServicesCard/ServicesCard'
 import Banner from 'Components/Banner/Banner'
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
   const projects = useTranslations('home.projects_section')
@@ -25,9 +26,14 @@ export default function Home() {
 
       <section className={styles.primary_section}>
         <Banner
-          backgroundImg='/Assets/Images/home_banner.jpg'
+          backgroundImg='/Assets/Images/banner-ebook.jpg'
           title='Humanizing'
           subTitle='Digital Products'
+          content={
+            <a href='/en/ebook' className={styles.ebook_btn_list}>
+              Descarga nuestro eBook  <FaArrowRight />
+            </a>
+          } 
         />
       </section>
 
