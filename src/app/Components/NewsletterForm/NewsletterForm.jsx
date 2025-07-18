@@ -41,8 +41,16 @@ export default function NewsletterForm({handleCancel}) {
 
   return (
     <div className={styles.modal_container}>
-      <h2 className={styles.title}>Suscribete a nuestra Newsletter!</h2>
-
+      <h2 className={styles.title}>
+        ¡Listo!
+        <br /> 
+          El eBook ya se está descargando.
+        </h2>
+        <p className={styles.legend}> 
+        ¿Querés que te avisemos cuando publiquemos contenido nuevo? 
+        <br />
+        <span> Completá tus datos y sumate a la comunidad</span>
+        </p>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
         <div className={styles.row}>

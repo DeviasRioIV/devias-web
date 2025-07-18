@@ -15,7 +15,7 @@ export default function Ebook() {
         <div>
           <h1 className={styles.title}>Devias eBook</h1>
           <p className={styles.comment}>
-            "Historias reales para founders latinos que empiezan en tech."
+            "Historias reales para founders que empiezan en tech."
           </p>
         </div>
 
