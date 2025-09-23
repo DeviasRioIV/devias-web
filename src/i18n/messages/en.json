@@ -640,12 +640,74 @@
     "title" : "Contact Us",
     "sub_title":"Let's talk"
   },
+  "privacy_policy": {
+    "title": "Devias Privacy Policy",
+    "date": "Effective date: 01/01/2025",
+    "subtitle": "At Devias.ar, we respect your privacy and are committed to protecting the personal information you share with us.",
+    "points": [
+      {
+        "title": "1. Information We Collect",
+        "description": "When you fill out forms, register on our website, or respond to our ads, we may collect:",
+        "list": [
+          "Full name",
+          "Email address",
+          "Phone number",
+          "Information about your project or company (budget, stage, description)"
+        ]
+      },
+      {
+        "title": "2. How We Use Your Information",
+        "description": "We use the collected information to:",
+        "list": [
+          "Contact you regarding your inquiry or project",
+          "Schedule meetings and provide information about our services",
+          "Improve our marketing and communication processes",
+          "Comply with applicable legal requirements"
+        ]
+      },
+      {
+        "title": "3. Sharing Information with Third Parties",
+        "description": "We do not sell, rent, or share your personal information with third parties, except in these cases:",
+        "list": [
+          "To comply with the law or a valid legal request",
+          "To work with technology providers who help us operate (e.g., Meta, Google, CRM)"
+        ]
+      },
+      {
+        "title": "4. Security",
+        "description": "We adopt reasonable technical and organizational measures to protect your information against unauthorized access, loss, or misuse."
+      },
+      {
+        "title": "5. User Rights",
+        "description": "You may request at any time:",
+        "list": [
+          "Access to the data we have about you",
+          "Modification or update of your information",
+          "Deletion of your data from our records"
+        ],
+        "additional_info": "To exercise these rights, write to us at: hola@devias.ar"
+      },
+      {
+        "title": "6. Changes to This Policy",
+        "description": "We may update this privacy policy from time to time. The date of the last update will always be posted on this page."
+      },
+      {
+        "title": "7. Contact",
+        "description": "If you have questions or concerns about this policy, you can write to us at:",
+        "list": [
+          "hola@devias.ar",
+          "www.devias.ar"
+        ]
+      }
+    ]
+  },
   "footer": {
     "links": {
       "about_us":"About Us",
       "projects": "Projects",
       "our_workflow":"Our Workflow",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "privacy_policy": "Privacy Policy"
     }
   }
 }

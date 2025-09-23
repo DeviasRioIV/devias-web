@@ -1,0 +1,61 @@
+@import 'Sass/config.scss';
+
+.privacy_policy{
+
+  h1 {
+    font-family: 'Roboto-bold';
+    font-size: 3rem;
+    color: $dark-black;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .date {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: $light-black;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .section_info {
+    margin-top: 50px;
+
+    .info_container {
+      // background-color: red;
+      margin-top: 30px;
+
+      .info_title {
+        font-family: 'Roboto-bold';
+        color: $dark-black;
+        font-size: 2.25rem;
+  
+        @media (max-width: 988px) {
+          font-size: 2rem;
+        }
+      }
+  
+      .info_text {
+        font-family: 'Roboto';
+        color: $light-black;
+        font-size: 1.5rem;
+        font-weight: 400;
+  
+        @media (max-width: 988px) {
+          font-size: 1.2rem;
+        }
+      }
+  
+      ul {
+        list-style: disc;
+        margin-left: 50px;
+  
+        li {
+          font-family: 'Roboto';
+          color: $light-black;
+        }
+      }
+    }
+
+  }
+}

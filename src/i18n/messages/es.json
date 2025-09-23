@@ -640,12 +640,74 @@
     "title": "Contacto",
     "sub_title": "Hablemos"
   },
+  "privacy_policy": {
+    "title": "Política de Privacidad de Devias",
+    "date": "Fecha de entrada en vigencia: 01/01/2025",
+    "subtitle": "En Devias.ar, respetamos tu privacidad y estamos comprometidos a proteger la información personal que compartís con nosotros.",
+    "points": [
+      {
+        "title": "1. Información que recopilamos",
+        "description": "Al completar formularios, registrarte en nuestra web o responder a nuestros anuncios, podemos recopilar:",
+        "list": [
+          "Nombre y apellido",
+          "Dirección de correo electrónico",
+          "Número de teléfono",
+          "Información sobre tu proyecto o empresa (presupuesto, etapa, descripción)"
+        ]
+      },
+      {
+        "title": "2. Cómo usamos tu información",
+        "description": "Usamos la información recopilada para:",
+        "list": [
+          "Contactarte en relación con tu consulta o proyecto",
+          "Agendar reuniones y proveer información sobre nuestros servicios",
+          "Mejorar nuestros procesos de marketing y comunicación",
+          "Cumplir con requisitos legales aplicables"
+        ]
+      },
+      {
+        "title": "3. Compartir información con terceros",
+        "description": "No vendemos, alquilamos ni compartimos tu información personal con terceros, salvo en estos casos:",
+        "list": [
+          "Para cumplir con la ley o una solicitud legal válida",
+          "Para trabajar con proveedores tecnológicos que nos ayudan a operar (ej. Meta, Google, CRM)"
+        ]
+      },
+      {
+        "title": "4. Seguridad",
+        "description": "Adoptamos medidas técnicas y organizativas razonables para proteger tu información frente a accesos no autorizados, pérdida o uso indebido."
+      },
+      {
+        "title": "5. Derechos del usuario",
+        "description": "Podés solicitar en cualquier momento:",
+        "list": [
+          "Acceso a los datos que tenemos sobre vos",
+          "Modificación o actualización de tu información",
+          "Eliminación de tus datos de nuestras bases"
+        ],
+        "additional_info": "Para ejercer estos derechos, escribinos a: hola@devias.ar"
+      },
+      {
+        "title": "6. Cambios a esta política",
+        "description": "Podemos actualizar esta política de privacidad de vez en cuando. La fecha de última actualización siempre se publicará en esta página."
+      },
+      {
+        "title": "7. Contacto",
+        "description": "Si tenés preguntas o inquietudes sobre esta política, podés escribirnos a:",
+        "list": [
+          "hola@devias.ar",
+          "www.devias.ar"
+        ]
+      }
+    ]
+  },
   "footer": {
     "links":{
       "about_us": "Nosotros",
       "projects": "Proyectos",
       "our_workflow": "Cómo trabajamos",
-      "contact": "Contáctanos"
+      "contact": "Contáctanos",
+      "privacy_policy": "Política de Privacidad"
     }
   }
 }
