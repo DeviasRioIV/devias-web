@@ -12,8 +12,54 @@ import ProjectDetails from 'Components/ProjectDetails/ProjectDetails'
 import ContactForm from 'Components/ContactForm/ContactForm'
 import InsigniaClutch from 'Components/InsigniaClutch/InsigniaClutch'
 import ServicesCard from 'Components/ServicesCard/ServicesCard'
-import Banner from 'Components/Banner/Banner'
 import { FaArrowRight } from "react-icons/fa6";
+import SwipeBanner from 'Components/SwipeBanner/SwipeBanner'
+import Clarity from "@microsoft/clarity"
+
+const banners = [
+  {
+    desktop_url: '/Assets/Images/Slide-Banner-Ebook-01.jpg',
+    mobile_url: '/Assets/Images/Slide-Banner-Ebook-01.jpg',
+    decorations: true,
+    content: (
+      <div className={styles.container_content}>
+        <h1 id={styles.title}>Humanizing</h1>
+        <h2 id={styles.subtitle} className={styles.shaking}>
+          {
+            'Digital Products'.split(' ').map((word, index) => (
+              <span key={index}>
+                {word}
+              </span>
+            ))
+          }
+        </h2>
+
+        <a href='/en/ebook' className={styles.ebook_btn_list} onClick={() => Clarity.event("Click Banner Ebook")}>
+          Descarga nuestro eBook  <FaArrowRight />
+        </a>
+      </div>
+    )
+  },
+  {
+    desktop_url: '/Assets/Images/hero-transparency-bg-desktop.png',
+    mobile_url: '/Assets/Images/hero-transparency-bg-mobile.png',
+    decorations: false,
+    content: (
+      <div className={styles.container_content}>
+        <picture>
+          <img src="/Assets/Images/logo-transparency.svg" alt="transparency logo" className={styles.transparency_logo} />
+        </picture>
+        <h3 id={styles.transparency_subtitle} className={styles.shaking}>
+          The new way B2B companies build trust with their clients.
+        </h3>
+
+        <a href='https://www.transparency.ar' target='_blank' className={styles.ebook_btn_list} onClick={() => Clarity.event("Click Banner Transparency")}>
+          Transparency  <FaArrowRight />
+        </a>
+      </div>
+    )
+  }
+]
 
 export default function Home() {
   const projects = useTranslations('home.projects_section')
@@ -25,16 +71,7 @@ export default function Home() {
       <Header />
 
       <section className={styles.primary_section}>
-        <Banner
-          backgroundImg='/Assets/Images/banner-ebook.jpg'
-          title='Humanizing'
-          subTitle='Digital Products'
-          content={
-            <a href='/en/ebook' className={styles.ebook_btn_list}>
-              Descarga nuestro eBook  <FaArrowRight />
-            </a>
-          } 
-        />
+        <SwipeBanner banners={banners} />
       </section>
 
       {/* Section cards */}

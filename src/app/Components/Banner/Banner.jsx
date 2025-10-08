@@ -5,7 +5,7 @@ import React from 'react'
 // Internal modules
 import styles from './banner.module.scss'
 
-export default function Banner({backgroundImg, title, subTitle, variant, content, placeholder}) {
+export default function Banner({backgroundImg, mobileBackgroundImg, title, subTitle, variant, content, placeholder, decorations}) {
 
   const firstElementDesktop = variant ? '/Assets/Utilities/Elements/desktop/about-us-hero/about-us-left-elements.png' :'/Assets/Utilities/Elements/desktop/home-hero/left-elements.png'
   const firstElementMobile = variant ? '/Assets/Utilities/Elements/mobile/about-us-hero/about-us-left-elements.png' : '/Assets/Utilities/Elements/mobile/home-hero/home-left-elements.png'
@@ -15,41 +15,56 @@ export default function Banner({backgroundImg, title, subTitle, variant, content
 
   return (
     <div className={`container ${styles.container}`}>
-      <div className={styles.container_titles}>
-        <h1 id={styles.title}>{title}</h1>
-        <h2 id={styles.subtitle} className={styles.shaking}>
-          {
-            subTitle.split(' ').map((word, index) => (
-              <span key={index}>
-                {word}
-              </span>
-            ))
-          }
-        </h2>
-
-        {content}
-      </div>
+      {
+        (title || subTitle) &&
+        <div className={styles.container_titles}>
+          <h2 id={styles.title}>{title}</h2>
+          <h3 id={styles.subtitle} className={styles.shaking}>
+            {
+              subTitle.split(' ').map((word, index) => (
+                <span key={index}>
+                  {word}
+                </span>
+              ))
+            }
+          </h3>
+        </div>
+      }
+      {content}
 
       {
         placeholder &&
           <div id={styles.placeholder}/>
       }
-      <img
-        src={backgroundImg}
-        alt="banner"
-        id={styles.banner}
-      />
       <picture>
-        <source srcSet={firstElementDesktop} media="(min-width: 769px)" />        
-        <img src={firstElementMobile} alt="element" id={styles.element_left} />
+        <source srcSet={backgroundImg} media="(min-width: 769px)" />
+        <img
+          src={mobileBackgroundImg}
+          alt="banner"
+          id={styles.banner}
+        />
       </picture>
 
-      <picture>
-        <source srcSet={secondElementDesktop} media="(min-width: 768px)" />
-        <img src={secondElementMobile} alt="element" id={styles.element_right} />
-      </picture>
-      
-      <img src={bottomElementMobile} alt="element" id={styles.element_bottom}/>
+      {
+        decorations &&
+        <picture>
+          <source srcSet={firstElementDesktop} media="(min-width: 769px)" />        
+          <img src={firstElementMobile} alt="element" id={styles.element_left} />
+        </picture>
+      }
+
+      {
+        decorations &&
+        <picture>
+          <source srcSet={secondElementDesktop} media="(min-width: 768px)" />
+          <img src={secondElementMobile} alt="element" id={styles.element_right} />
+        </picture>
+      }
+
+      {
+        decorations &&
+        <img src={bottomElementMobile} alt="element" id={styles.element_bottom}/>
+      }
     </div>
   )
 }
