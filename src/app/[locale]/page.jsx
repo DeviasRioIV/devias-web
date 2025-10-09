@@ -16,17 +16,22 @@ import { FaArrowRight } from "react-icons/fa6";
 import SwipeBanner from 'Components/SwipeBanner/SwipeBanner'
 import Clarity from "@microsoft/clarity"
 
-const banners = [
+export default function Home() {
+  const projects = useTranslations('home.projects_section')
+  const clutch = useTranslations('home.clutch')
+  const bannersLang = useTranslations('home.banners')
+
+  const banners = [
   {
     desktop_url: '/Assets/Images/Slide-Banner-Ebook-01.jpg',
     mobile_url: '/Assets/Images/Slide-Banner-Ebook-01.jpg',
     decorations: true,
     content: (
       <div className={styles.container_content}>
-        <h1 id={styles.title}>Humanizing</h1>
+        <h1 id={styles.title}>{bannersLang('banner_1.title')}</h1>
         <h2 id={styles.subtitle} className={styles.shaking}>
           {
-            'Digital Products'.split(' ').map((word, index) => (
+            bannersLang('banner_1.legend').split(' ').map((word, index) => (
               <span key={index}>
                 {word}
               </span>
@@ -35,7 +40,7 @@ const banners = [
         </h2>
 
         <a href='/en/ebook' className={styles.ebook_btn_list} onClick={() => Clarity.event("Click Banner Ebook")}>
-          Descarga nuestro eBook  <FaArrowRight />
+          {bannersLang('banner_1.button')} <FaArrowRight />
         </a>
       </div>
     )
@@ -50,20 +55,16 @@ const banners = [
           <img src="/Assets/Images/logo-transparency.svg" alt="transparency logo" className={styles.transparency_logo} />
         </picture>
         <h3 id={styles.transparency_subtitle} className={styles.shaking}>
-          The new way B2B companies build trust with their clients.
+          {bannersLang('banner_2.legend')}
         </h3>
 
         <a href='https://www.transparency.ar' target='_blank' className={styles.ebook_btn_list} onClick={() => Clarity.event("Click Banner Transparency")}>
-          Transparency  <FaArrowRight />
+          {bannersLang('banner_2.button')} <FaArrowRight />
         </a>
       </div>
     )
   }
 ]
-
-export default function Home() {
-  const projects = useTranslations('home.projects_section')
-  const clutch = useTranslations('home.clutch')
 
   return (
     <main id='home' className={styles.home}>

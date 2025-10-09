@@ -10,9 +10,16 @@
     }
   },
   "home": {
-    "main_title": {
-      "title": "Humanizando\nproductos digitales",
-      "legend": "Trabajamos junto a nuestros clientes para ofrecer las mejores soluciones."
+    "banners": {
+      "banner_1": {
+        "title": "Humanizando",
+        "legend": "Productos Digitales",
+        "button": "Descarga nuestro eBook"
+      },
+      "banner_2": {
+        "legend": "La nueva forma en que las empresas B2B construyen confianza con sus clientes.",
+        "button": "Únete a la whitelist"
+      }
     },
     "services": {
       "development": {
