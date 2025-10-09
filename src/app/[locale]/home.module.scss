@@ -45,6 +45,13 @@
 
     .transparency_logo {
       height: 150px;
+
+      @media (max-width: 960px) {
+        height: 120px;
+      }
+      @media (max-width: 768px) {
+        height: 60px;
+      }
     }
 
     #transparency_subtitle {
