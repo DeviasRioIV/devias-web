@@ -24,7 +24,7 @@ export default function Home() {
   const banners = [
   {
     desktop_url: '/Assets/Images/Slide-Banner-Ebook-01.jpg',
-    mobile_url: '/Assets/Images/Slide-Banner-Ebook-01.jpg',
+    mobile_url: '/Assets/Images/Slide-Banner-Ebook-01-Posteo.jpg',
     decorations: true,
     content: (
       <div className={styles.container_content}>
