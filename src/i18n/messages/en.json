@@ -10,9 +10,16 @@
     }
   },
   "home" : {
-    "main_title": {
-      "title": "Humanizing\ndigital products.",
-      "legend": "We work along our customers to deliver the best solutions."
+    "banners": {
+      "banner_1": {
+        "title": "Humanizing",
+        "legend": "Digital Products",
+        "button": "Download our eBook"
+      },
+      "banner_2": {
+        "legend": "The new way B2B companies build trust with their clients.",
+        "button": "Join the Waitlist"
+      }
     },
     "services": {
       "development": {
