@@ -14,7 +14,7 @@ export default function SwipeBanner({ banners, autoplay = true, delay = 5000}) {
     <Swiper
       spaceBetween={0}
       slidesPerView={1}
-      autoplay={autoplay ? { delay, disableOnInteraction: true } : false}
+      autoplay={autoplay ? { delay, disableOnInteraction: false } : false}
       loop={true}
       modules={[Autoplay, Pagination, Navigation]}
       pagination={{
