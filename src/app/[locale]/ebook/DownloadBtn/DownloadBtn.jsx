@@ -16,6 +16,7 @@ export default function DownloadBtn() {
   const handlerDownload = () => {
     Clarity.event("Download Ebook")
     setOpen(true)
+    console.log('hola')
   }
 
   return (
