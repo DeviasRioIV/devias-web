@@ -10,6 +10,7 @@ import 'swiper/css/autoplay'
 
 // Internal modules
 import ClarityInit from '@/app/Components/Clarity/Clarity'
+import MetaPixel from '@/app/Components/MetaPixel/MetaPixel'
 
 
 
@@ -43,6 +44,7 @@ export default async function RootLayout({ children, params }) {
         <title>Devias</title>
         <meta name="description" content="Humanizing Digital Products" />
         <ClarityInit />
+        <MetaPixel />
       </head>
 
       <body className={roboto.variable}>
