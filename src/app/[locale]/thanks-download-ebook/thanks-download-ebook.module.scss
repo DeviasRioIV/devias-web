@@ -1,0 +1,186 @@
+@import 'Sass/config.scss';
+
+.thanks_ebook_page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $withe;
+}
+
+.thanks_ebook_container {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: stretch;
+  
+  @media (max-width: 991px) {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+
+// Left Section - Thank You Message
+.left_section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  // background: linear-gradient(135deg, $withe 0%, lighten($light-blue, 20%) 100%);
+  
+  @media (max-width: 991px) {
+    min-height: 60vh;
+    padding: 3rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 50vh;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .content {
+    max-width: 600px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .icon_wrapper {
+    margin-bottom: 2rem;
+    animation: scaleIn 0.6s ease-out 0.2s backwards;
+  }
+
+  .check_icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .check_circle {
+    stroke: $green;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+  }
+
+  .check_path {
+    stroke: $green;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+
+  .title {
+    font-family: 'Univia Pro', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: $dark-blue;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+    animation: fadeInUp 0.8s ease-out 0.3s backwards;
+
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $grey;
+    margin: 0 0 1rem 0;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .submessage {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $grey;
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out 0.5s backwards;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Right Section - Newsletter Form
+.right_section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  background-color: $withe;
+  border-left: 1px solid lighten($grey, 40%);
+  color: $dark-black;
+  
+  @media (max-width: 991px) {
+    border-left: none;
+    border-top: 1px solid lighten($grey, 40%);
+    padding: 3rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

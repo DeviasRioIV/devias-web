@@ -1,0 +1,185 @@
+@import 'Sass/config.scss';
+
+.thanks_contact_page{
+  width: 100%;
+  min-height: 100vh;
+}
+
+.thanks_contact {
+  width: 100%;
+  min-height: 70vh;
+  background-color: $withe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+
+  @media (max-width: 768px) {
+    min-height: 60vh;
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .icon_wrapper {
+    margin-bottom: 2rem;
+    animation: scaleIn 0.6s ease-out 0.2s backwards;
+  }
+
+  .check_icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .check_circle {
+    stroke: $green;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+  }
+
+  .check_path {
+    stroke: $green;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+
+  .title {
+    font-family: 'Univia Pro', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: $dark-blue;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+    animation: fadeInUp 0.8s ease-out 0.3s backwards;
+
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $grey;
+    margin: 0 0 1rem 0;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .submessage {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: $grey;
+    margin: 0 0 3rem 0;
+    animation: fadeInUp 0.8s ease-out 0.5s backwards;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .home_button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $withe;
+    background-color: $dark-blue;
+    border: 2px solid $dark-blue;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+
+    @media (max-width: 768px) {
+      padding: 0.875rem 2.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.75rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    &:hover {
+      background-color: $withe;
+      color: $dark-blue;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 108, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(0, 0, 108, 0.2);
+    }
+  }
+}
+
+// Animaciones
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
