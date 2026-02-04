@@ -605,9 +605,28 @@
     ]
   },
   "about_us":{
-    "label": "— Hello from Argentina",
-    "title": "We are Devias.",
-    "card": "We are a small team with great strength. \n We work along our customers to deliver the best solutions for them, customized to their needs, by using the latest programming tech and the best team work tools."
+    "banner": {
+      "title": "We are",
+      "subtitle": "DEVIAS"
+    },
+    "hello_section": {
+      "hello": "Hello from",
+      "argentina": "ARGENTINA"
+    },
+    "sections": {
+      "who_we_are": {
+        "title": "Who We Are",
+        "text": "We are a dynamic team of innovative thinkers and expert developers with a global reach. For over 17 years, weve partnered with our clients to create bespoke digital solutions that drive success. Our approach is grounded in human values, ensuring that every interaction and project is a testament to our commitment to building lasting partnerships. \n\nFor nearly two decades, we have built a reputation for delivering high-quality solutions. Our portfolio includes significant projects for major national clients, including leading health insurance companies. Our teams commitment to excellence and innovation has driven our growth and success. \n\nAt our core, we believe in the power of collaboration and the strength of diversity. Our teams collective expertise, coupled with our passion for cutting-edge technology, fuels our ability to transform complex challenges into simple, effective solutions."
+      },
+      "philosophy": {
+        "title": "Our Philosophy",
+        "text": "We understand that technology alone isnt enough. \"Humanizing digital products\" means we prioritize the people who use them. We work closely with our clients, understanding their needs and aspirations to deliver solutions that truly resonate. Our dedicated team brings together technical expertise and a deep commitment to quality, ensuring that our projects not only meet but exceed expectations."
+      },
+      "why_choose_us": {
+        "title": "Why Choose Us?",
+        "text": "Our approach is personalized, agile, and grounded in a deep understanding of your needs. By leveraging the latest technology and fostering a culture of teamwork, we deliver solutions that are not only effective but also sustainable and scalable."
+      }
+    }
   },
   "our_way":{
     "label_section":"This is how we work.",
@@ -715,6 +734,79 @@
       "our_workflow":"Our Workflow",
       "contact": "Contact Us",
       "privacy_policy": "Privacy Policy"
+    }
+  },
+  "thanks_contact": {
+    "title": "THANK YOU FOR CONTACTING US!",
+    "message": "We have received your message successfully.",
+    "submessage": "Our team will review your inquiry and respond to you shortly.",
+    "button": "BACK TO HOME"
+  },
+  "thanks_download_ebook": {
+    "title": "Thank you for downloading the eBook!",
+    "message": "Your download will begin shortly.",
+    "submessage": "We hope you enjoy the content and find it very useful for your projects."
+  },
+  "newsletter_form": {
+    "title": "Ready!",
+    "subtitle": "The eBook is now downloading.",
+    "legend": "Want us to notify you when we publish new content?",
+    "legend_span": "Fill in your details and join the community",
+    "labels": {
+      "name": "Name",
+      "last_name": "Last Name",
+      "email": "Email"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "submitting": "Submitting"
+    }
+  },
+  "ebook": {
+    "title": "Devias eBook",
+    "comment": "\"Real stories for founders starting in tech.\"",
+    "hero_text": "Building a digital product without a technical background is possible. This free eBook brings together learnings, mistakes, and shortcuts from founders like you.",
+    "paragraph_1": "If you're a founder and don't come from the tech world, this material will save you time, mistakes, and frustrations.",
+    "paragraph_2": "Made by Devias, with +19 years helping startups launch their MVP without going broke in the attempt.",
+    "paragraph_3": "This project is just the beginning.",
+    "paragraph_4": "If you'd like to share your story or add your experience for a next edition, write to us at",
+    "paragraph_4_link": "or via",
+    "paragraph_5": "There are many of us on this journey. The important thing is not to travel it alone.",
+    "download_button": "Download eBook"
+  },
+  "contact_form": {
+    "title": "LET'S TALK",
+    "labels": {
+      "name": "Name",
+      "last_name": "Last name",
+      "company": "Company",
+      "email": "E-mail",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Name",
+      "last_name": "Last name",
+      "company": "Company",
+      "email": "E-mail",
+      "message": "Leave your message"
+    },
+    "errors": {
+      "short_name": "Short name",
+      "short_last_name": "Short last name",
+      "short_company": "Short company name",
+      "invalid_email": "Incorrect email",
+      "short_message": "The minimum number of characters is (15)"
+    },
+    "buttons": {
+      "submit": "Submit",
+      "sending": "Sending..."
+    },
+    "location": {
+      "address_line1": "San Martín 1496, 5800",
+      "address_line2": "Rio Cuarto, Córdoba",
+      "country": "Argentina",
+      "view_map": "View Map"
     }
   }
 }

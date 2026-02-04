@@ -605,9 +605,28 @@
     ]
   },
   "about_us": {
-    "label": "— Hola desde Argentina",
-    "title": "Somos Devias.",
-    "card": "Somos un pequeño equipo con gran potencia. \n Trabajamos con nuestros clientes para brindarles las mejores soluciones, personalizar sus necesidades, utilizando siempre la ùltima tecnologìa en programaciòn y las mejores herramientas de trabajo en equipo "
+    "banner": {
+      "title": "Somos",
+      "subtitle": "DEVIAS"
+    },
+    "hello_section": {
+      "hello": "Hola desde",
+      "argentina": "ARGENTINA"
+    },
+    "sections": {
+      "who_we_are": {
+        "title": "Quiénes Somos",
+        "text": "Somos un equipo dinámico de pensadores innovadores y desarrolladores expertos con alcance global. Durante más de 17 años, hemos trabajado con nuestros clientes para crear soluciones digitales a medida que impulsan el éxito. Nuestro enfoque se basa en valores humanos, asegurando que cada interacción y proyecto sea un testimonio de nuestro compromiso de construir asociaciones duraderas. \n\nDurante casi dos décadas, hemos construido una reputación por entregar soluciones de alta calidad. Nuestro portafolio incluye proyectos significativos para importantes clientes nacionales, incluyendo compañías líderes de seguros de salud. El compromiso de nuestro equipo con la excelencia y la innovación ha impulsado nuestro crecimiento y éxito. \n\nEn nuestro núcleo, creemos en el poder de la colaboración y la fuerza de la diversidad. La experiencia colectiva de nuestro equipo, junto con nuestra pasión por la tecnología de vanguardia, alimenta nuestra capacidad de transformar desafíos complejos en soluciones simples y efectivas."
+      },
+      "philosophy": {
+        "title": "Nuestra Filosofía",
+        "text": "Entendemos que la tecnología por sí sola no es suficiente. \"Humanizar productos digitales\" significa que priorizamos a las personas que los usan. Trabajamos estrechamente con nuestros clientes, entendiendo sus necesidades y aspiraciones para entregar soluciones que realmente resuenen. Nuestro equipo dedicado reúne experiencia técnica y un profundo compromiso con la calidad, asegurando que nuestros proyectos no solo cumplan sino que superen las expectativas."
+      },
+      "why_choose_us": {
+        "title": "¿Por qué elegirnos?",
+        "text": "Nuestro enfoque es personalizado, ágil y se basa en una profunda comprensión de tus necesidades. Al aprovechar la última tecnología y fomentar una cultura de trabajo en equipo, entregamos soluciones que no solo son efectivas sino también sostenibles y escalables."
+      }
+    }
   },
   "our_way": {
     "label_section": "Así es como trabajamos",
@@ -715,6 +734,79 @@
       "our_workflow": "Cómo trabajamos",
       "contact": "Contáctanos",
       "privacy_policy": "Política de Privacidad"
+    }
+  },
+  "thanks_contact": {
+    "title": "¡GRACIAS POR CONTACTARNOS!",
+    "message": "Hemos recibido tu mensaje correctamente.",
+    "submessage": "Nuestro equipo revisará tu consulta y te responderá a la brevedad.",
+    "button": "VOLVER AL INICIO"
+  },
+  "thanks_download_ebook": {
+    "title": "¡Gracias por descargar el eBook!",
+    "message": "Tu descarga comenzará en breve.",
+    "submessage": "Esperamos que disfrutes el contenido y te sea de gran utilidad en tus proyectos."
+  },
+  "newsletter_form": {
+    "title": "¡Listo!",
+    "subtitle": "El eBook ya se está descargando.",
+    "legend": "¿Querés que te avisemos cuando publiquemos contenido nuevo?",
+    "legend_span": "Completá tus datos y sumate a la comunidad",
+    "labels": {
+      "name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Email"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "submit": "Enviar",
+      "submitting": "Enviando"
+    }
+  },
+  "ebook": {
+    "title": "Devias eBook",
+    "comment": "\"Historias reales para founders que empiezan en tech.\"",
+    "hero_text": "Construir un producto digital sin background técnico es posible. Este eBook gratuito reúne aprendizajes, errores y atajos de founders como vos.",
+    "paragraph_1": "Si sos founder y no venís del mundo tech, este material te va a ahorrar tiempo, errores y frustraciones.",
+    "paragraph_2": "Hecho por Devias, con +19 años ayudando a startups a lanzar su MVP sin fundirse en el intento.",
+    "paragraph_3": "Este proyecto es solo el comienzo.",
+    "paragraph_4": "Si te gustaría compartir tu historia o sumar tu experiencia para una próxima edición escribínos a",
+    "paragraph_4_link": "o por",
+    "paragraph_5": "Somos muchos los que estamos en este camino. Lo importante es no recorrerlo solos.",
+    "download_button": "Descargar eBook"
+  },
+  "contact_form": {
+    "title": "HABLEMOS",
+    "labels": {
+      "name": "Nombre",
+      "last_name": "Apellido",
+      "company": "Empresa",
+      "email": "E-mail",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Nombre",
+      "last_name": "Apellido",
+      "company": "Empresa",
+      "email": "E-mail",
+      "message": "Dejanos tu mensaje"
+    },
+    "errors": {
+      "short_name": "Nombre demasiado corto",
+      "short_last_name": "Apellido demasiado corto",
+      "short_company": "Nombre de empresa demasiado corto",
+      "invalid_email": "Email incorrecto",
+      "short_message": "El número mínimo de caracteres es (15)"
+    },
+    "buttons": {
+      "submit": "Enviar",
+      "sending": "Enviando..."
+    },
+    "location": {
+      "address_line1": "San Martín 1496, 5800",
+      "address_line2": "Rio Cuarto, Córdoba",
+      "country": "Argentina",
+      "view_map": "Ver Mapa"
     }
   }
 }
