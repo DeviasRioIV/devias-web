@@ -1,3 +1,6 @@
+// External modules
+import { useTranslations } from 'next-intl'
+
 // Internal modules
 import styles from './ebook.module.scss'
 
@@ -7,31 +10,33 @@ import Footer from 'Components/Footer/Footer'
 import DownloadBtn from './DownloadBtn/DownloadBtn'
 
 export default function Ebook() {
+  const t = useTranslations('ebook')
+  
   return (
     <>
       <Header />
       <main id={styles.ebook} className='container'>
 
         <div>
-          <h1 className={styles.title}>Devias eBook</h1>
+          <h1 className={styles.title}>{t('title')}</h1>
           <p className={styles.comment}>
-            "Historias reales para founders que empiezan en tech."
+            {t('comment')}
           </p>
         </div>
 
         <section className={styles.container}>
           <section className={styles.hero_section}>
             <p className={styles.text}>
-              Construir un producto digital sin background técnico es posible. Este eBook gratuito reúne aprendizajes, errores y atajos de founders como vos.
+              {t('hero_text')}
             </p>
           </section>
           
           <section className={styles.paragraph}>
             <p className={styles.text}>
-              Si sos founder y no venís del mundo tech, este material te va a ahorrar tiempo, errores y frustraciones.
+              {t('paragraph_1')}
             </p>
             <p className={styles.text}>
-              Hecho por Devias, con +19 años ayudando a startups a lanzar su MVP sin fundirse en el intento.
+              {t('paragraph_2')}
             </p>
           </section>
           
@@ -39,15 +44,15 @@ export default function Ebook() {
           
           <section className={styles.paragraph}>
             <p className={styles.text}>
-              Este proyecto es solo el comienzo.
+              {t('paragraph_3')}
             </p>
 
             <p className={styles.text}>
-              Si te gustaría compartir tu historia o sumar tu experiencia para una próxima edición escribínos a <a target='_blank' href='mailto:hola@devias.ar'>hola@devias.ar</a> o por <a target='_blank' href="https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true">LinkedIn</a>.
+              {t('paragraph_4')} <a target='_blank' href='mailto:hola@devias.ar'>hola@devias.ar</a> {t('paragraph_4_link')} <a target='_blank' href="https://www.linkedin.com/company/devias-ar/mycompany/?viewAsMember=true">LinkedIn</a>.
             </p>
 
             <p className={styles.text}>
-              Somos muchos los que estamos en este camino. Lo importante es no recorrerlo solos.
+              {t('paragraph_5')}
             </p>
           </section>
         </section>
