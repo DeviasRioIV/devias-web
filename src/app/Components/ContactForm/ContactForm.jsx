@@ -1,14 +1,23 @@
+'use client'
+
 // External modules
 import React from 'react'
 import emailjs from '@emailjs/browser'
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineEmail } from "react-icons/md";
 import Map from '@/app/Components/Map/Map'
+import { useParams, useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl'
 
 // Internal modules
 import styles from './contact-form.module.scss'
 
 export default function ContactForm ({home}){
+
+  // Hooks
+  const router = useRouter()
+  const params = useParams()
+  const t = useTranslations('contact_form')
 
   // Local State
   const [isLoading, setIsLoading] = React.useState(false)
@@ -108,7 +117,9 @@ export default function ContactForm ({home}){
           consult: ''
         })
 
-        location.reload()
+        // Guardar token de sesión y redirigir
+        sessionStorage.setItem('formSubmitted', 'true')
+        router.push(`/${params.locale}/thanks-contact`)
         setIsLoading(false)
 
       }, (error) => {
@@ -130,7 +141,7 @@ export default function ContactForm ({home}){
           home && (
             <div className={styles.contact_title}>
               <h2>
-                LET'S TALK
+                {t('title')}
               </h2>
             </div>
           )
@@ -144,72 +155,72 @@ export default function ContactForm ({home}){
             <div className={styles.data_container}>
 
               <div className={styles.locker}>
-                <label className={styles.form_label}>Name <span>*</span></label>
+                <label className={styles.form_label}>{t('labels.name')} <span>*</span></label>
                 <input
                   type='text'
                   name='user_name'
                   value={formData.name}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  placeholder='Name'
+                  placeholder={t('placeholders.name')}
                 />
 
                 {/* Verify touched name and valid name */}
                 {touchedFields.user_name && !isFieldValid('user_name') && (
-                  <h4 className={styles.input_incorrect}>Short name</h4>
+                  <h4 className={styles.input_incorrect}>{t('errors.short_name')}</h4>
                 )}
               </div>
 
               <div className={styles.locker}>
-                <label className={styles.form_label} >Last name <span>*</span></label>
+                <label className={styles.form_label} >{t('labels.last_name')} <span>*</span></label>
                 <input
                   type='text'
                   name='user_last_name'
                   value={formData.lastName}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  placeholder='Last name'
+                  placeholder={t('placeholders.last_name')}
                 />
 
                 {/* Verify touched last name and valid last name */}
                 {touchedFields.user_last_name && !isFieldValid('user_last_name') && (
-                  <h4 className={styles.input_incorrect}>Short last name</h4>
+                  <h4 className={styles.input_incorrect}>{t('errors.short_last_name')}</h4>
                 )}
               </div>
 
               <div className={styles.locker}>
 
-                <label className={styles.form_label} >Company <span>*</span></label>
+                <label className={styles.form_label} >{t('labels.company')} <span>*</span></label>
                 <input
                   type='text'
                   name='user_company'
                   value={formData.company}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  placeholder='Company'
+                  placeholder={t('placeholders.company')}
                 />
 
                 {/* Verify touched company and valid company */}
                 {touchedFields.user_company && !isFieldValid('user_company') && (
-                  <h4 className={styles.input_incorrect}>Short name company</h4>
+                  <h4 className={styles.input_incorrect}>{t('errors.short_company')}</h4>
                 )}
               </div>
 
               <div className={styles.locker}>
 
-                <label className={styles.form_label} >E-mail <span>*</span></label>
+                <label className={styles.form_label} >{t('labels.email')} <span>*</span></label>
                 <input
                   type='email'
                   name='user_email'
                   value={formData.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  placeholder='E-mail'
+                  placeholder={t('placeholders.email')}
                 />
 
                 {/* Verify touched email and valid email */}
                 {touchedFields.user_email && !isFieldValid('user_email') && (
-                  <h4 className={styles.input_incorrect}>Incorrect email</h4>
+                  <h4 className={styles.input_incorrect}>{t('errors.invalid_email')}</h4>
                 )}
               </div>
             </div>
@@ -217,24 +228,24 @@ export default function ContactForm ({home}){
             {/* Container of consult */}
             <div className={styles.consult_container}>
 
-              <label className={styles.form_label} >Message <span>*</span></label>
+              <label className={styles.form_label} >{t('labels.message')} <span>*</span></label>
               <textarea
                 name='consult'
                 value={formData.consult}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                placeholder='Leave your message'
+                placeholder={t('placeholders.message')}
                 className={styles.textarea}
               />
 
               {/* Verify touched consult and valid consult */}
               {touchedFields.consult && !isFieldValid('consult') && (
-                <h4 className={styles.input_incorrect_consult}>The minimum number of characters is (15)</h4>
+                <h4 className={styles.input_incorrect_consult}>{t('errors.short_message')}</h4>
               )}
               <input
                 className={`${!allFieldsValid ? styles.form_empty : ''}`}
                 type='submit'
-                value={isLoading ? 'Sending...' : 'Submit'}
+                value={isLoading ? t('buttons.sending') : t('buttons.submit')}
                 disabled={!allFieldsValid}
               />
             </div>
@@ -248,14 +259,14 @@ export default function ContactForm ({home}){
             <span>
               <GrLocation />
             </span>
-            <p>San Martín 1496, 5800</p>
-            <p>Rio Cuarto, Córdoba</p>
+            <p>{t('location.address_line1')}</p>
+            <p>{t('location.address_line2')}</p>
             <p className={styles.country}>
-              Argentina
+              {t('location.country')}
             </p>
             <p>
               <a target='_blank' href="https://www.google.com/maps/dir//San+Mart%C3%ADn+1496,+X5800+R%C3%ADo+Cuarto,+C%C3%B3rdoba/@-33.1189921,-64.448018,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95d200414389ba49:0xbaaff6e5b3f350c!2m2!1d-64.3656168!2d-33.1190192?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D">
-                View Map
+                {t('location.view_map')}
               </a>
             </p>
             <br />

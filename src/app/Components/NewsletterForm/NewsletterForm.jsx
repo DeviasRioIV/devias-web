@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form"
 import {zodResolver} from '@hookform/resolvers/zod'
 import { LuLoader2 } from "react-icons/lu"
+import { useTranslations } from 'next-intl'
 
 // Internal modules
 import styles from './NewsletterForm.module.scss'
@@ -11,6 +12,7 @@ import { addNewsletterUser } from '@/actions/NewsletterUsers'
 
 export default function NewsletterForm({handleCancel}) {
   // Hooks
+  const t = useTranslations('newsletter_form')
   const {
     register,
     handleSubmit,
@@ -42,33 +44,33 @@ export default function NewsletterForm({handleCancel}) {
   return (
     <div className={styles.modal_container}>
       <h2 className={styles.title}>
-        ¡Listo!
+        {t('title')}
         <br /> 
-          El eBook ya se está descargando.
-        </h2>
-        <p className={styles.legend}> 
-        ¿Querés que te avisemos cuando publiquemos contenido nuevo? 
+        {t('subtitle')}
+      </h2>
+      <p className={styles.legend}> 
+        {t('legend')}
         <br />
-        <span> Completá tus datos y sumate a la comunidad</span>
-        </p>
+        <span>{t('legend_span')}</span>
+      </p>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
         <div className={styles.row}>
           <div>
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="name">{t('labels.name')}</label>
             <input {...register('name')} type="text" name="name"/>
             <ErrorMessage name='name' />
           </div>
 
           <div>
-            <label htmlFor="last_name">Apellido</label>
+            <label htmlFor="last_name">{t('labels.last_name')}</label>
             <input {...register('last_name')} type="text" name="last_name" />
             <ErrorMessage name='last_name' />
           </div>
         </div>
 
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t('labels.email')}</label>
           <input {...register('email')} type="text" name="email"/>
           <ErrorMessage name='email' />
         </div>
@@ -77,15 +79,15 @@ export default function NewsletterForm({handleCancel}) {
           {
             handleCancel &&
             <button  type="button" className={styles.btn_cancel} onClick={handleCancel}>
-              Cancelar
+              {t('buttons.cancel')}
             </button>
           }
 
           <button type="submit" disabled={!isValid || isSubmitting} className={styles.btn_download}>
             {
               !isSubmitting
-              ? 'Enviar'
-              : <div className={styles.loading}>Enviando <LuLoader2 /></div>
+              ? t('buttons.submit')
+              : <div className={styles.loading}>{t('buttons.submitting')} <LuLoader2 /></div>
             }
           </button>
         </div>
