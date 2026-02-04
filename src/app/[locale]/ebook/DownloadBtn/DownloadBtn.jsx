@@ -1,40 +1,33 @@
 'use client'
 // External module
-import { useState } from "react"
 import Clarity from "@microsoft/clarity"
+import { useTranslations } from 'next-intl'
 
 // Internal module
 import styles from'./DownloadBtn.module.scss'
 
 // Components
-import NewsletterForm from "@/app/Components/NewsletterForm/NewsletterForm"
+import Link from "next/link"
+import { useParams } from "next/navigation"
 
 export default function DownloadBtn() {
 
-  const [open, setOpen] = useState(false)
+  //Hooks
+  const params = useParams()
+  const t = useTranslations('ebook')
 
   const handlerDownload = () => {
     Clarity.event("Download Ebook")
-    setOpen(true)
   }
 
   return (
-    <>
-      <a
-        href="/eBook_Devias.pdf"
-        download="eBook Devias.pdf" 
-        className={styles.btn_download}
-        onClick={handlerDownload}>
-        Descargar eBook 
-      </a>
-
-      { 
-        open &&
-        <div className={styles.modal_content}>
-          <span className={styles.background_modal} onClick={() => setOpen(false)} />
-          <NewsletterForm handleCancel={() => setOpen(false)} />
-        </div>
-      }
-    </>
+    <Link
+      href={`/${params.locale}/thanks-download-ebook`}
+      download="eBook Devias.pdf" 
+      className={styles.btn_download}
+      onClick={handlerDownload}
+    >
+      {t('download_button')}
+    </Link>
   )
 }
