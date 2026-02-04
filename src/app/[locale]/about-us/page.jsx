@@ -32,7 +32,7 @@ export default function AboutUs() {
   // Constants
   const imagesCarousel = [ imageTeam_1, imageTeam_2, imageTeam_3, imageTeam_4, imageTeam_5 ]
 
-  const aboutPage = useTranslations('about_us')
+  const t = useTranslations('about_us')
 
   // Scroll Effect
   React.useEffect(() => {
@@ -85,8 +85,8 @@ export default function AboutUs() {
       <section className={styles.section_title}>
         <Banner
           backgroundImg='/Assets/Images/about-us-hero-bg.jpg'
-          title='We are'
-          subTitle='DEVIAS'
+          title={t('banner.title')}
+          subTitle={t('banner.subtitle')}
           variant
           placeholder
         />
@@ -98,8 +98,8 @@ export default function AboutUs() {
             <Image src={mapArgentina} alt="element" id={styles.map}/>
 
             <div id={styles.container_title_hello}>
-              <h3 id={styles.hello} className={isShaking ? styles.shaking : ''} >Hello from</h3>
-              <h3 id={styles.argentina} className={isShaking ? styles.shaking : ''}>ARGENTINA</h3>
+              <h3 id={styles.hello} className={isShaking ? styles.shaking : ''} >{t('hello_section.hello')}</h3>
+              <h3 id={styles.argentina} className={isShaking ? styles.shaking : ''}>{t('hello_section.argentina')}</h3>
               <Image src={width > 596 ? flagElementsDesktop : flagElementsMobile} alt="element" id={styles.elements}/>
             </div>
 
@@ -111,26 +111,26 @@ export default function AboutUs() {
         <div className={`container ${styles.container}`}>
           <div className={styles.info_container}>
             <h4 className={styles.info_title}>
-              Who We Are
+              {t('sections.who_we_are.title')}
             </h4>
             <p className={styles.info_text}>
-            We are a dynamic team of innovative thinkers and expert developers with a global reach. For over 17 years, weve partnered with our clients to create bespoke digital solutions that drive success. Our approach is grounded in human values, ensuring that every interaction and project is a testament to our commitment to building lasting partnerships. <br /><br /> For nearly two decades, we have built a reputation for delivering high-quality solutions. Our portfolio includes significant projects for major national clients, including leading health insurance companies. Our teams commitment to excellence and innovation has driven our growth and success. <br /><br /> At our core, we believe in the power of collaboration and the strength of diversity. Our teams collective expertise, coupled with our passion for cutting-edge technology, fuels our ability to transform complex challenges into simple, effective solutions.
+              {t('sections.who_we_are.text')}
             </p>
           </div>
           <div className={styles.info_container}>
             <h4 className={styles.info_title}>
-              Our Philosophy
+              {t('sections.philosophy.title')}
             </h4>
             <p className={styles.info_text}>
-              We understand that technology alone isnt enough. “Humanizing digital products” means we prioritize the people who use them. We work closely with our clients, understanding their needs and aspirations to deliver solutions that truly resonate. Our dedicated team brings together technical expertise and a deep commitment to quality, ensuring that our projects not only meet but exceed expectations.
+              {t('sections.philosophy.text')}
             </p>
           </div>
           <div className={styles.info_container}>
             <h4 className={styles.info_title}>
-              Why Choose Us?
+              {t('sections.why_choose_us.title')}
             </h4>
             <p className={styles.info_text}>
-              Our approach is personalized, agile, and grounded in a deep understanding of your needs. By leveraging the latest technology and fostering a culture of teamwork, we deliver solutions that are not only effective but also sustainable and scalable.
+              {t('sections.why_choose_us.text')}
             </p>
           </div>
         </div>
