@@ -1,0 +1,101 @@
+@import 'Sass/config.scss';
+
+// Estilos para el modal de confirmación
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal_content {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.modal_title {
+  font-family: 'Univia Pro';
+  font-size: 2rem;
+  color: $dark-blue;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.modal_subtitle {
+  font-family: 'Roboto';
+  font-size: 1.125rem;
+  color: $dark-black;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.modal_button {
+  background-color: $dark-blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.875rem 2.5rem;
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($dark-blue, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 60, 123, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.75rem 2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

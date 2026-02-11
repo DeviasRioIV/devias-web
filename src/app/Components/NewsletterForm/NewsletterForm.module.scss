@@ -87,6 +87,20 @@
       min-height: 21px;
     }
     
+    .error_message_submit {
+      display: grid;
+      place-content: center;
+      font-family: 'Roboto';
+      font-weight: 500;
+      color: red;
+      font-size: 1rem;
+      background-color: rgba(255, 0, 0, 0.1);
+      border-radius: 5px;
+      text-align: center;
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+    
     .btn_container {
       display: flex;
       justify-content: flex-end;

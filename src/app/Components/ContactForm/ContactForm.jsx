@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl'
 
 // Internal modules
 import styles from './contact-form.module.scss'
+import ConfirmationModal from '@/app/Components/ConfirmationModal/ConfirmationModal'
 
 export default function ContactForm ({home}){
 
@@ -21,6 +22,8 @@ export default function ContactForm ({home}){
 
   // Local State
   const [isLoading, setIsLoading] = React.useState(false)
+  const [showConfirmationModal, setShowConfirmationModal] = React.useState(false)
+  const [submitError, setSubmitError] = React.useState(false)
   const [formData,setFormData] = React.useState({
     user_name: '',
     user_last_name: '',
@@ -105,8 +108,14 @@ export default function ContactForm ({home}){
 
     e.preventDefault()
     setIsLoading(true)
+    setSubmitError(false)
 
-    emailjs.sendForm('service_7zoo6s6', 'template_tpsiyhh', form.current, 'yT0rf2WJTNyJnW15P')
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      form.current,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
       .then((result) => {
 
         console.log(result.text)
@@ -116,22 +125,36 @@ export default function ContactForm ({home}){
           ...formData,
           consult: ''
         })
-
-        // Guardar token de sesión y redirigir
-        sessionStorage.setItem('formSubmitted', 'true')
-        router.push(`/${params.locale}/thanks-contact`)
+        setTouchedFields({
+          user_name: false,
+          user_last_name: false,
+          user_company: false,
+          user_email: false,
+          consult: false
+        })
         setIsLoading(false)
+        setShowConfirmationModal(true)
 
       }, (error) => {
 
         console.log(error.text)
         setIsLoading(false)
+        setSubmitError(true)
 
       })
 
   }
 
   return (
+    <>
+      <ConfirmationModal
+        isOpen={showConfirmationModal}
+        onClose={() => setShowConfirmationModal(false)}
+        title={t('confirmation_modal.title')}
+        subtitle={t('confirmation_modal.subtitle')}
+        closeButtonText={t('confirmation_modal.close_button')}
+      />
+
     <form className={`${styles.contact_form} ${home ? styles.form_home : ''}`} ref={form} onSubmit={sendEmail}>
 
       <div className={`${styles.form_container} container`}>
@@ -242,6 +265,12 @@ export default function ContactForm ({home}){
               {touchedFields.consult && !isFieldValid('consult') && (
                 <h4 className={styles.input_incorrect_consult}>{t('errors.short_message')}</h4>
               )}
+              
+              {/* Error message for submit */}
+              {submitError && (
+                <p className={styles.error_message_submit}>{t('errors.submit_error')}</p>
+              )}
+
               <input
                 className={`${!allFieldsValid ? styles.form_empty : ''}`}
                 type='submit'
@@ -280,6 +309,7 @@ export default function ContactForm ({home}){
       </div>
 
     </form>
+    </>
   )
 
 }

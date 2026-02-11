@@ -757,10 +757,18 @@
       "last_name": "Last Name",
       "email": "Email"
     },
+    "errors": {
+      "submit_error": "Oops! Something went wrong."
+    },
     "buttons": {
       "cancel": "Cancel",
       "submit": "Submit",
       "submitting": "Submitting"
+    },
+    "confirmation_modal": {
+      "title": "Welcome!",
+      "subtitle": "We will share ideas and real cases to help you think about technology with business impact.",
+      "close_button": "Close"
     }
   },
   "ebook": {
@@ -796,11 +804,17 @@
       "short_last_name": "Short last name",
       "short_company": "Short company name",
       "invalid_email": "Incorrect email",
-      "short_message": "The minimum number of characters is (15)"
+      "short_message": "The minimum number of characters is (15)",
+      "submit_error": "Oops! Something went wrong."
     },
     "buttons": {
       "submit": "Submit",
       "sending": "Sending..."
+    },
+    "confirmation_modal": {
+      "title": "Done! Thank you for contacting us.",
+      "subtitle": "Within the next 24 business hours, we will write to you to coordinate the next steps.",
+      "close_button": "Close"
     },
     "location": {
       "address_line1": "San Martín 1496, 5800",

@@ -757,10 +757,18 @@
       "last_name": "Apellido",
       "email": "Email"
     },
+    "errors": {
+      "submit_error": "Ups! Algo salió mal."
+    },
     "buttons": {
       "cancel": "Cancelar",
       "submit": "Enviar",
       "submitting": "Enviando"
+    },
+    "confirmation_modal": {
+      "title": "¡Bienvenido!",
+      "subtitle": "Te vamos a compartir ideas y casos reales para pensar la tecnología con impacto en el negocio.",
+      "close_button": "Cerrar"
     }
   },
   "ebook": {
@@ -796,11 +804,17 @@
       "short_last_name": "Apellido demasiado corto",
       "short_company": "Nombre de empresa demasiado corto",
       "invalid_email": "Email incorrecto",
-      "short_message": "El número mínimo de caracteres es (15)"
+      "short_message": "El número mínimo de caracteres es (15)",
+      "submit_error": "Ups! Algo salió mal."
     },
     "buttons": {
       "submit": "Enviar",
       "sending": "Enviando..."
+    },
+    "confirmation_modal": {
+      "title": "¡Listo! Gracias por contactarnos.",
+      "subtitle": "En las próximas 24 hs hábiles te escribimos para coordinar los próximos pasos.",
+      "close_button": "Cerrar"
     },
     "location": {
       "address_line1": "San Martín 1496, 5800",

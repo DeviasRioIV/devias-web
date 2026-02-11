@@ -1,5 +1,6 @@
 'use client'
 // External modules
+import { useState } from 'react'
 import { useForm } from "react-hook-form"
 import {zodResolver} from '@hookform/resolvers/zod'
 import { LuLoader2 } from "react-icons/lu"
@@ -9,10 +10,13 @@ import { useTranslations } from 'next-intl'
 import styles from './NewsletterForm.module.scss'
 import schema from './NewsletterSchema'
 import { addNewsletterUser } from '@/actions/NewsletterUsers'
+import ConfirmationModal from '@/app/Components/ConfirmationModal/ConfirmationModal'
 
 export default function NewsletterForm({handleCancel}) {
   // Hooks
   const t = useTranslations('newsletter_form')
+  const [showConfirmationModal, setShowConfirmationModal] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
   const {
     register,
     handleSubmit,
@@ -24,14 +28,27 @@ export default function NewsletterForm({handleCancel}) {
 
   // Methods
   const onSubmit = async (data) => {
-    const body = {
-      name: data.name,
-      lastName: data.last_name,
-      email: data.email
-    }
+    try {
+      setSubmitError(false)
+      const body = {
+        name: data.name,
+        lastName: data.last_name,
+        email: data.email
+      }
 
-    await addNewsletterUser(body)
-    handleCancel()
+      await addNewsletterUser(body)
+      setShowConfirmationModal(true)
+    } catch (error) {
+      console.error('Error submitting newsletter form:', error)
+      setSubmitError(true)
+    }
+  }
+
+  const handleCloseModal = () => {
+    setShowConfirmationModal(false)
+    if (handleCancel) {
+      handleCancel()
+    }
   }
 
   // Render Method
@@ -42,6 +59,15 @@ export default function NewsletterForm({handleCancel}) {
   }
 
   return (
+    <>
+      <ConfirmationModal
+        isOpen={showConfirmationModal}
+        onClose={handleCloseModal}
+        title={t('confirmation_modal.title')}
+        subtitle={t('confirmation_modal.subtitle')}
+        closeButtonText={t('confirmation_modal.close_button')}
+      />
+
     <div className={styles.modal_container}>
       <h2 className={styles.title}>
         {t('title')}
@@ -77,6 +103,11 @@ export default function NewsletterForm({handleCancel}) {
 
         <div className={styles.btn_container}>
           {
+            submitError &&
+            <p className={styles.error_message_submit}>{t('errors.submit_error')}</p>
+          }
+          
+          {
             handleCancel &&
             <button  type="button" className={styles.btn_cancel} onClick={handleCancel}>
               {t('buttons.cancel')}
@@ -93,5 +124,6 @@ export default function NewsletterForm({handleCancel}) {
         </div>
       </form>
     </div>
+    </>
   )
 }

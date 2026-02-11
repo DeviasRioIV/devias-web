@@ -162,6 +162,18 @@
             color: $red;
             font-size: 1rem;
           }
+          
+          .error_message_submit {
+            font-family: 'Roboto';
+            font-weight: 500;
+            color: $red;
+            font-size: 1rem;
+            margin: 0.75rem 0;
+            padding: 0.75rem;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+          }
     
     
           input {
