@@ -9,12 +9,13 @@ import { z } from 'zod'
 import { GrLocation } from 'react-icons/gr'
 import { MdOutlineEmail } from 'react-icons/md'
 import Map from '@/app/Components/Map/Map'
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 // Internal modules
 import styles from './contact-form.module.scss'
-import ConfirmationModal from '@/app/Components/ConfirmationModal/ConfirmationModal'
+// import ConfirmationModal from '@/app/Components/ConfirmationModal/ConfirmationModal'
+import { addContactLead } from '@/actions/ContactLeads'
 
 const contactFormSchema = z.object({
   user_name: z.string().trim().min(4, 'short_name'),
@@ -29,10 +30,11 @@ const contactFormSchema = z.object({
 export default function ContactForm ({home}){
 
   // Hooks
+  const router = useRouter()
   const params = useParams()
   const t = useTranslations('contact_form')
 
-  const [showConfirmationModal, setShowConfirmationModal] = React.useState(false)
+  // const [showConfirmationModal, setShowConfirmationModal] = React.useState(false)
   const [submitError, setSubmitError] = React.useState(false)
   const form = React.useRef(null)
 
@@ -61,11 +63,23 @@ export default function ContactForm ({home}){
   }
 
   // Request of EmailJS
-  const sendEmail = async () => {
+  const sendEmail = async (data) => {
 
     setSubmitError(false)
 
     try {
+      const body = {
+        name: data.user_name,
+        lastName: data.user_last_name,
+        company: data.user_company,
+        email: data.user_email,
+        phone: data.user_phone,
+        smsConsent: data.sms_consent,
+        message: data.consult
+      }
+
+      await addContactLead(body)
+
       const result = await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
@@ -74,8 +88,8 @@ export default function ContactForm ({home}){
       )
 
       console.log(result.text)
-      reset()
-      setShowConfirmationModal(true)
+      sessionStorage.setItem('formSubmitted', 'true')
+      router.push(`/${params?.locale || 'en'}/thanks-contact`)
     } catch (error) {
       console.log(error.text)
       setSubmitError(true)
@@ -85,13 +99,13 @@ export default function ContactForm ({home}){
 
   return (
     <>
-      <ConfirmationModal
+      {/* <ConfirmationModal
         isOpen={showConfirmationModal}
         onClose={() => setShowConfirmationModal(false)}
         title={t('confirmation_modal.title')}
         subtitle={t('confirmation_modal.subtitle')}
         closeButtonText={t('confirmation_modal.close_button')}
-      />
+      /> */}
 
     <form className={`${styles.contact_form} ${home ? styles.form_home : ''}`} ref={form} onSubmit={handleSubmit(sendEmail)}>
 
