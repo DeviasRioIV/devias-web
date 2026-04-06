@@ -53,6 +53,9 @@ export default function Footer() {
             <li>
               <Link href={`/${locale}/privacy-policy`}> {links('privacy_policy')} </Link>
             </li>
+            <li>
+              <Link href={`/${locale}/terms`}> {links('terms')} </Link>
+            </li>
           </ul>
         </div>
         <div id={styles.social_icons}>

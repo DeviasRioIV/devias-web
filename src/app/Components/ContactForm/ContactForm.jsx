@@ -3,145 +3,83 @@
 // External modules
 import React from 'react'
 import emailjs from '@emailjs/browser'
-import { GrLocation } from "react-icons/gr";
-import { MdOutlineEmail } from "react-icons/md";
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { GrLocation } from 'react-icons/gr'
+import { MdOutlineEmail } from 'react-icons/md'
 import Map from '@/app/Components/Map/Map'
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
 // Internal modules
 import styles from './contact-form.module.scss'
 import ConfirmationModal from '@/app/Components/ConfirmationModal/ConfirmationModal'
 
+const contactFormSchema = z.object({
+  user_name: z.string().trim().min(4, 'short_name'),
+  user_last_name: z.string().trim().min(4, 'short_last_name'),
+  user_company: z.string().trim().min(4, 'short_company'),
+  user_email: z.string().trim().min(8, 'invalid_email').email('invalid_email'),
+  user_phone: z.string().trim().min(8, 'invalid_phone'),
+  sms_consent: z.boolean().refine((value) => value, { message: 'sms_consent_required' }),
+  consult: z.string().trim().min(15, 'short_message')
+})
+
 export default function ContactForm ({home}){
 
   // Hooks
-  const router = useRouter()
   const params = useParams()
   const t = useTranslations('contact_form')
 
-  // Local State
-  const [isLoading, setIsLoading] = React.useState(false)
   const [showConfirmationModal, setShowConfirmationModal] = React.useState(false)
   const [submitError, setSubmitError] = React.useState(false)
-  const [formData,setFormData] = React.useState({
-    user_name: '',
-    user_last_name: '',
-    user_company: '',
-    user_email: '',
-    consult: ''
-  })
-  const [touchedFields, setTouchedFields] = React.useState({
-    user_name: false,
-    user_last_name: false,
-    user_company: false,
-    user_email: false,
-    consult: false
-  })
-  const [allFieldsValid, setAllFieldsValid] = React.useState(false)
-
-  // Constants
   const form = React.useRef(null)
 
-  // Effects
-  // Verify is all fields valid
-  React.useEffect(() => {
-
-    const newAllFieldsValid = Object.keys(formData).every((fieldName) => isFieldValid(fieldName))
-    setAllFieldsValid(newAllFieldsValid)
-
-  }, [formData, touchedFields])
-
-  // Save the new values
-  const handleChange = (e) => {
-
-    const {name, value} = e.target
-    setFormData({...formData, [name]: value})
-
-  }
-
-  // Check blur
-  const handleBlur = (e) => {
-
-    const {name} = e.target
-    setTouchedFields({...touchedFields, [name]: true})
-
-  }
-
-  // Verify is field valid
-  const isFieldValid = (fieldName) => {
-
-    if (!touchedFields[fieldName]) {
-
-      return false
-
-    } else {
-
-      switch (fieldName) {
-
-        case 'user_name':
-          return formData.user_name.length >= 4
-
-        case 'user_last_name':
-          return formData.user_last_name.length >= 4
-
-        case 'user_company':
-          return formData.user_company.length >= 4
-
-        case 'user_email':
-          return formData.user_email.length >= 8 && formData.user_email.includes('@')
-
-        case 'consult':
-          return formData.consult.length >= 15
-
-        default:
-          return true
-
-      }
-
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid, isSubmitting }
+  } = useForm({
+    resolver: zodResolver(contactFormSchema),
+    mode: 'onTouched',
+    defaultValues: {
+      user_name: '',
+      user_last_name: '',
+      user_company: '',
+      user_email: '',
+      user_phone: '',
+      sms_consent: false,
+      consult: ''
     }
+  })
 
+  const getErrorMessage = (fieldName) => {
+    const key = errors[fieldName]?.message
+    return key ? t(`errors.${key}`) : ''
   }
 
   // Request of EmailJS
-  const sendEmail = (e) => {
+  const sendEmail = async () => {
 
-    e.preventDefault()
-    setIsLoading(true)
     setSubmitError(false)
 
-    emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      form.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-    )
-      .then((result) => {
+    try {
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
 
-        console.log(result.text)
-        form.current.reset()
-        setAllFieldsValid(false)
-        setFormData({
-          ...formData,
-          consult: ''
-        })
-        setTouchedFields({
-          user_name: false,
-          user_last_name: false,
-          user_company: false,
-          user_email: false,
-          consult: false
-        })
-        setIsLoading(false)
-        setShowConfirmationModal(true)
-
-      }, (error) => {
-
-        console.log(error.text)
-        setIsLoading(false)
-        setSubmitError(true)
-
-      })
+      console.log(result.text)
+      reset()
+      setShowConfirmationModal(true)
+    } catch (error) {
+      console.log(error.text)
+      setSubmitError(true)
+    }
 
   }
 
@@ -155,7 +93,7 @@ export default function ContactForm ({home}){
         closeButtonText={t('confirmation_modal.close_button')}
       />
 
-    <form className={`${styles.contact_form} ${home ? styles.form_home : ''}`} ref={form} onSubmit={sendEmail}>
+    <form className={`${styles.contact_form} ${home ? styles.form_home : ''}`} ref={form} onSubmit={handleSubmit(sendEmail)}>
 
       <div className={`${styles.form_container} container`}>
 
@@ -178,104 +116,133 @@ export default function ContactForm ({home}){
             <div className={styles.data_container}>
 
               <div className={styles.locker}>
-                <label className={styles.form_label}>{t('labels.name')} <span>*</span></label>
+                <label className={styles.form_label} htmlFor='user_name'>{t('labels.name')} <span>*</span></label>
                 <input
+                  id='user_name'
                   type='text'
-                  name='user_name'
-                  value={formData.name}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
                   placeholder={t('placeholders.name')}
+                  {...register('user_name')}
                 />
 
-                {/* Verify touched name and valid name */}
-                {touchedFields.user_name && !isFieldValid('user_name') && (
-                  <h4 className={styles.input_incorrect}>{t('errors.short_name')}</h4>
+                {errors.user_name && (
+                  <h4 className={styles.input_incorrect}>{getErrorMessage('user_name')}</h4>
                 )}
               </div>
 
               <div className={styles.locker}>
-                <label className={styles.form_label} >{t('labels.last_name')} <span>*</span></label>
+                <label className={styles.form_label} htmlFor='user_last_name'>{t('labels.last_name')} <span>*</span></label>
                 <input
+                  id='user_last_name'
                   type='text'
-                  name='user_last_name'
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
                   placeholder={t('placeholders.last_name')}
+                  {...register('user_last_name')}
                 />
 
-                {/* Verify touched last name and valid last name */}
-                {touchedFields.user_last_name && !isFieldValid('user_last_name') && (
-                  <h4 className={styles.input_incorrect}>{t('errors.short_last_name')}</h4>
+                {errors.user_last_name && (
+                  <h4 className={styles.input_incorrect}>{getErrorMessage('user_last_name')}</h4>
                 )}
               </div>
 
               <div className={styles.locker}>
 
-                <label className={styles.form_label} >{t('labels.company')} <span>*</span></label>
+                <label className={styles.form_label} htmlFor='user_company'>{t('labels.company')} <span>*</span></label>
                 <input
+                  id='user_company'
                   type='text'
-                  name='user_company'
-                  value={formData.company}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
                   placeholder={t('placeholders.company')}
+                  {...register('user_company')}
                 />
 
-                {/* Verify touched company and valid company */}
-                {touchedFields.user_company && !isFieldValid('user_company') && (
-                  <h4 className={styles.input_incorrect}>{t('errors.short_company')}</h4>
+                {errors.user_company && (
+                  <h4 className={styles.input_incorrect}>{getErrorMessage('user_company')}</h4>
                 )}
               </div>
 
               <div className={styles.locker}>
 
-                <label className={styles.form_label} >{t('labels.email')} <span>*</span></label>
+                <label className={styles.form_label} htmlFor='user_email'>{t('labels.email')} <span>*</span></label>
                 <input
+                  id='user_email'
                   type='email'
-                  name='user_email'
-                  value={formData.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
                   placeholder={t('placeholders.email')}
+                  {...register('user_email')}
                 />
 
-                {/* Verify touched email and valid email */}
-                {touchedFields.user_email && !isFieldValid('user_email') && (
-                  <h4 className={styles.input_incorrect}>{t('errors.invalid_email')}</h4>
+                {errors.user_email && (
+                  <h4 className={styles.input_incorrect}>{getErrorMessage('user_email')}</h4>
                 )}
+              </div>
+
+              <div className={styles.locker}>
+
+                <label className={styles.form_label} htmlFor='user_phone'>{t('labels.phone')} <span>*</span></label>
+                <input
+                  id='user_phone'
+                  type='tel'
+                  placeholder={t('placeholders.phone')}
+                  required
+                  {...register('user_phone')}
+                />
+
+                {errors.user_phone && (
+                  <h4 className={styles.input_incorrect}>{getErrorMessage('user_phone')}</h4>
+                )}
+              </div>
+
+              <div className={styles.locker}>
+                <label className={styles.sms_consent_label} htmlFor='sms_consent'>
+                  <input
+                    id='sms_consent'
+                    type='checkbox'
+                    className={styles.sms_checkbox}
+                    required
+                    {...register('sms_consent')}
+                  />
+                  {t('labels.sms_consent')}
+                </label>
+
+                {errors.sms_consent && (
+                  <h4 className={styles.input_incorrect}>{getErrorMessage('sms_consent')}</h4>
+                )}
+
+                <p className={styles.terms_notice}>
+                  {t('terms_notice.prefix')}{' '}
+                  <a href={`/${params?.locale || 'en'}/terms`} target='_blank' rel='noopener noreferrer'>
+                    {t('terms_notice.terms_link')}
+                  </a>{' '}
+                  {t('terms_notice.connector')}{' '}
+                  <a href={`/${params?.locale || 'en'}/privacy-policy`} target='_blank' rel='noopener noreferrer'>
+                    {t('terms_notice.privacy_link')}
+                  </a>.
+                </p>
               </div>
             </div>
 
             {/* Container of consult */}
             <div className={styles.consult_container}>
 
-              <label className={styles.form_label} >{t('labels.message')} <span>*</span></label>
+              <label className={styles.form_label} htmlFor='consult'>{t('labels.message')} <span>*</span></label>
               <textarea
-                name='consult'
-                value={formData.consult}
-                onChange={handleChange}
-                onBlur={handleBlur}
+                id='consult'
                 placeholder={t('placeholders.message')}
                 className={styles.textarea}
+                {...register('consult')}
               />
 
-              {/* Verify touched consult and valid consult */}
-              {touchedFields.consult && !isFieldValid('consult') && (
-                <h4 className={styles.input_incorrect_consult}>{t('errors.short_message')}</h4>
+              {errors.consult && (
+                <h4 className={styles.input_incorrect_consult}>{getErrorMessage('consult')}</h4>
               )}
-              
+
               {/* Error message for submit */}
               {submitError && (
                 <p className={styles.error_message_submit}>{t('errors.submit_error')}</p>
               )}
 
               <input
-                className={`${!allFieldsValid ? styles.form_empty : ''}`}
+                className={`${!isValid ? styles.form_empty : ''}`}
                 type='submit'
-                value={isLoading ? t('buttons.sending') : t('buttons.submit')}
-                disabled={!allFieldsValid}
+                value={isSubmitting ? t('buttons.sending') : t('buttons.submit')}
+                disabled={!isValid || isSubmitting}
               />
             </div>
           </div>
@@ -294,7 +261,7 @@ export default function ContactForm ({home}){
               {t('location.country')}
             </p>
             <p>
-              <a target='_blank' href="https://www.google.com/maps/dir//San+Mart%C3%ADn+1496,+X5800+R%C3%ADo+Cuarto,+C%C3%B3rdoba/@-33.1189921,-64.448018,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95d200414389ba49:0xbaaff6e5b3f350c!2m2!1d-64.3656168!2d-33.1190192?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D">
+              <a target='_blank' href='https://www.google.com/maps/dir//San+Mart%C3%ADn+1496,+X5800+R%C3%ADo+Cuarto,+C%C3%B3rdoba/@-33.1189921,-64.448018,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95d200414389ba49:0xbaaff6e5b3f350c!2m2!1d-64.3656168!2d-33.1190192?entry=ttu&g_ep=EgoyMDI0MDgyNy4wIKXMDSoASAFQAw%3D%3D'>
                 {t('location.view_map')}
               </a>
             </p>

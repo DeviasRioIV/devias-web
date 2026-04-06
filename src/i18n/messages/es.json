@@ -727,13 +727,79 @@
       }
     ]
   },
+  "terms": {
+    "title": "Términos y Condiciones - Comunicaciones SMS de Devias",
+    "date": "Fecha de vigencia: Marzo 2026",
+    "points": [
+      {
+        "description": "Al proporcionar tu número de teléfono y dar tu consentimiento a través de nuestros formularios web, aceptás recibir mensajes SMS de Devias relacionados con tu consulta o servicios solicitados."
+      },
+      {
+        "title": "1. Información de la empresa",
+        "description": "Devias S.A.S. (\"Devias\") brinda servicios de desarrollo de software a medida y consultoría."
+      },
+      {
+        "title": "2. Comunicaciones SMS",
+        "description": "Al enviar tu número de teléfono a través de nuestros formularios web, aceptás recibir mensajes SMS de Devias sobre:",
+        "list": [
+          "Seguimiento de tus consultas",
+          "Comunicación relacionada con proyectos",
+          "Coordinación de reuniones o próximos pasos",
+          "Estos mensajes son conversacionales y se relacionan únicamente con tu solicitud. No enviamos mensajes no solicitados ni promocionales.",
+          "Los mensajes solo se enviarán a usuarios que hayan dado su consentimiento explícito."
+        ]
+      },
+      {
+        "title": "3. Consentimiento de suscripción",
+        "description": "Los usuarios aceptan recibir SMS ingresando su número de teléfono en nuestros formularios web y marcando activamente su consentimiento.",
+        "additional_info": "El consentimiento incluye una declaración clara como: \"I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Reply STOP to opt out.\""
+      },
+      {
+        "title": "4. Frecuencia de mensajes",
+        "description": "La frecuencia de los mensajes puede variar según la naturaleza de tu consulta y la comunicación en curso."
+      },
+      {
+        "title": "5. Tarifas de mensajes y datos",
+        "description": "Pueden aplicarse tarifas de mensajes y datos según tu operador móvil."
+      },
+      {
+        "title": "6. Instrucciones de baja",
+        "description": "Podés darte de baja de los mensajes SMS en cualquier momento respondiendo STOP.",
+        "additional_info": "Luego de darte de baja, ya no recibirás mensajes de nuestra parte."
+      },
+      {
+        "title": "7. Instrucciones de ayuda",
+        "description": "Para recibir ayuda, respondé HELP o contactanos en hola@devias.ar."
+      },
+      {
+        "title": "8. Privacidad",
+        "description": "Tu información no será compartida con terceros con fines de marketing.",
+        "list": [
+          "Para más información, visitá nuestra Política de Privacidad:",
+          "https://www.devias.ar/es/privacy-policy"
+        ]
+      },
+      {
+        "title": "9. Información de contacto",
+        "list": [
+          "Devias S.A.S.",
+          "Email: hola@devias.ar",
+          "Sitio web: https://www.devias.ar"
+        ]
+      },
+      {
+        "description": "Al aceptar, confirmás que leíste y aceptaste estos Términos y Condiciones."
+      }
+    ]
+  },
   "footer": {
     "links":{
       "about_us": "Nosotros",
       "projects": "Proyectos",
       "our_workflow": "Cómo trabajamos",
       "contact": "Contáctanos",
-      "privacy_policy": "Política de Privacidad"
+      "privacy_policy": "Política de Privacidad",
+      "terms": "Términos y Condiciones"
     }
   },
   "thanks_contact": {
@@ -790,13 +856,22 @@
       "last_name": "Apellido",
       "company": "Empresa",
       "email": "E-mail",
+      "phone": "Teléfono",
+      "sms_consent": "Acepto recibir SMS messages de Devias sobre mi consulta. Message frequency may vary. Reply STOP to opt out.",
       "message": "Mensaje"
+    },
+    "terms_notice": {
+      "prefix": "Al enviar este formulario, aceptás nuestros",
+      "terms_link": "Términos y Condiciones",
+      "connector": "y",
+      "privacy_link": "Política de Privacidad"
     },
     "placeholders": {
       "name": "Nombre",
       "last_name": "Apellido",
       "company": "Empresa",
       "email": "E-mail",
+      "phone": "Teléfono",
       "message": "Dejanos tu mensaje"
     },
     "errors": {
@@ -804,6 +879,8 @@
       "short_last_name": "Apellido demasiado corto",
       "short_company": "Nombre de empresa demasiado corto",
       "invalid_email": "Email incorrecto",
+      "invalid_phone": "Teléfono incorrecto",
+      "sms_consent_required": "Debes aceptar el consentimiento SMS",
       "short_message": "El número mínimo de caracteres es (15)",
       "submit_error": "Ups! Algo salió mal."
     },

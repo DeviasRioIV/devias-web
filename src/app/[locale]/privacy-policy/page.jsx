@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
   const points = t.raw('points')
 
   return (
-    <main id='about_us' className={styles.privacy_policy}>
+    <main id='privacy_policy' className={styles.privacy_policy}>
       <Header />
         <h1>{t('title')}</h1>
         <p className={styles.date}>{t('date')}</p>

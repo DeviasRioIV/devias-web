@@ -727,13 +727,79 @@
       }
     ]
   },
+  "terms": {
+    "title": "Terms and Conditions - Devias SMS Communications",
+    "date": "Effective Date: March 2026",
+    "points": [
+      {
+        "description": "By providing your phone number and opting in through our website forms, you agree to receive SMS messages from Devias related to your inquiry or requested services."
+      },
+      {
+        "title": "1. Company Information",
+        "description": "Devias S.A.S. (\"Devias\") provides custom software development and consulting services."
+      },
+      {
+        "title": "2. SMS Communications",
+        "description": "By submitting your phone number through our website forms, you consent to receive SMS messages from Devias regarding:",
+        "list": [
+          "Follow-ups on your inquiries",
+          "Project-related communication",
+          "Coordination of meetings or next steps",
+          "These messages are conversational and related only to your request. We do not send unsolicited or promotional messages.",
+          "Messages will only be sent to users who have explicitly opted in."
+        ]
+      },
+      {
+        "title": "3. Opt-In Consent",
+        "description": "Users opt-in by entering their phone number in our website forms and actively agreeing to receive SMS communications.",
+        "additional_info": "The opt-in includes a clear statement such as: \"I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Reply STOP to opt out.\""
+      },
+      {
+        "title": "4. Message Frequency",
+        "description": "Message frequency may vary depending on the nature of your inquiry and ongoing communication."
+      },
+      {
+        "title": "5. Message and Data Rates",
+        "description": "Message and data rates may apply depending on your mobile carrier."
+      },
+      {
+        "title": "6. Opt-Out Instructions",
+        "description": "You can opt out of receiving SMS messages at any time by replying STOP.",
+        "additional_info": "After opting out, you will no longer receive messages from us."
+      },
+      {
+        "title": "7. Help Instructions",
+        "description": "For assistance, reply HELP or contact us at hola@devias.ar."
+      },
+      {
+        "title": "8. Privacy",
+        "description": "Your information will not be shared with third parties for marketing purposes.",
+        "list": [
+          "For more information, please visit our Privacy Policy:",
+          "https://www.devias.ar/en/privacy-policy"
+        ]
+      },
+      {
+        "title": "9. Contact Information",
+        "list": [
+          "Devias S.A.S.",
+          "Email: hola@devias.ar",
+          "Website: https://www.devias.ar"
+        ]
+      },
+      {
+        "description": "By opting in, you confirm that you have read and agreed to these Terms and Conditions."
+      }
+    ]
+  },
   "footer": {
     "links": {
       "about_us":"About Us",
       "projects": "Projects",
       "our_workflow":"Our Workflow",
       "contact": "Contact Us",
-      "privacy_policy": "Privacy Policy"
+      "privacy_policy": "Privacy Policy",
+      "terms": "Terms and Conditions"
     }
   },
   "thanks_contact": {
@@ -790,13 +856,22 @@
       "last_name": "Last name",
       "company": "Company",
       "email": "E-mail",
+      "phone": "Phone",
+      "sms_consent": "I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Reply STOP to opt out.",
       "message": "Message"
+    },
+    "terms_notice": {
+      "prefix": "By submitting this form, you agree to our",
+      "terms_link": "Terms and Conditions",
+      "connector": "and",
+      "privacy_link": "Privacy Policy"
     },
     "placeholders": {
       "name": "Name",
       "last_name": "Last name",
       "company": "Company",
       "email": "E-mail",
+      "phone": "Phone",
       "message": "Leave your message"
     },
     "errors": {
@@ -804,6 +879,8 @@
       "short_last_name": "Short last name",
       "short_company": "Short company name",
       "invalid_email": "Incorrect email",
+      "invalid_phone": "Incorrect phone",
+      "sms_consent_required": "You must accept SMS consent",
       "short_message": "The minimum number of characters is (15)",
       "submit_error": "Oops! Something went wrong."
     },
