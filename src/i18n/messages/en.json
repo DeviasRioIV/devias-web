@@ -752,7 +752,7 @@
       {
         "title": "3. Opt-In Consent",
         "description": "Users opt-in by entering their phone number in our website forms and actively agreeing to receive SMS communications.",
-        "additional_info": "The opt-in includes a clear statement such as: \"I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Reply STOP to opt out.\""
+        "additional_info": "The opt-in includes a clear statement such as: \"I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Message & data rates may apply. Reply STOP to opt out or HELP for assistance.\""
       },
       {
         "title": "4. Message Frequency",
@@ -857,7 +857,7 @@
       "company": "Company",
       "email": "E-mail",
       "phone": "Phone",
-      "sms_consent": "I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Reply STOP to opt out.",
+      "sms_consent": "I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Message & data rates may apply. Reply STOP to opt out or HELP for assistance.",
       "message": "Message"
     },
     "terms_notice": {

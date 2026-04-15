@@ -752,7 +752,7 @@
       {
         "title": "3. Consentimiento de suscripción",
         "description": "Los usuarios aceptan recibir SMS ingresando su número de teléfono en nuestros formularios web y marcando activamente su consentimiento.",
-        "additional_info": "El consentimiento incluye una declaración clara como: \"I agree to receive SMS messages from Devias regarding my inquiry. Message frequency may vary. Reply STOP to opt out.\""
+        "additional_info": "El consentimiento incluye una declaración clara como: \"Acepto recibir mensajes SMS de Devias relacionados con mi consulta. La frecuencia de los mensajes puede variar. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para darte de baja o HELP para obtener ayuda.\""
       },
       {
         "title": "4. Frecuencia de mensajes",
@@ -857,7 +857,7 @@
       "company": "Empresa",
       "email": "E-mail",
       "phone": "Teléfono",
-      "sms_consent": "Acepto recibir SMS messages de Devias sobre mi consulta. Message frequency may vary. Reply STOP to opt out.",
+      "sms_consent": "Acepto recibir mensajes SMS de Devias relacionados con mi consulta. La frecuencia de los mensajes puede variar. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para darte de baja o HELP para obtener ayuda.",
       "message": "Mensaje"
     },
     "terms_notice": {
