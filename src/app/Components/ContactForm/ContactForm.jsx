@@ -22,8 +22,8 @@ const contactFormSchema = z.object({
   user_last_name: z.string().trim().min(4, 'short_last_name'),
   user_company: z.string().trim().min(4, 'short_company'),
   user_email: z.string().trim().min(8, 'invalid_email').email('invalid_email'),
-  user_phone: z.string().trim().min(8, 'invalid_phone'),
-  sms_consent: z.boolean().refine((value) => value, { message: 'sms_consent_required' }),
+  user_phone: z.string().trim().min(8, 'invalid_phone').optional().or(z.literal('')),
+  sms_consent: z.boolean().optional(),
   consult: z.string().trim().min(15, 'short_message')
 })
 
@@ -189,12 +189,11 @@ export default function ContactForm ({home}){
 
               <div className={styles.locker}>
 
-                <label className={styles.form_label} htmlFor='user_phone'>{t('labels.phone')} <span>*</span></label>
+                <label className={styles.form_label} htmlFor='user_phone'>{t('labels.phone')}</label>
                 <input
                   id='user_phone'
                   type='tel'
                   placeholder={t('placeholders.phone')}
-                  required
                   {...register('user_phone')}
                 />
 
@@ -209,7 +208,6 @@ export default function ContactForm ({home}){
                     id='sms_consent'
                     type='checkbox'
                     className={styles.sms_checkbox}
-                    required
                     {...register('sms_consent')}
                   />
                   {t('labels.sms_consent')}
