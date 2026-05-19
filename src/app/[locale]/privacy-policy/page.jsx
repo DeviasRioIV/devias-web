@@ -62,7 +62,6 @@ export default function PrivacyPolicy() {
                 {point.additional_info && (
                   <p className={styles.info_text}><em>{renderTextWithLinks(point.additional_info)}</em></p>
                 )}
-                {console.log('render-html:', point['render_html'])}
                 {point['render_html'] && (
                   <div className={styles.info_text} dangerouslySetInnerHTML={{ __html: point['render_html'] }} />
                 )}
