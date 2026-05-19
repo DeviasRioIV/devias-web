@@ -697,7 +697,8 @@
         "list": [
           "To comply with the law or a valid legal request",
           "To work with technology providers who help us operate (e.g., Meta, Google, CRM)"
-        ]
+        ],
+        "render_html": "<strong>SMS Opt-In and Mobile Data Protection:</strong> </br> <p>Notwithstanding the above, no mobile phone numbers or SMS opt-in data/consent collected through our website forms will be shared, sold, or rented to third parties or affiliates for marketing or promotional purposes. This information is strictly used for the communication requested by the user.</p>"
       },
       {
         "title": "4. Security",

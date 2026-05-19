@@ -697,7 +697,10 @@
         "list": [
           "Para cumplir con la ley o una solicitud legal válida",
           "Para trabajar con proveedores tecnológicos que nos ayudan a operar (ej. Meta, Google, CRM)"
-        ]
+        ],
+        "render_html": "<strong>Suscripción SMS y Protección de Datos Móviles:</strong> </br> <p>Sin perjuicio de lo anterior, ningún número de teléfono móvil ni dato/consentimiento de suscripción SMS recopilado a través de los formularios de nuestro sitio web será compartido, vendido ni alquilado a terceros o afiliados con fines de marketing o promoción. Esta información se utiliza estrictamente para la comunicación solicitada por el usuario.</p>"
+
+
       },
       {
         "title": "4. Seguridad",
